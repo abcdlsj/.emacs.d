@@ -27,6 +27,7 @@
 			   popwin
 			   evil
 			   neotree
+			   winum
 			   ;; --- Major Mode ---
 			   markdown-mode
 			   lsp-mode
@@ -37,9 +38,11 @@
 			   yasnippet
 			   ;;use-package
 			   use-package
+			   ;;ui
+			   dashboard
 			   ;;theme
-			   doom-themes
 			   doom-modeline
+			   base16-theme
 			   ))
 
 ;; ...

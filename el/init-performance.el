@@ -11,40 +11,48 @@
 (setq recentf-max-menu-item 10)
 (setq org-src-fontify-natively t)
 (setq inital-scratch-message nil)
+(menu-bar-mode -1)
 (tool-bar-mode -1)
-(global-linum-mode 1)
+(toggle-scroll-bar -1)
 (setq inhibit-startup-screen t)
 (setq frame-title-format "%b  [%I] %f  GNU/Emacs")
 (setq visible-bell t)
-(setq  ring-bell-function 'ignore)
+(setq ring-bell-function 'ignore)
 (setq-default cursor-type 'bar)
 (set-face-attribute 'default nil :height 140)
 (global-hl-line-mode 1)
 (show-paren-mode 1)
+;;(global-linum-mode 1)
 (setq make-backup-files nil)
 (electric-pair-mode t)
 (delete-selection-mode 1)
 (fset 'yes-or-no-p 'y-or-n-p)
 ;;DOOM
 ;; Global settings (defaults)
-(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-      doom-themes-enable-italic t) ; if nil, italics is universally disabled
+;;(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+;;      doom-themes-enable-italic t) ; if nil, italics is universally disabled
 ;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
 ;; may have their own settings.
-(load-theme 'doom-one t)
+;;(load-theme 'doom-one t)
 ;; Enable flashing mode-line on errors
-(doom-themes-visual-bell-config)
+;;(doom-themes-visual-bell-config)
 ;; Enable custom neotree theme (all-the-icons must be installed!)
-(doom-themes-neotree-config)
+;;(doom-themes-neotree-config)
 ;; or for treemacs users
-(setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-(doom-themes-treemacs-config)
+;;(setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+;;(doom-themes-treemacs-config)
 ;; Corrects (and improves) org-mode's native fontification.
-(doom-themes-org-config)
-
+;;(doom-themes-org-config)
+(use-package base16-theme
+  :config
+  (load-theme 'base16-default-dark t))
 ;;company-mode
 (global-company-mode 1)
 
+;;
+(use-package dashboard
+  :config
+  (dashboard-setup-startup-hook))
 ;;evil
 (require 'evil)
 (evil-mode 1)
@@ -55,6 +63,9 @@
 (require 'doom-modeline)
 (doom-modeline-mode 1)
 
+(use-package winum
+  :config
+  (winum-mode))
 ;;neotree
 (require 'neotree)
 
