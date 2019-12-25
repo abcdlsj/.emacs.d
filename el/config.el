@@ -1,11 +1,3 @@
-;;
-;; ____            __                                           
-;;|  _ \ ___ _ __ / _| ___  _ __ _ __ ___   __ _ _ __   ___ ___ 
-;;| |_) / _ \ '__| |_ / _ \| '__| '_ ` _ \ / _` | '_ \ / __/ _ \
-;;|  __/  __/ |  |  _| (_) | |  | | | | | | (_| | | | | (_|  __/
-;;|_|   \___|_|  |_|  \___/|_|  |_| |_| |_|\__,_|_| |_|\___\___|
-;;
-;;
 (require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-item 10)
@@ -43,17 +35,8 @@
 ;;(doom-themes-treemacs-config)
 ;; Corrects (and improves) org-mode's native fontification.
 ;;(doom-themes-org-config)
-(use-package base16-theme
-  :config
-  (load-theme 'base16-default-dark t))
-;;company-mode
-(global-company-mode 1)
-
 ;;
-(use-package dashboard
-  :config
-  (dashboard-setup-startup-hook))
-;;evil
+;evil
 (require 'evil)
 (evil-mode 1)
 (require 'evil-leader)
@@ -112,4 +95,4 @@
 (yas-global-mode 1)
 
 ;;
-(provide 'init-performance)
+(provide 'config)

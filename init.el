@@ -11,6 +11,7 @@
 (add-to-list 'load-path "~/.emacs.d/elp/")
 
 (require 'init-packages)
-(require 'init-performance)
+(require 'config)
 (require 'init-keybindings)
-(require 'my-org)
+(require 'init-org)
+(require 'init-ui)

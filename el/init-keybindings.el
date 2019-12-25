@@ -5,26 +5,21 @@
 ;;|_|\_\___|\__, |_.__/|_|_| |_|\__,_|_|_| |_|\__, |___/
 ;;|___/                             |___/
 ;; 
-
 ;;设置mark-set
-(global-set-key (kbd "M-m") 'set-mark-command)
-;;happy hacking
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
-(global-set-key (kbd "<f2>") 'open-init-file)
-
+;;(global-set-key (kbd "M-m") 'set-mark-command)
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
-  "f" 'find-file
+  "ff" 'find-file
   "b" 'switch-to-buffer
-  "k" 'kill-buffer
+  "kb" 'kill-buffer
   "n" 'neotree-toggle
-  "r" 'recentf-open-files
+  "fr" 'recentf-open-files
   "/" 'xref-find-definitions
- )
+  "0" 'winum-select-window-0
+  "1" 'winum-select-window-1
+  "2" 'winum-select-window-2
+  "3" 'winum-select-window-3
+  "4" 'winum-select-window-4)
 
-;;
 (provide 'init-keybindings)
