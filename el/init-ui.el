@@ -51,6 +51,10 @@
 	dashboard-startup-banner "~/Pictures/MIT_GNU_Scheme_Logo_r.png"
 	dashboard-center-content t
 	dashboard-set-heading-icons t
-	dashboard-set-file-icons t))
+	dashboard-set-file-icons t
+	dashboard-items '((recents  . 10)
+			  (bookmarks . 5)
+			  (projects . 5)
+			  (agenda . 5))))
 
 (provide 'init-ui)

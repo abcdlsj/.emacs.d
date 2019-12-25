@@ -6,12 +6,16 @@
 ;;|___/                             |___/
 ;; 
 ;;设置mark-set
-(global-set-key (kbd "C-<SPC>") 'nil)
 (global-set-key (kbd "M-m") 'set-mark-command)
+;;open private config
+(defun open-private-dire()
+  (interactive)
+  (directory-files))
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
   "ff" 'find-file
+  "fw" 'find-file-other-window
   ;;"fp" 'open-private-config
   "fr" 'recentf-open-files
   "b" 'switch-to-buffer

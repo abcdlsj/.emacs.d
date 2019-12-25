@@ -19,8 +19,6 @@
 			   ;; --- Auto-completion ---
 			   company
 			   ;; --- Better Editor ---
-			   smooth-scrolling
-			   hungry-delete
 			   projectile
 			   ;;swiper
 			   ;;counsel
@@ -29,6 +27,7 @@
 			   evil
 			   neotree
 			   winum
+			   which-key
 			   ;;Major Mode
 			   markdown-mode
 			   lsp-mode
@@ -46,6 +45,9 @@
 			   ;;theme
 			   doom-modeline
 			   base16-theme
+			   ;;lang
+			   sly
+			   sly-quicklisp
 			   ))
 
 ;; ...

@@ -13,66 +13,76 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;;company-mode
-(global-company-mode 1)
+(use-package company
+  :config
+  (global-company-mode 1))
 ;evil
-(require 'evil)
-(evil-mode 1)
+(use-package evil
+  :config
+  (evil-mode t))
 
-(require 'evil-leader)
-(global-evil-leader-mode 1)
+(use-package evil-leader
+  :config
+  (global-evil-leader-mode 1))
 
-(require 'recentf)
-(recentf-mode 1)
+(use-package recentf
+  :config
+  (recentf-mode 1))
 ;;doom-modline
-(require 'doom-modeline)
-(doom-modeline-mode 1)
+(use-package doom-modeline
+  :config
+  (doom-modeline-mode 1))
 
 (use-package winum
   :config
-  (winum-mode))
+  (winum-mode 1))
 ;;neotree
-(require 'neotree)
-
+(use-package neotree)
+;;which-key
+(use-package which-key
+  :config
+  (which-key-mode))
 ;;all-the-icons
-(require 'all-the-icons)
-
+(use-package all-the-icons)
 ;;popwin
-(require 'popwin)
-(popwin-mode 1)
+(use-package popwin
+  :config
+  (popwin-mode 1))
 
 ;;smartparens
-(require 'smartparens-config)
-
+(use-package smartparens-config)
 ;;ivy
-(ivy-mode 1)
-
-;;smooth-scrolling
-(require 'smooth-scrolling)
-(smooth-scrolling-mode 1)
-
-;;hungry-delete
-(require 'hungry-delete)
-(global-hungry-delete-mode)
+(use-package ivy
+  :config
+  (ivy-mode 1)
+  (counsel-mode 1))
 
 ;;lsp-mode
-(require 'lsp-mode)
-;;(add-hook 'c++-mode-hook #'lsp)
-(require 'lsp-ui)
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
-(require 'company-lsp)
-(push 'company-lsp company-backends)
-(require 'ccls)
-(setq ccls-executable "/usr/bin/ccls")
-(use-package lsp-mode :commands lsp)
-(use-package lsp-ui :commands lsp-ui-mode)
-(use-package company-lsp :commands company-lsp)
-
+(use-package lsp-mode
+  :config
+  (add-hook 'c++-mode-hook #'lsp)
+  :commands lsp)
+(use-package lsp-ui
+  :config
+  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  :commands lsp-ui-mode)
+(use-package company-lsp
+  :config
+  (push 'company-lsp company-backends)
+  :commands company-lsp)
 (use-package ccls
+  :config
+  (setq ccls-executable "/usr/bin/ccls")
   :hook ((c-mode c++-mode objc-mode cuda-mode) .
-         (lambda () (require 'ccls) (lsp))))
+	 (lambda () (require 'ccls) (lsp))))
 
 ;;yasnippet
-(require 'yasnippet)
-(yas-global-mode 1)
+(use-package yasnippet
+  :config
+  (yas-global-mode 1))
 
+(use-package sly
+  :config
+  (setq inferior-lisp-program "/usr/bin/scheme"))
+(use-package sly-quicklisp)
 (provide 'config)
