@@ -5,10 +5,9 @@
 ;;|_| |_| |_|\__, |  \___\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|
 ;;           |___/                         |___/                                   
 
-(package-initialize)
 
-(add-to-list 'load-path "~/.emacs.d/el/")
 (add-to-list 'load-path "~/.emacs.d/elp/")
+(add-to-list 'load-path "~/.emacs.d/el/")
 
 (require 'init-packages)
 (require 'config)

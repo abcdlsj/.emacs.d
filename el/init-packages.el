@@ -5,7 +5,7 @@
 ;;| .__/ \__,_|\___|_|\_\__,_|\__, |\___|
 ;;|_|                         |___/
 ;;
-(when (>= emacs-major-version 24)
+(when (>= emacs-major-version 25)
     (require 'package)
     (package-initialize)
     (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
@@ -21,6 +21,7 @@
 			   ;; --- Better Editor ---
 			   smooth-scrolling
 			   hungry-delete
+			   projectile
 			   ;;swiper
 			   ;;counsel
 			   smartparens
@@ -28,7 +29,7 @@
 			   evil
 			   neotree
 			   winum
-			   ;; --- Major Mode ---
+			   ;;Major Mode
 			   markdown-mode
 			   lsp-mode
 			   ;;lsp
@@ -40,6 +41,8 @@
 			   use-package
 			   ;;ui
 			   dashboard
+			   page-break-lines
+			   all-the-icons
 			   ;;theme
 			   doom-modeline
 			   base16-theme

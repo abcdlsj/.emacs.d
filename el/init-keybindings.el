@@ -6,6 +6,7 @@
 ;;|___/                             |___/
 ;; 
 ;;设置mark-set
+(global-set-key (kbd "C-<SPC>") 'nil)
 (global-set-key (kbd "M-m") 'set-mark-command)
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")

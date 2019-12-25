@@ -15,15 +15,42 @@
 ;;(doom-themes-treemacs-config)
 ;; Corrects (and improves) org-mode's native fontification.
 ;;(doom-themes-org-config)
-;
+					;
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(toggle-scroll-bar -1)
+(global-hl-line-mode 1)
+(show-paren-mode 1)
+(display-time-mode 1)
+;;
+;;; Scrolling
+
+(setq hscroll-margin 2
+      hscroll-step 1
+      scroll-conservatively 10
+      scroll-margin 0
+      scroll-preserve-screen-position t
+      ;; Reduce cursor lag by a tiny bit by not auto-adjusting `window-vscroll'
+      ;; for tall lines.
+      auto-window-vscroll nil
+      ;; mouse
+      mouse-wheel-scroll-amount '(5 ((shift) . 2))
+      mouse-wheel-progressive-speed nil)  ; don't accelerate scrolling
+(set-face-attribute 'default nil :height 120)
+(set-frame-parameter (selected-frame) 'alpha '(95 100))
+(add-to-list 'default-frame-alist (cons 'alpha '(95 100)))
+;;(setq frame-title-format "%b  [%I] %f  GNU/Emacs")
 (use-package base16-theme
   :config
   (load-theme 'base16-default-dark t))
-;;company-mode
-(global-company-mode 1)
-
 (use-package dashboard
   :config
-  (dashboard-setup-startup-hook))
+  (dashboard-setup-startup-hook)
+  (add-to-list 'dashboard-items '(agenda) t)
+  (setq dashboard-banner-logo-title "ABCDLSJ!!!"
+	dashboard-startup-banner "~/Pictures/MIT_GNU_Scheme_Logo_r.png"
+	dashboard-center-content t
+	dashboard-set-heading-icons t
+	dashboard-set-file-icons t))
 
 (provide 'init-ui)
