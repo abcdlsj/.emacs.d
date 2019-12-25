@@ -6,15 +6,16 @@
 ;;|___/                             |___/
 ;; 
 ;;设置mark-set
-;;(global-set-key (kbd "M-m") 'set-mark-command)
+(global-set-key (kbd "M-m") 'set-mark-command)
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
   "ff" 'find-file
+  ;;"fp" 'open-private-config
+  "fr" 'recentf-open-files
   "b" 'switch-to-buffer
   "kb" 'kill-buffer
   "n" 'neotree-toggle
-  "fr" 'recentf-open-files
   "/" 'xref-find-definitions
   "0" 'winum-select-window-0
   "1" 'winum-select-window-1
