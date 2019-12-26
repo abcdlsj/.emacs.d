@@ -19,16 +19,17 @@
   "fw" 'find-file-other-window
   ;;"fp" 'open-private-config
   "fr" 'recentf-open-files
-  "b" 'switch-to-buffer
+  "sb" 'switch-to-buffer
   "kb" 'kill-buffer
-  "n" 'neotree-toggle
-  "/" 'xref-find-definitions
+  "eb" 'eval-buffer
+  "nt" 'neotree-toggle
+  ;;"/" 'xref-find-definitions
   "0" 'winum-select-window-0
   "1" 'winum-select-window-1
   "2" 'winum-select-window-2
   "3" 'winum-select-window-3
   "4" 'winum-select-window-4
   "X" 'counsel-org-capture
-  "oA" 'counsel-org-agenda)
-
+  "oA" 'counsel-org-agenda
+  "vt" 'vterm-other-window)
 (provide 'init-keybindings)
