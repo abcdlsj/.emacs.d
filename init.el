@@ -6,8 +6,8 @@
 ;;           |___/                         |___/                                   
 
 
-(add-to-list 'load-path "~/.emacs.d/elp/")
-(add-to-list 'load-path "~/.emacs.d/el/")
+(add-to-list 'load-path "~/.emacs.d/core/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 (require 'init-packages)
 (require 'config)

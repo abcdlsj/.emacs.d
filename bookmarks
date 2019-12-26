@@ -4,7 +4,7 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/Arch/home/abcdlsj/Dropbox/org/journal.org")
- (front-context-string . "**** [2019-12-25")
- (rear-context-string . "tx启动比较好 :linux:\n")
- (position . 9310))
+ (front-context-string . "**** [2019-12-26")
+ (rear-context-string . "ga:emacs:build:\n")
+ (position . 9673))
 )
