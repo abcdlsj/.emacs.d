@@ -1,5 +1,0 @@
-/home/abcdlsj/.emacs.d/elpa/vterm-20191218.202/build/CMakeFiles/rebuild_cache.dir
-/home/abcdlsj/.emacs.d/elpa/vterm-20191218.202/build/CMakeFiles/edit_cache.dir
-/home/abcdlsj/.emacs.d/elpa/vterm-20191218.202/build/CMakeFiles/run.dir
-/home/abcdlsj/.emacs.d/elpa/vterm-20191218.202/build/CMakeFiles/vterm-module.dir
-/home/abcdlsj/.emacs.d/elpa/vterm-20191218.202/build/CMakeFiles/libvterm.dir
