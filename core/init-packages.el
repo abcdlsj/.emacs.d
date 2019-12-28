@@ -55,6 +55,8 @@
 			   ;in my GithubPro
 			   ;;apps
 			   telega
+			   ;;workspace
+			   persp-mode
 			   ))
 
 
