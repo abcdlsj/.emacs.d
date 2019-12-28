@@ -8,6 +8,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/core/")
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'load-path "~/.emacs.d/myel")
 
 (require 'init-packages)
 (require 'config)

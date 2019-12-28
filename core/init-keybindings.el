@@ -14,7 +14,6 @@
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
-  "<SPC>" 'message-me 
   "ff" 'find-file
   "fw" 'find-file-other-window
   ;;"fp" 'open-private-config

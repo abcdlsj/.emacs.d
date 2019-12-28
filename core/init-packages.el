@@ -21,10 +21,12 @@
 			   ;; --- Better Editor ---
 			   projectile
 			   ;;swiper
-			   ;;counsel
+			   ivy
+			   counsel
 			   smartparens
 			   popwin
 			   evil
+			   evil-leader
 			   neotree
 			   winum
 			   which-key
@@ -42,6 +44,7 @@
 			   dashboard
 			   page-break-lines
 			   all-the-icons
+			   posframe
 			   ;;theme
 			   doom-modeline
 			   base16-theme
