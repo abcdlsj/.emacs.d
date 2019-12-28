@@ -48,7 +48,7 @@
   (dashboard-setup-startup-hook)
   (add-to-list 'dashboard-items '(agenda) t)
   (setq dashboard-banner-logo-title "ABCDLSJ!!!"
-	dashboard-startup-banner "~/Pictures/MIT_GNU_Scheme_Logo_r.png"
+	dashboard-startup-banner "~/.emacs.d/banner/MIT_GNU_Scheme_Logo_r.png"
 	dashboard-center-content t
 	dashboard-set-heading-icons t
 	dashboard-set-file-icons t
