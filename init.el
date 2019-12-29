@@ -26,3 +26,5 @@
 (require 'init-edit)
 (require 'init-snippet)
 (require 'init-vterm)
+(require 'init-magit)
+(require 'init-apps)

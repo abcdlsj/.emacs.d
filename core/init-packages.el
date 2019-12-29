@@ -51,6 +51,7 @@
 			   base16-theme
 			   hide-mode-line
 			   ;;lang
+			   google-c-style
 			   sly
 			   sly-quicklisp
 			   ;;vterm
@@ -59,6 +60,8 @@
 			   telega
 			   ;;workspace
 			   persp-mode
+			   ;;magit
+			   magit
 			   ))
 
 

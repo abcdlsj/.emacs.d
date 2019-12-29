@@ -22,6 +22,7 @@
   :after evil
   :config
   (evil-collection-init))
+
 (global-set-key (kbd "M-m") 'set-mark-command)
 (global-set-key (kbd "M--") 'shell-command)
 ;;evil-leader

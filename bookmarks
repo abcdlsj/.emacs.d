@@ -5,6 +5,6 @@
 (("org-capture-last-stored"
  (filename . "~/Dropbox/org/journal.org")
  (front-context-string . "**** [2019-12-29")
- (rear-context-string . " 2019-12-29 星期日\n")
- (position . 9851))
+ (rear-context-string . "        :daily:\n")
+ (position . 9928))
 )
