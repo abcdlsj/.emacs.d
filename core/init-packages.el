@@ -48,6 +48,7 @@
 			   ;;theme
 			   doom-modeline
 			   base16-theme
+			   hide-mode-line
 			   ;;lang
 			   sly
 			   sly-quicklisp

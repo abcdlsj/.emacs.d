@@ -5,7 +5,16 @@
 ;;|_|\_\___|\__, |_.__/|_|_| |_|\__,_|_|_| |_|\__, |___/
 ;;|___/                             |___/
 ;; 
-;;设置mark-set
+
+;evil
+(use-package evil
+  :config
+  (evil-mode t))
+
+(use-package evil-leader
+  :config
+  (global-evil-leader-mode 1))
+
 (global-set-key (kbd "M-m") 'set-mark-command)
 ;;open private config
 (defun open-private-dire()

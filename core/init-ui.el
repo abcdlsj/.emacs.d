@@ -22,15 +22,7 @@
 (global-hl-line-mode 1)
 (show-paren-mode 1)
 (display-time-mode 1)
-;;
 ;;; Scrolling
-
-(set-face-attribute 'default nil
-                    :family "Monaco"
-                    :height 110
-                    :weight 'normal
-                    :width 'normal)
-
 (setq hscroll-margin 2
       hscroll-step 1
       scroll-conservatively 10
@@ -49,6 +41,20 @@
 (use-package base16-theme
   :config
   (load-theme 'base16-default-dark t))
+
+(use-package doom-modeline
+  :config
+  (doom-modeline-mode 1))
+
+(use-package all-the-icons)
+
+(use-package hide-mode-line
+  :hook (((completion-list-mode completion-in-region-mode) . hide-mode-line-mode)))
+;;popwin
+(use-package popwin
+  :config
+  (popwin-mode 1))
+
 (use-package dashboard
   :config
   (dashboard-setup-startup-hook)
