@@ -14,6 +14,7 @@
 (require 'init-keybindings)
 (require 'init-org)
 (require 'init-ui)
+(require 'init-const)
 (require 'init-funcs)
 (require 'init-ivy)
 (require 'init-cc)

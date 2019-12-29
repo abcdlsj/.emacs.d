@@ -1,5 +1,3 @@
-(setq make-backup-files nil)
-(setq auto-save-default nil)
 (fset 'yes-or-no-p 'y-or-n-p)
 (use-package recentf
   :ensure nil
