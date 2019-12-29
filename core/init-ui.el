@@ -1,4 +1,3 @@
-
 ;;DOOM
 ;; Global settings (defaults)
 ;;(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
@@ -34,9 +33,10 @@
       ;; mouse
       mouse-wheel-scroll-amount '(5 ((shift) . 2))
       mouse-wheel-progressive-speed nil)  ; don't accelerate scrolling
-(set-face-attribute 'default nil :height 120)
+
 (set-frame-parameter (selected-frame) 'alpha '(95 100))
 (add-to-list 'default-frame-alist (cons 'alpha '(95 100)))
+
 ;;(setq frame-title-format "%b  [%I] %f  GNU/Emacs")
 (use-package base16-theme
   :config
