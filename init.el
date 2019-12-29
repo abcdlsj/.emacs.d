@@ -25,3 +25,4 @@
 (require 'init-company)
 (require 'init-edit)
 (require 'init-snippet)
+(require 'init-vterm)

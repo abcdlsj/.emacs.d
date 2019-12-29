@@ -3,8 +3,8 @@
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
- (filename . "~/Arch/home/abcdlsj/Dropbox/org/task.org")
- (front-context-string . "** TODO emacs添加s")
- (rear-context-string . "2019-12-25 Wed]\n")
- (position . 3049))
+ (filename . "~/Dropbox/org/journal.org")
+ (front-context-string . "**** [2019-12-29")
+ (rear-context-string . " 2019-12-29 星期日\n")
+ (position . 9851))
 )
