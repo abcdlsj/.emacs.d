@@ -7,9 +7,8 @@
 
 
 (add-to-list 'load-path "~/.emacs.d/core/")
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-(add-to-list 'load-path "~/.emacs.d/myel")
-
+(add-to-list 'load-path "~/.emacs.d/myel/")
+(add-to-list 'load-path "~/.emacs.d/gitel/")
 (require 'init-packages)
 (require 'init-keybindings)
 (require 'init-org)

@@ -9,7 +9,8 @@
     (require 'package)
     (package-initialize)
     (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			 ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+			     ("melpa" . "http://elpa.emacs-china.org/melpa/")
+			     ("org" . 	"http://elpa.emacs-china.org/org/"))))
 
 ;; cl - Common Lisp Extension
 (require 'cl)
@@ -22,7 +23,11 @@
 			   projectile
 			   ;;swiper
 			   ivy
-			   counsel
+			   ivy-rich
+			   ;;counsel
+			   counsel-projectile
+			   ;;swiper
+			   all-the-icons-ivy
 			   smartparens
 			   popwin
 			   evil
@@ -58,6 +63,8 @@
 			   ;in my GithubPro
 			   ;;apps
 			   telega
+			   elfeed
+			   elfeed-org
 			   ;;workspace
 			   persp-mode
 			   ;;magit

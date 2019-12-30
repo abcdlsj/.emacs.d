@@ -1,8 +1,9 @@
 (use-package org
-  :init
-  (setq org-directory nil)
-  (setq org-capture-templates nil)
+  ;;:init
+  ;;(setq org-directory nil)
+  ;;(setq org-capture-templates nil)
   :config
+  (setq org-directory "~/Dropbox/org/")
   (setq org-agenda-files (list "~/Dropbox/org/"))
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
   (setq org-capture-templates

@@ -8,14 +8,27 @@
 (setq make-backup-files nil)               ; Forbide to make backup files
 (setq auto-save-default nil)               ; Disable auto save
 (setq-default major-mode 'text-mode)
+
 (use-package winum
   :config
   (winum-mode 1))
+
 ;;neotree
 (use-package neotree)
+
 ;;which-key
 (use-package which-key
   :config
   (which-key-mode))
+
+(electric-pair-mode t)
+(setq electric-pair-pairs '(
+                            (?\" . ?\")
+                            (?\` . ?\`)
+                            (?\( . ?\))
+                            (?\{ . ?\})
+                            ))
+(setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit)
+(show-paren-mode t)
 
 (provide 'init-edit)

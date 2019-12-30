@@ -4,7 +4,7 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/Dropbox/org/journal.org")
- (front-context-string . "**** [2019-12-29")
- (rear-context-string . "        :daily:\n")
- (position . 9928))
+ (front-context-string . "**** [2019-12-30")
+ (rear-context-string . " 2019-12-30 星期一\n")
+ (position . 10030))
 )

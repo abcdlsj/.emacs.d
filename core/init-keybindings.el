@@ -31,7 +31,7 @@
   "ff" 'find-file
   "fw" 'find-file-other-window
   ;;"fp" 'open-private-config
-  "fr" 'recentf-open-files
+  "fr" 'counsel-recentf
   "bs" 'switch-to-buffer
   "bk" 'kill-buffer
   "be" 'eval-buffer
