@@ -21,9 +21,11 @@
 			   company
 			   ;; --- Better Editor ---
 			   projectile
+			   highlight-indent-guides
 			   ;;swiper
 			   ivy
 			   ivy-rich
+			   ivy-posframe
 			   ;;counsel
 			   counsel-projectile
 			   ;;swiper
@@ -57,14 +59,15 @@
 			   hide-mode-line
 			   ;;lang
 			   google-c-style
-			   sly
-			   sly-quicklisp
+			   ;;sly
+			   ;;sly-quicklisp
 			   ;;vterm
 			   ;in my GithubPro
 			   ;;apps
 			   telega
 			   elfeed
 			   elfeed-org
+			   ;;mingus
 			   ;;workspace
 			   persp-mode
 			   ;;magit

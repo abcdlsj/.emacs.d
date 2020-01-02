@@ -25,5 +25,13 @@
 (use-package all-the-icons-ivy
   :config
   (all-the-icons-ivy-setup))
-
+(use-package ivy-posframe
+  :after ivy
+  :config
+  (setq ivy-posframe-display-functions-alist
+	'((swiper          . ivy-posframe-display-at-window-center)
+	  (complete-symbol . ivy-posframe-display-at-point)
+	  (counsel-M-x     . ivy-posframe-display-at-window-center)
+	  (t               . ivy-posframe-display-at-frame-center)))
+  (ivy-posframe-mode 1))
 (provide 'init-ivy)

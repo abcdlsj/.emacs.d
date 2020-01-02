@@ -5,7 +5,6 @@
 ;;|_| |_| |_|\__, |  \___\___/|_| |_|_| |_|\__, |\__,_|_|  \__,_|\__|_|\___/|_| |_|
 ;;           |___/                         |___/
 
-
 (add-to-list 'load-path "~/.emacs.d/core/")
 (add-to-list 'load-path "~/.emacs.d/myel/")
 (add-to-list 'load-path "~/.emacs.d/gitel/")
@@ -27,3 +26,4 @@
 (require 'init-vterm)
 (require 'init-magit)
 (require 'init-apps)
+(require 'init-lisp)

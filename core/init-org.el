@@ -3,6 +3,9 @@
   ;;(setq org-directory nil)
   ;;(setq org-capture-templates nil)
   :config
+  ;;org babel
+  (setq org-babel-lisp-eval-fn "sly-eval")
+  ;;org-agenda
   (setq org-directory "~/Dropbox/org/")
   (setq org-agenda-files (list "~/Dropbox/org/"))
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
@@ -21,4 +24,9 @@
           (file+headline "~/Dropbox/org/notes.org" "NOTES")
           "* %U - %^{heading} %^g\n %?\n"))))
 
+(org-babel-do-load-languages 'org-babel-load-languages '(
+							 (scheme . t)
+							 (lisp . t)
+							 ))
+(setq org-babel-lisp-eval-fn "sly-eval")
 (provide 'init-org)
