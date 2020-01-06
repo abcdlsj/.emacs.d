@@ -5,6 +5,6 @@
 (("org-capture-last-stored"
  (filename . "~/Dropbox/org/journal.org")
  (front-context-string . "**** [2020-01-06")
- (rear-context-string . " 2020-01-06 星期一\n")
- (position . 10922))
+ (rear-context-string . "\n     #+END_SRC\n")
+ (position . 11152))
 )

@@ -17,6 +17,8 @@
 
 ;; Add Packages
 (defvar abcdlsj/packages '(
+			   ;;base
+			   request
 			   ;; --- Auto-completion ---
 			   company
 			   ;; --- Better Editor ---
