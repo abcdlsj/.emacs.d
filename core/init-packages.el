@@ -72,6 +72,8 @@
 			   persp-mode
 			   ;;magit
 			   magit
+			   ;;read
+			   nov
 			   ))
 
 
