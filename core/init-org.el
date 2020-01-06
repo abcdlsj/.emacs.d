@@ -27,6 +27,7 @@
 (org-babel-do-load-languages 'org-babel-load-languages '(
 							 (scheme . t)
 							 (lisp . t)
+							 (shell . t)
 							 ))
-(setq org-babel-lisp-eval-fn "sly-eval")
+
 (provide 'init-org)

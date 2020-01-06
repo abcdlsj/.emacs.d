@@ -32,6 +32,7 @@
   "fw" 'find-file-other-window
   ;;"fp" 'open-private-config
   "fr" 'counsel-recentf
+  "fd" 'delete-file
   "bs" 'switch-to-buffer
   "bk" 'kill-buffer
   "be" 'eval-buffer

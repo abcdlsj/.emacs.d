@@ -20,5 +20,4 @@
   :config
   (setq rmh-elfeed-org-files (list "~/Dropbox/org/elfeed.org"))
   (elfeed-org))
-
 (provide 'init-apps)

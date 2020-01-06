@@ -18,8 +18,9 @@
            return (set-fontset-font t 'unicode font nil 'prepend))
 
   ;; Specify font for Chinese characters
-  (cl-loop for font in '("WenQuanYi Micro Hei")
+  (cl-loop for font in '("sarasa-extralight" "WenQuanYi MicroHei")
            when (font-installed-p font)
            return (set-fontset-font t '(#x4e00 . #x9fff) font)))
+
 
 (provide 'init-fonts)
