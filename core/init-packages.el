@@ -73,7 +73,7 @@
 			   ;;magit
 			   magit
 			   ;;read
-			   nov
+			   ;;nov
 			   ))
 
 
