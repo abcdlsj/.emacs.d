@@ -56,6 +56,7 @@
 			   all-the-icons
 			   posframe
 			   ;;theme
+			   doom-themes
 			   doom-modeline
 			   base16-theme
 			   hide-mode-line
@@ -66,6 +67,7 @@
 			   ;;vterm
 			   ;in my GithubPro
 			   ;;apps
+			   gist
 			   telega
 			   elfeed
 			   elfeed-org

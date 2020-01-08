@@ -25,6 +25,7 @@
 
 (global-set-key (kbd "M-m") 'set-mark-command)
 (global-set-key (kbd "M--") 'shell-command)
+(global-set-key (kbd "C-c e") 'company-english-helper-search)
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
@@ -45,6 +46,10 @@
   "4" 'winum-select-window-4
   "oc" 'counsel-org-capture
   "oa" 'org-agenda
-  "vt" 'vterm-other-window)
+  "vt" 'vterm-other-window
+  ;;company
+  ;;ivy
+  "is" 'ivy-baidu-fanyi-suggest
+  )
 
 (provide 'init-keybindings)

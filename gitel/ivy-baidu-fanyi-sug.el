@@ -1,7 +1,6 @@
 (require 'request)
 (require 'ivy)
 
-
 (defun ivy-baidu-fanyi-suggest-fetch (keyword)
   (let* ((json-array-type 'list)
          (fanyi (request
@@ -71,3 +70,5 @@
               (format "https://fanyi.baidu.com/#%s/%s/%s"
                       from to (url-hexify-string query)))))
     "Browse URL")))
+
+(provide 'ivy-baidu-fanyi-sug)

@@ -25,5 +25,11 @@
 ;(use-package nov
 ;  :config
 ;  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
+;;company-english-helper
+(require 'company-english-helper)
+
+(require 'ivy-baidu-fanyi-sug)
+
+;;github gist
 
 (provide 'init-apps)

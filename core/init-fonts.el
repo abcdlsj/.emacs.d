@@ -4,7 +4,7 @@
 
 (when (display-graphic-p)
   ;; Set default font
-  (cl-loop for font in '("Monaco" "sarasa-extralight")
+  (cl-loop for font in '("Monaco")
            when (font-installed-p font)
            return (set-face-attribute 'default nil
                                       :font font
