@@ -1,4 +1,13 @@
 (fset 'yes-or-no-p 'y-or-n-p)
+;; after copy Ctrl+c in Linux X11, you can paste by `yank' in emacs
+(setq x-select-enable-clipboard t)
+
+;; after mouse selection in X11, you can paste by `yank' in emacs
+(setq x-select-enable-primary t)
+
+(global-hl-line-mode t)
+(show-paren-mode t)
+
 (use-package recentf
   :ensure nil
   :hook (after-init . recentf-mode)
@@ -47,5 +56,8 @@
     "Show trailing spaces and delete on saving."
     (setq show-trailing-whitespace t)
     (add-hook 'before-save-hook #'delete-trailing-whitespace nil t)))
+
+(setq user-full-name "abcdlsj")
+(setq user-mail-address "lisongjianshuai@gmail.com")
 
 (provide 'init-custom)

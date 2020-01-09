@@ -28,6 +28,22 @@
 							 (scheme . t)
 							 (lisp . t)
 							 (shell . t)
+							 (C . t)
 							 ))
+
+
+(use-package org-page
+  :load-path "~/.emacs.d/gitel/org-page/"
+  :init
+  (setq op/repository-directory "~/GithubPro/abcdlsj.github.io")
+  (setq op/site-domain "https://abcdlsj.github.io")
+  (setq op/personal-github-link "https://github.com/abcdlsj") ; if you want to show a personal github link
+  (setq op/site-main-title "ABCDLSJ'S WORLD")
+  (setq op/site-sub-title "=========>>享受专注")
+  (setq op/personal-disqus-shortname "abcdlsj")
+  (setq op/repository-org-branch "source")
+  (setq op/repository-html-branch "master")
+  (setq op/theme 'mdo))
+
 
 (provide 'init-org)

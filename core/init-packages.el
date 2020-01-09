@@ -8,9 +8,9 @@
 (when (>= emacs-major-version 25)
     (require 'package)
     (package-initialize)
-    (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-			     ("melpa" . "http://elpa.emacs-china.org/melpa/")
-			     ("org" . 	"http://elpa.emacs-china.org/org/"))))
+    (setq package-archives '(("gnu"   . "~/media/emacs/gnu")
+			     ("melpa" . "~/media/emacs/melpa/")
+			     ("org" . 	"~/media/emacs/org/"))))
 
 ;; cl - Common Lisp Extension
 (require 'cl)
@@ -48,9 +48,11 @@
 			   lsp-ui
 			   ccls
 			   yasnippet
+			   yasnippet-snippets
 			   ;;use-package
 			   use-package
 			   ;;ui
+			   ;;perspeen
 			   dashboard
 			   page-break-lines
 			   all-the-icons
@@ -58,19 +60,23 @@
 			   ;;theme
 			   doom-themes
 			   doom-modeline
+			   solaire-mode
 			   base16-theme
 			   hide-mode-line
 			   ;;lang
 			   google-c-style
-			   ;;sly
-			   ;;sly-quicklisp
+			   sly
+			   sly-quicklisp
+			   racket-mode
+			   geiser
 			   ;;vterm
-			   ;in my GithubPro
 			   ;;apps
 			   gist
 			   telega
 			   elfeed
 			   elfeed-org
+			   ;;org
+			   ;;org-page
 			   ;;mingus
 			   ;;workspace
 			   persp-mode
@@ -96,5 +102,4 @@
     (when (not (package-installed-p pkg))
       (package-install pkg))))
 
-;; 文件末尾
 (provide 'init-packages)

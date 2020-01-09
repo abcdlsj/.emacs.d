@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: org-babel-sicp
+# key: <sicp
+# --
+
+#+BEGIN_SRC scheme :sicp racket
+$0
+#+END_SRC

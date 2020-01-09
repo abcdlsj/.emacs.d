@@ -1,26 +1,6 @@
-;;DOOM
-;; Global settings (defaults)
-;;(setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-;;      doom-themes-enable-italic t) ; if nil, italics is universally disabled
-;; Load the theme (doom-one, doom-molokai, etc); keep in mind that each theme
-;; may have their own settings.
-;;(load-theme 'doom-one t)
-;; Enable flashing mode-line on errors
-;;(doom-themes-visual-bell-config)
-;; Enable custom neotree theme (all-the-icons must be installed!)
-;;(doom-themes-neotree-config)
-;; or for treemacs users
-;;(setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-;;(doom-themes-treemacs-config)
-;; Corrects (and improves) org-mode's native fontification.
-;;(doom-themes-org-config)
-					;
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(toggle-scroll-bar -1)
-(global-hl-line-mode 1)
-(show-paren-mode 1)
-(display-time-mode 1)
+(global-hl-line-mode t)
+(show-paren-mode t)
+(display-time-mode t)
 ;;; Scrolling
 (setq hscroll-margin 2
       hscroll-step 1
@@ -37,7 +17,7 @@
 (set-frame-parameter (selected-frame) 'alpha '(95 100))
 (add-to-list 'default-frame-alist (cons 'alpha '(95 100)))
 
-;;(setq frame-title-format "%b  [%I] %f  GNU/Emacs")
+(setq frame-title-format "%b  [%I] %f  GNU/Emacs")
 ;;(use-package base16-theme
 ;;  :config
 ;;  (load-theme 'base16-default-dark t))
@@ -47,6 +27,8 @@
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  ;;(load-theme 'doom-tomorrow-night nil)
+  ;(load-theme 'doom-vibrant t)
   (load-theme 'doom-one t)
 
   ;; Enable flashing mode-line on errors
@@ -55,17 +37,22 @@
   ;; Enable custom neotree theme (all-the-icons must be installed!)
   (doom-themes-neotree-config)
   ;; or for treemacs users
-  (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  (doom-themes-treemacs-config)
+  ;;(setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+  ;;(doom-themes-treemacs-config)
 
   ;; Corrects (and improves) org-mode's native fontification.
   (doom-themes-org-config))
 
 (use-package doom-modeline
   :config
-  (doom-modeline-mode 1))
+  (doom-modeline-mode 1)
+  (setq doom-modeline-height 0.5)
+  (set-face-attribute 'mode-line nil :height 110)
+  (set-face-attribute 'mode-line-inactive nil :height 110))
 
-(use-package all-the-icons)
+(use-package all-the-icons
+  :config
+  (setq inhibit-compacting-font-caches t))
 
 (use-package hide-mode-line
   :hook (((completion-list-mode completion-in-region-mode) . hide-mode-line-mode)))
@@ -87,5 +74,31 @@
 			  (bookmarks . 5)
 			  (projects . 5)
 			  (agenda . 5))))
+
+
+;;font
+(defun font-installed-p (font-name)
+  "Check if font with FONT-NAME is available."
+  (find-font (font-spec :name font-name)))
+
+(when (display-graphic-p)
+  ;; Set default font
+  (cl-loop for font in '("sarasa-extralight" "Monaco")
+           when (font-installed-p font)
+           return (set-face-attribute 'default nil
+                                      :font font
+                                      :height (cond (sys/mac-x-p 130)
+                                                    (sys/win32p 110)
+                                                    (t 120))))
+
+  ;; Specify font for all unicode characters
+  (cl-loop for font in '("Symbola" "Apple Symbols" "Symbol" "icons-in-terminal")
+           when (font-installed-p font)
+           return (set-fontset-font t 'unicode font nil 'prepend))
+
+  ;; Specify font for Chinese characters
+  (cl-loop for font in '("sarasa-extralight" "WenQuanYi MicroHei")
+           when (font-installed-p font)
+           return (set-fontset-font t '(#x4e00 . #x9fff) font)))
 
 (provide 'init-ui)

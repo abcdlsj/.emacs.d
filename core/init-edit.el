@@ -29,9 +29,10 @@
                             (?\{ . ?\})
                             ))
 (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit)
-(show-paren-mode t)
+
 (use-package highlight-indent-guides
   :config
   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
   (setq highlight-indent-guides-method 'character))
+
 (provide 'init-edit)

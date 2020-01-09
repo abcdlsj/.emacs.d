@@ -29,7 +29,7 @@
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
-  "ff" 'find-file
+  "ff" 'counsel-find-file
   "fw" 'find-file-other-window
   ;;"fp" 'open-private-config
   "fr" 'counsel-recentf
