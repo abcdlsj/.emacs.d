@@ -24,14 +24,16 @@
 			   ;; --- Better Editor ---
 			   projectile
 			   highlight-indent-guides
+			   expand-region
 			   ;;swiper
 			   ivy
 			   ivy-rich
 			   ivy-posframe
+			   ivy-xref
 			   ;;counsel
 			   counsel-projectile
 			   ;;swiper
-			   all-the-icons-ivy
+			   ;all-the-icons-ivy
 			   smartparens
 			   popwin
 			   evil
@@ -75,8 +77,9 @@
 			   telega
 			   elfeed
 			   elfeed-org
-			   ;;org
-			   ;;org-page
+			   ;;blog
+			   ;org-page
+			   ox-hugo
 			   ;;mingus
 			   ;;workspace
 			   persp-mode

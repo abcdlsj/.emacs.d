@@ -1,23 +1,3 @@
-(global-hl-line-mode t)
-(show-paren-mode t)
-(display-time-mode t)
-;;; Scrolling
-(setq hscroll-margin 2
-      hscroll-step 1
-      scroll-conservatively 10
-      scroll-margin 0
-      scroll-preserve-screen-position t
-      ;; Reduce cursor lag by a tiny bit by not auto-adjusting `window-vscroll'
-      ;; for tall lines.
-      auto-window-vscroll nil
-      ;; mouse
-      mouse-wheel-scroll-amount '(5 ((shift) . 2))
-      mouse-wheel-progressive-speed nil)  ; don't accelerate scrolling
-
-(set-frame-parameter (selected-frame) 'alpha '(95 100))
-(add-to-list 'default-frame-alist (cons 'alpha '(95 100)))
-
-(setq frame-title-format "%b  [%I] %f  GNU/Emacs")
 ;;(use-package base16-theme
 ;;  :config
 ;;  (load-theme 'base16-default-dark t))
@@ -41,7 +21,8 @@
   ;;(doom-themes-treemacs-config)
 
   ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config))
+  ;(doom-themes-org-config)
+  )
 
 (use-package doom-modeline
   :config
@@ -75,30 +56,9 @@
 			  (projects . 5)
 			  (agenda . 5))))
 
+(if (and (fboundp 'daemonp) (daemonp))
+    (add-hook 'after-make-frame-functions #'+my|init-font)
+  (+my/better-font))
 
-;;font
-(defun font-installed-p (font-name)
-  "Check if font with FONT-NAME is available."
-  (find-font (font-spec :name font-name)))
-
-(when (display-graphic-p)
-  ;; Set default font
-  (cl-loop for font in '("sarasa-extralight" "Monaco")
-           when (font-installed-p font)
-           return (set-face-attribute 'default nil
-                                      :font font
-                                      :height (cond (sys/mac-x-p 130)
-                                                    (sys/win32p 110)
-                                                    (t 120))))
-
-  ;; Specify font for all unicode characters
-  (cl-loop for font in '("Symbola" "Apple Symbols" "Symbol" "icons-in-terminal")
-           when (font-installed-p font)
-           return (set-fontset-font t 'unicode font nil 'prepend))
-
-  ;; Specify font for Chinese characters
-  (cl-loop for font in '("sarasa-extralight" "WenQuanYi MicroHei")
-           when (font-installed-p font)
-           return (set-fontset-font t '(#x4e00 . #x9fff) font)))
 
 (provide 'init-ui)

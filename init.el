@@ -8,12 +8,12 @@
 (add-to-list 'load-path "~/.emacs.d/core/")
 (add-to-list 'load-path "~/.emacs.d/myel/")
 (add-to-list 'load-path "~/.emacs.d/gitel/")
+(setq custom-file "~/.emacs.d/core/init-custom.el")
 
 (require 'init-packages)
 (require 'init-const)
 (require 'init-funcs)
 (require 'init-custom)
-(require 'init-org)
 (require 'init-ui)
 (require 'init-ivy)
 (require 'init-cc)
@@ -24,3 +24,4 @@
 (require 'init-awesome)
 (require 'init-lisp)
 (require 'init-keybindings)
+(require 'init-org)
