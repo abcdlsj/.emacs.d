@@ -3,11 +3,14 @@
 # key: hugo
 # --
 #+HUGO_BASE_DIR: ~/GithubPro/abcdlsj.github.io/
+#+HUGO_SECTION: post
 #+TITLE: $1
 #+DATE: `(format-time-string "%Y-%m-%d")`
 #+HUGO_AUTO_SET_LASTMOD: t
 #+HUGO_TAGS: $2
 #+HUGO_CATEGORIES: $3
 #+HUGO_DRAFT: false
+#+AUTHOR:
+#+HUGO_CUSTOM_FONT_MATTER: :author "abcdlsj"
 
 $0

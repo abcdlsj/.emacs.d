@@ -39,6 +39,7 @@
 			   evil
 			   evil-leader
 			   evil-collection
+			   evil-nerd-commenter
 			   neotree
 			   winum
 			   which-key
@@ -59,6 +60,7 @@
 			   page-break-lines
 			   all-the-icons
 			   posframe
+			   cnfonts
 			   ;;theme
 			   doom-themes
 			   doom-modeline

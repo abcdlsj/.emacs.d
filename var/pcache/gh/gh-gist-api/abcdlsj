@@ -1,8 +1,0 @@
-;; Object gh/gh-gist-api/abcdlsj
-;; EIEIO PERSISTENT OBJECT
-(gh-cache "gh/gh-gist-api/abcdlsj"
-  :file "abcdlsj"
-  :object-name "gh/gh-gist-api/abcdlsj"
-  :version "26.3/0.4/gh-4"
-  :entries #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (("/users/abcdlsj/gists" "GET" "55b421b9875ed128f478d78ded303a5db18d3a30") (gh-cache-entry "gh-cache-entry" :timestamp 1578460341.064449 :etag "\"989aed5b879419b9796147a1b183adde\"")))
-  :timestamp 1578461179.6169882)
