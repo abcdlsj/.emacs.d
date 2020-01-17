@@ -7,7 +7,8 @@
 (global-hl-line-mode t)
 (show-paren-mode t)
 (display-time-mode t)
-
+(setq inhibit-startup-screen t)
+(setq org-startup-indented t)
 ;;for emacs-27 early-init
 (when (<= emacs-major-version 27)
   (menu-bar-mode -1)
@@ -86,15 +87,3 @@
 (setq user-mail-address "lisongjianshuai@gmail.com")
 
 (provide 'init-custom)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-startup-indented t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )

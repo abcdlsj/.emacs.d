@@ -11,7 +11,6 @@
     (setq package-archives '(("gnu"   . "~/media/emacs/gnu")
 			     ("melpa" . "~/media/emacs/melpa/")
 			     ("org" . 	"~/media/emacs/org/"))))
-
 ;; cl - Common Lisp Extension
 (require 'cl)
 
@@ -22,6 +21,7 @@
 			   ;; --- Auto-completion ---
 			   company
 			   ;; --- Better Editor ---
+			   ;;pyim
 			   projectile
 			   highlight-indent-guides
 			   expand-region
@@ -43,6 +43,8 @@
 			   neotree
 			   winum
 			   which-key
+			   ;;key
+			   hydra
 			   ;;Major Mode
 			   markdown-mode
 			   lsp-mode
@@ -50,6 +52,7 @@
 			   company-lsp
 			   lsp-ui
 			   ccls
+			   lsp-python-ms
 			   yasnippet
 			   yasnippet-snippets
 			   ;;use-package
@@ -74,11 +77,12 @@
 			   racket-mode
 			   geiser
 			   ;;vterm
+			   eshell-up
 			   ;;apps
 			   gist
 			   telega
-			   elfeed
-			   elfeed-org
+			   ;elfeed
+			   ;elfeed-org
 			   ;;blog
 			   ;org-page
 			   ox-hugo
@@ -89,9 +93,8 @@
 			   magit
 			   ;;read
 			   ;;nov
-			   ))
-
-
+			   benchmark-init
+))
 ;; ...
 (setq package-selected-packages abcdlsj/packages)
 

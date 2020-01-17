@@ -4,9 +4,8 @@
   (telega-mode-line-mode 1))
 
 ;;vterm
-(use-package vterm
-  :load-path "~/.emacs.d/gitel/emacs-libvterm")
-
+;; (use-package vterm
+;;   :load-path "~/.emacs.d/gitel/emacs-libvterm")
 
 ;;sdcv
 (use-package sdcv
@@ -16,14 +15,6 @@
   (setq sdcv-dictionary-data-dir "~/.stardict/dic/") ;setup directory of stardict dictionary
   (setq sdcv-dictionary-simple-list '())
   (setq sdcv-dictionary-complete-list '()))
-
-;;elfeed
-(use-package elfeed)
-(use-package elfeed-org
-  :after elfeed
-  :config
-  (setq rmh-elfeed-org-files (list "~/Dropbox/org/elfeed.org"))
-  (elfeed-org))
 
 ;;nov
 ;(use-package nov
@@ -48,6 +39,16 @@
   (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
   (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
   (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key take_photo "p" eaf-camera-keybinding))
+  (eaf-bind-key take_photo "p" eaf-camera-keybinding)
+  (setq eaf-grip-token "1f9f6b249d2a08255b89875aebc025fd596805c8")
+  (eaf-setq eaf-browser-default-zoom  "1.25"))
+
+(when (display-graphic-p)
+  (use-package awesome-tab
+    :load-path "~/.emacs.d/gitel/awesome-tab/"
+    :config
+    (awesome-tab-mode t)))
+
+(require 'aweshell)
 
 (provide 'init-awesome)

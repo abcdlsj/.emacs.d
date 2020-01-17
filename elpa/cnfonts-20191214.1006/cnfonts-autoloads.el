@@ -16,16 +16,24 @@
 \(fn &optional FRAME)" t nil)
 
 (autoload 'cnfonts-reset-fontsize "cnfonts" "\
-使用 `cnfonts-default-step' 对应的 step 来设置字体." t nil)
+使用 `cnfonts-default-step' 对应的 step 来设置字体.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-decrease-fontsize "cnfonts" "\
-Cnfonts 减小字体." t nil)
+Cnfonts 减小字体.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-increase-fontsize "cnfonts" "\
-Cnfonts 增大字体." t nil)
+Cnfonts 增大字体.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-switch-profile "cnfonts" "\
-切换 cnfonts profile." t nil)
+切换 cnfonts profile.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-next-profile "cnfonts" "\
 选择下一个 profile 中当前 STEP 对应的字体设置.
@@ -33,31 +41,47 @@ Cnfonts 增大字体." t nil)
 \(fn &optional STEP)" t nil)
 
 (autoload 'cnfonts-edit-profile "cnfonts" "\
-编辑当前 cnfonts profile." t nil)
+编辑当前 cnfonts profile.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-edit-profile-without-ui "cnfonts" "\
-编辑当前 cnfonts profile, 不使用 ‘cnfonts-ui’ 组件." t nil)
+编辑当前 cnfonts profile, 不使用 ‘cnfonts-ui’ 组件.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-regenerate-profile "cnfonts" "\
-重新生成当前 profile." t nil)
+重新生成当前 profile.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-insert-fonts-configure "cnfonts" "\
-在光标处，插入一个 elisp 片断，这个 elisp 片断可以用来配置中文和英文字体." t nil)
+在光标处，插入一个 elisp 片断，这个 elisp 片断可以用来配置中文和英文字体.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-insert-fontname "cnfonts" "\
-Select a valid font name, and insert at point." t nil)
+Select a valid font name, and insert at point.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-enable "cnfonts" "\
-运行这个函数，可以让 Emacs 启动的时候就激活 cnfonts." t nil)
+运行这个函数，可以让 Emacs 启动的时候就激活 cnfonts.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-disable "cnfonts" "\
-清除与 cnfonts 相关的 hook 设定." t nil)
+清除与 cnfonts 相关的 hook 设定.
+
+\(fn)" t nil)
 
 (autoload 'cnfonts-set-spacemacs-fallback-fonts "cnfonts" "\
 显示 Spacemace mode-line 上面有一些 Unicode 字符.
 这些字符需要专门的字体来显示，spacemacs 将这些字体的名字内置在
 `spacemacs/set-default-font' 的代码中。运行这个函数后，cnfonts
-将使用同样的字体来显示这些 Unicode 字符。" t nil)
+将使用同样的字体来显示这些 Unicode 字符。
+
+\(fn)" t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "cnfonts" '("cnfonts-")))
 

@@ -1,0 +1,29 @@
+cc helloworld.cpp 
+g++ helloworld.cpp -o helloworld
+./helloworld 
+cc L1-002.cpp 
+c
+gcc L1-002.cpp -o L1-002
+c
+g++ uva_156.cpp -o uva_156
+./uva_156.cpp
+./uva_156
+ls
+./test.py
+chmod +x test.py 
+./test.py
+g++ AB1.cpp -o AB1
+./AB1 
+c
+alias c="clear"
+a
+c
+c
+c
+c
+g++ AB2.cpp -o AB2
+./AB2
+g++ AB3.cpp -o AB3
+./AB3
+g++ AB3.cpp -o AB3
+./AB3

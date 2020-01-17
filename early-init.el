@@ -15,3 +15,10 @@
 (push '(vertical-scroll-bars) default-frame-alist)
 (when (eq system-type 'darwin)
   (push '(ns-transparent-titlebar . t) default-frame-alist))
+
+
+(let (
+      ;; 加载的时候临时增大`gc-cons-threshold'以加速启动速度。
+      (gc-cons-threshold most-positive-fixnum)
+      ;; 清空避免加载远程文件的时候分析文件。
+      (file-name-handler-alist nil)))

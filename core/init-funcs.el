@@ -30,4 +30,37 @@ will also be the width of all other printable characters."
     (if (display-graphic-p)
         (+my/better-font))))
 
+(defun my/name-of-buffers (n)
+  "Return the names of the first N buffers from `buffer-list'."
+  (let ((bns
+         (delq nil
+               (mapcar
+                (lambda (b)
+                  (unless (string-match "^ " (setq b (buffer-name b)))
+                    b))
+                (buffer-list)))))
+    (subseq bns 1 (min (1+ n) (length bns)))))
+
+;; Given ("a", "b", "c"), return "1. a, 2. b, 3. c".
+(defun my/number-names (list)
+  "Enumerate and concatenate LIST."
+  (let ((i 0))
+    (mapconcat
+     (lambda (x)
+       (format "%d. %s" (cl-incf i) x))
+     list
+     ", ")))
+
+(defvar my/last-buffers nil)
+
+(defun my/switch-to-buffer (arg)
+  (interactive "p")
+  (switch-to-buffer
+   (nth (1- arg) my/last-buffers)))
+
+(defun my/switch-to-buffer-other-window (arg)
+  (interactive "p")
+  (switch-to-buffer-other-window
+   (nth (1- arg) my/last-buffers)))
+
 (provide 'init-funcs)

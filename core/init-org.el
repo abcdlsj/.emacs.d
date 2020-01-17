@@ -25,16 +25,15 @@
           "* %U - %^{heading} %^g\n %?\n")))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(
-							   (scheme . t)
-							   (lisp . t)
-							   (shell . t)
-							   (C . t)
-							   ))
+                                                           (scheme . t)
+                                                           (lisp . t)
+                                                           (shell . t)
+                                                           (C . t)
+                                                           ))
   ;;org-view
   (setq org-indent-mode 1)
   (setq org-log-done 'time)
   )
-
 (use-package ox-hugo
   :after ox)
 (with-eval-after-load 'org-capture
@@ -52,8 +51,8 @@ See `org-capture-templates' for more information."
                    "%?\n")          ;Place the cursor here finally
                  "\n")))
     (add-to-list 'org-capture-templates
-		 '("h" "Hugo post Blog" entry
-		   (file "~/Dropbox/org/blog.org")
-		   (function org-hugo-new-subtree-post-capture-template))))
+                 '("h" "Hugo post Blog" entry
+                   (file "~/Dropbox/org/blog.org")
+                   (function org-hugo-new-subtree-post-capture-template))))
 
 (provide 'init-org)

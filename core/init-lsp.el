@@ -5,6 +5,7 @@
   :commands lsp)
 (use-package lsp-ui
   :config
+  (setq lsp-ui-doc-mode t)
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
   :commands lsp-ui-mode)
 
@@ -12,11 +13,17 @@
   :config
   (push 'company-lsp company-backends)
   :commands company-lsp)
+
 (use-package ccls
+  :defines projectile-project-root-files-top-down-recurring
+  :hook ((c-mode c++-mode objc-mode cuda-mode) . (lambda () (require 'ccls)))
   :config
-  (setq ccls-executable "/usr/bin/ccls")
-  :hook ((c-mode c++-mode objc-mode cuda-mode) .
-	 (lambda () (require 'ccls) (lsp))))
+  (setq ccls-executable "usr/local/bin/ccls")
+  (with-eval-after-load 'projectile
+    (setq projectile-project-root-files-top-down-recurring
+	  (append '("compile_commands.json"
+		    ".ccls")
+		  projectile-project-root-files-top-down-recurring))))
 
 (use-package ivy-xref
   :init
@@ -28,5 +35,10 @@
   ;; commands other than xref-find-definitions (e.g. project-find-regexp)
   ;; as well
   (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
+
+(use-package lsp-python-ms
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-python-ms)
+                          (lsp))))  ; or lsp-deferred
 
 (provide 'init-lsp)

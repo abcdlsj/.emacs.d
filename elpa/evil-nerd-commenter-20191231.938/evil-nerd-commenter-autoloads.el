@@ -29,10 +29,14 @@ For example, you can use either \\<M-53>\\[evilnc-quick-comment-or-uncomment-to-
 \(fn &optional LAST-DIGITS)" t nil)
 
 (autoload 'evilnc-toggle-invert-comment-line-by-line "evil-nerd-commenter" "\
-Please note this command may NOT work on complex evil text objects." t nil)
+Please note this command may NOT work on complex evil text objects.
+
+\(fn)" t nil)
 
 (autoload 'evilnc-toggle-comment-empty-lines "evil-nerd-commenter" "\
-Toggle the flag which decide wether empty line will be commented." t nil)
+Toggle the flag which decide wether empty line will be commented.
+
+\(fn)" t nil)
 
 (autoload 'evilnc-comment-or-uncomment-lines "evil-nerd-commenter" "\
 Comment or uncomment NUM lines.  NUM could be negative.
@@ -84,7 +88,9 @@ Kill from the current line to the LINENUM line.  For non-evil user only.
 \(fn &optional LINENUM)" t nil)
 
 (autoload 'evilnc-version "evil-nerd-commenter" "\
-The version number." t nil)
+The version number.
+
+\(fn)" t nil)
 
 (autoload 'evilnc-default-hotkeys "evil-nerd-commenter" "\
 Setup the key bindings of evil-nerd-comment.
@@ -94,7 +100,9 @@ if NO-EMACS-KEYBINDINGS is t, we don't define keybindings in EMACS mode.
 \(fn &optional NO-EVIL-KEYBINDINGS NO-EMACS-KEYBINDINGS)" t nil)
 
 (autoload 'evilnc-imenu-create-index-function "evil-nerd-commenter" "\
-Imenu function find comments." nil nil)
+Imenu function find comments.
+
+\(fn)" nil nil)
 
 (autoload 'evilnc-comment-or-uncomment-html-tag "evil-nerd-commenter" "\
 Comment or uncomment html tag(s).
@@ -103,7 +111,9 @@ In this case, only one tag is selected.
 If users manually select region, the region could cross multiple sibling tags
 and automatically expands to include complete tags.
 Users can press \"v\" key in evil mode to select multiple tags.
-This command is not dependent on any 3rd party package." t nil)
+This command is not dependent on any 3rd party package.
+
+\(fn)" t nil)
 
 (autoload 'evilnc-comment-or-uncomment-html-paragraphs "evil-nerd-commenter" "\
 Comment or uncomment NUM paragraphs contain html tag.

@@ -1,0 +1,4 @@
+CS:APP 學習指引 - HackMD https://hackmd.io/@sysprog/CSAPP
+How A Compiler Works: GNU Toolchain https://www.slideshare.net/jserv/how-a-compiler-works-gnu-toolchain
+百度一下，你就知道 https://www.baidu.com/
+www.google.com https://www.google.com/search?ie=utf-8&oe=utf-8&q=ftp%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%BC%96%E5%86%99

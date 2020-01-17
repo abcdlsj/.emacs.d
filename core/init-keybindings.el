@@ -5,7 +5,6 @@
 ;;|_|\_\___|\__, |_.__/|_|_| |_|\__,_|_|_| |_|\__, |___/
 ;;|___/                             |___/
 ;;
-
 ;evil
 (use-package evil
   :init
@@ -26,6 +25,8 @@
 (global-set-key (kbd "M-m") 'set-mark-command)
 (global-set-key (kbd "M--") 'shell-command)
 (global-set-key (kbd "C-c e") 'company-english-helper-search)
+(global-unset-key (kbd "C-SPC"))
+(global-unset-key (kbd "C-n"))
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
@@ -46,11 +47,13 @@
   "4" 'winum-select-window-4
   "oc" 'counsel-org-capture
   "oa" 'org-agenda
-  "vt" 'vterm-other-window
-  ;;company
+  "as" 'aweshell-dedicated-toggle
   ;;ivy
   "is" 'ivy-baidu-fanyi-suggest
-  "/" 'xref-find-definitions-at-mouse
+  "qa" 'awesome-tab-forward-tab
+  "qd" 'awesome-tab-backward-tab
+  "qw" 'awesome-tab-forward-group
+  "qs" 'awesome-tab-backward-group
   )
 
 (global-set-key "\C-s" 'swiper)
@@ -61,13 +64,29 @@
 (global-set-key (kbd "<f1> f") 'counsel-describe-function)
 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 (global-set-key (kbd "<f1> l") 'counsel-find-library)
-(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
-(global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+(global-set-key (kbd "<f1> i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "<f1> u") 'counsel-unicode-char)
 (global-set-key (kbd "C-c g") 'counsel-git)
 (global-set-key (kbd "C-c j") 'counsel-git-grep)
 (global-set-key (kbd "C-c k") 'counsel-ag)
 (global-set-key (kbd "C-x l") 'counsel-locate)
 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
 (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
+
+(global-set-key
+ (kbd "C-c C-n")
+ (defhydra hydra-move
+   (:body-pre (next-line))
+   "move"
+   ("n" next-line)
+   ("p" previous-line)
+   ("f" forward-char)
+   ("b" backward-char)
+   ("a" beginning-of-line)
+   ("e" move-end-of-line)
+   ("v" scroll-up-command)
+   ;; Converting M-v to V here by analogy.
+   ("V" scroll-down-command)
+   ("l" recenter-top-bottom)))
 
 (provide 'init-keybindings)
