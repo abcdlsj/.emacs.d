@@ -1,14 +1,3 @@
-;; after copy Ctrl+c in Linux X11, you can paste by `yank' in emacs
-(setq x-select-enable-clipboard t)
-;; after mouse selection in X11, you can paste by `yank' in emacs
-(setq x-select-enable-primary t)
-(fset 'yes-or-no-p 'y-or-n-p)
-
-(global-hl-line-mode t)
-(show-paren-mode t)
-(display-time-mode t)
-(setq inhibit-startup-screen t)
-(setq org-startup-indented t)
 ;;for emacs-27 early-init
 (when (<= emacs-major-version 27)
   (menu-bar-mode -1)
@@ -82,6 +71,31 @@
     "Show trailing spaces and delete on saving."
     (setq show-trailing-whitespace t)
     (add-hook 'before-save-hook #'delete-trailing-whitespace nil t)))
+
+(setq visible-bell nil
+      inhibit-compacting-font-caches t  ; Don’t compact font caches during GC.
+      delete-by-moving-to-trash t       ; Deleting files go to OS's trash folder
+      make-backup-files nil             ; Forbide to make backup files
+      auto-save-default nil             ; Disable auto save
+
+      inhibit-startup-screen t
+      org-startup-indented t
+
+      gobal-hl-line-mode t
+      show-paren-mode t
+
+      ;; after copy Ctrl+c in Linux X11, you can paste by `yank' in emacs
+      x-select-enable-clipboard t
+      ;; after mouse selection in X11, you can paste by `yank' in emacs
+      x-select-enable-primary t
+
+      uniquify-buffer-name-style 'post-forward-angle-brackets ; Show path if names are same
+      adaptive-fill-regexp "[ t]+|[ t]*([0-9]+.|*+)[ t]*"
+      adaptive-fill-first-line-regexp "^* *$"
+      sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*"
+      sentence-end-double-space nil)
+
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (setq user-full-name "abcdlsj")
 (setq user-mail-address "lisongjianshuai@gmail.com")

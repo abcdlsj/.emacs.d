@@ -69,6 +69,7 @@
 			   doom-modeline
 			   solaire-mode
 			   base16-theme
+			   tao-theme
 			   hide-mode-line
 			   ;;lang
 			   google-c-style

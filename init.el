@@ -1,4 +1,3 @@
-;;                                    __ _                       _   _
 ;; _ __ ___  _   _    ___ ___  _ __  / _(_) __ _ _   _ _ __ __ _| |_(_) ___  _ __
 ;;| '_ ` _ \| | | |  / __/ _ \| '_ \| |_| |/ _` | | | | '__/ _` | __| |/ _ \| '_ \
 ;;| | | | | | |_| | | (_| (_) | | | |  _| | (_| | |_| | | | (_| | |_| | (_) | | | |
@@ -13,7 +12,7 @@
 
 ;;init
 (require 'init-packages)
-;(require 'init-optimize)
+(require 'init-optimize)
 (require 'init-const)
 (require 'init-funcs)
 (require 'init-custom)
@@ -30,5 +29,6 @@
 (require 'init-snippet)
 (require 'init-awesome)
 (require 'init-lisp)
-(require 'init-keybindings)
 (require 'init-org)
+;;
+(require 'init-keybindings)

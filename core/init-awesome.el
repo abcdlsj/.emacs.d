@@ -17,12 +17,12 @@
   (setq sdcv-dictionary-complete-list '()))
 
 ;;nov
-;(use-package nov
-;  :config
-;  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
-;;company-english-helper
+;;(use-package nov
+;;  :config
+;;  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
-;;
+
+;;company-english-helper
 (require 'company-english-helper)
 
 (require 'ivy-baidu-fanyi-sug)

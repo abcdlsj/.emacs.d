@@ -3,6 +3,7 @@
   :config
   (add-hook 'c++-mode-hook #'lsp)
   :commands lsp)
+
 (use-package lsp-ui
   :config
   (setq lsp-ui-doc-mode t)
@@ -21,9 +22,9 @@
   (setq ccls-executable "usr/local/bin/ccls")
   (with-eval-after-load 'projectile
     (setq projectile-project-root-files-top-down-recurring
-	  (append '("compile_commands.json"
-		    ".ccls")
-		  projectile-project-root-files-top-down-recurring))))
+          (append '("compile_commands.json"
+                    ".ccls")
+                  projectile-project-root-files-top-down-recurring))))
 
 (use-package ivy-xref
   :init
