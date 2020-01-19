@@ -40,7 +40,9 @@
 			   evil-leader
 			   evil-collection
 			   evil-nerd-commenter
-			   neotree
+			   treemacs
+			   treemacs-evil
+			   treemacs-projectile
 			   winum
 			   which-key
 			   ;;key

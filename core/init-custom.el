@@ -1,4 +1,4 @@
-;;for emacs-27 early-init
+;for emacs-27 early-init
 (when (<= emacs-major-version 27)
   (menu-bar-mode -1)
   (tool-bar-mode -1)

@@ -5,8 +5,19 @@
   :config
   (winum-mode 1))
 
-;;neotree
-(use-package neotree)
+(use-package treemacs
+  :defer t
+  :init
+  (with-eval-after-load 'winum
+    (define-key winum-keymap (kbd "C-c t") #'treemacs-select-window)))
+
+(use-package treemacs)
+
+(use-package treemacs-evil
+  :after treemacs evil)
+
+(use-package treemacs-projectile
+  :after treemacs projectile)
 
 ;;which-key
 (use-package which-key

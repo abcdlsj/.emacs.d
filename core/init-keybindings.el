@@ -38,7 +38,6 @@
   "bs" 'switch-to-buffer
   "bk" 'kill-buffer
   "be" 'eval-buffer
-  "nt" 'neotree-toggle
   ;;"/" 'xref-find-definitions
   "0" 'winum-select-window-0
   "1" 'winum-select-window-1

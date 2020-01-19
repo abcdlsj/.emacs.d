@@ -56,7 +56,4 @@ See `org-capture-templates' for more information."
                    (file "~/Dropbox/org/blog.org")
                    (function org-hugo-new-subtree-post-capture-template))))
 
-(server-start)
-(require 'org-protocol)
-
 (provide 'init-org)
