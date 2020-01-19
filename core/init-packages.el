@@ -49,6 +49,8 @@
 			   markdown-mode
 			   lsp-mode
 			   ;;lsp
+			   lsp-java
+			   dap-mode
 			   company-lsp
 			   lsp-ui
 			   ccls

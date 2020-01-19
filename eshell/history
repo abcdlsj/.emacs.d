@@ -27,3 +27,21 @@ g++ AB3.cpp -o AB3
 ./AB3
 g++ AB3.cpp -o AB3
 ./AB3
+g++ sstream.cpp -o sstream
+ls
+l
+ls -al
+g++ sstream.cpp -o sstream
+./sstream 
+./sstream 
+g++ sstream.cpp -o sstream
+./sstream
+g++ sstream.cpp -o sstream
+./sstream
+g++ sstream.cpp -o sstream 
+./sstream
+g++ 5315.cpp -o 5315
+g++ 5315.cpp -o 5315
+./5315 
+cd ../workspace/alg/OJ/leetcode/
+./5315

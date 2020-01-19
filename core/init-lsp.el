@@ -5,10 +5,16 @@
   :commands lsp)
 
 (use-package lsp-ui
-  :config
-  (setq lsp-ui-doc-mode t)
+  :commands lsp-ui-mode
+  :init
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-  :commands lsp-ui-mode)
+  :config
+  (setq lsp-ui-peek-enable t)
+  (setq lsp-ui-doc-enable nil)
+  (setq lsp-ui-imenu-enable t)
+  (setq lsp-ui-flycheck-enable t)
+  (setq lsp-ui-sideline-enable nil)
+  (setq lsp-ui-sideline-ignore-duplicate t))
 
 (use-package company-lsp
   :config
@@ -41,5 +47,16 @@
   :hook (python-mode . (lambda ()
                           (require 'lsp-python-ms)
                           (lsp))))  ; or lsp-deferred
+
+(use-package lsp-java :after lsp
+  :config (add-hook 'java-mode-hook 'lsp))
+
+(use-package dap-mode
+  :after lsp-mode
+  :config
+  (dap-mode t)
+  (dap-ui-mode t))
+
+(use-package dap-java :after (lsp-java))
 
 (provide 'init-lsp)

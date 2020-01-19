@@ -29,6 +29,7 @@
                                                            (lisp . t)
                                                            (shell . t)
                                                            (C . t)
+							   (java . t)
                                                            ))
   ;;org-view
   (setq org-indent-mode 1)
@@ -54,5 +55,8 @@ See `org-capture-templates' for more information."
                  '("h" "Hugo post Blog" entry
                    (file "~/Dropbox/org/blog.org")
                    (function org-hugo-new-subtree-post-capture-template))))
+
+(server-start)
+(require 'org-protocol)
 
 (provide 'init-org)

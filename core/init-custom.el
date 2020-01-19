@@ -4,6 +4,9 @@
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
 
+(global-hl-line-mode t)
+(show-paren-mode t)
+
 ;;; Scrolling
 (setq hscroll-margin 2
       hscroll-step 1
@@ -80,9 +83,6 @@
 
       inhibit-startup-screen t
       org-startup-indented t
-
-      gobal-hl-line-mode t
-      show-paren-mode t
 
       ;; after copy Ctrl+c in Linux X11, you can paste by `yank' in emacs
       x-select-enable-clipboard t

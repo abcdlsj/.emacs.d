@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: java
+# key: java
+# --
+#+HEADERS: :classname $1 :cmdline "-cp ."
+#+begin_src java  :results output :exports both
+$0
+#+end_src
