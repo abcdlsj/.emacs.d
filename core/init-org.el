@@ -32,7 +32,7 @@
 							   (java . t)
                                                            ))
   ;;org-view
-  (setq org-indent-mode 1)
+  ;(setq org-indent-mode 1)
   (setq org-log-done 'time)
   )
 (use-package ox-hugo

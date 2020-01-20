@@ -40,9 +40,14 @@ named collections of buffers and window configurations.
 Here is a keymap of this minor mode:
 \\{persp-mode-map}
 
+If called interactively, enable Persp mode if ARG is positive,
+and disable it if ARG is zero or negative.  If called from Lisp,
+also enable the mode if ARG is omitted or nil, and toggle it if
+ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "persp-mode" '("persp" "ido-toggle-persp-filter" "find-other-frame-with-persp" "safe-persp-" "set-" "get-" "clear-window-persp" "with-persp-" "window-persp-set-p" "delete-persp-parameter" "modify-persp-parameters" "*persp-")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "persp-mode" '("*persp-" "clear-window-persp" "delete-persp-parameter" "find-other-frame-with-persp" "get-" "ido-toggle-persp-filter" "modify-persp-parameters" "persp" "safe-persp-" "set-" "window-persp-set-p" "with-persp-")))
 
 ;;;***
 

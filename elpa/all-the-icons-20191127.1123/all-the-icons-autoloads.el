@@ -55,7 +55,7 @@ When FAMILY is non-nil, limit the candidates to the icon set matching it.
 
 \(fn &optional ARG FAMILY)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "all-the-icons" '("material" "wicon" "octicon" "fileicon" "faicon" "all" "define-icon")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "all-the-icons" '("all" "define-icon" "faicon" "fileicon" "material" "octicon" "wicon")))
 
 ;;;***
 

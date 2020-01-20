@@ -12,6 +12,11 @@
 (autoload 'lsp-java-lens-mode "lsp-java" "\
 Toggle run/debug overlays.
 
+If called interactively, enable Lsp-Java-Lens mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 (with-eval-after-load 'lsp-mode (require 'lsp-java))
 
@@ -25,6 +30,11 @@ Toggle run/debug overlays.
 (autoload 'lsp-java-boot-lens-mode "lsp-java-boot" "\
 Toggle code-lens overlays.
 
+If called interactively, enable Lsp-Java-Boot-Lens mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lsp-java-boot" '("lsp-java-boot-")))
@@ -37,19 +47,18 @@ Toggle code-lens overlays.
 (autoload 'lsp-jt-lens-mode "lsp-jt" "\
 Toggle code-lens overlays.
 
+If called interactively, enable Lsp-Jt-Lens mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
-(autoload 'lsp-jt-browser "lsp-jt" "\
+(autoload 'lsp-jt-browser "lsp-jt" nil t nil)
 
+(autoload 'lsp-jt-show-report "lsp-jt" nil t nil)
 
-\(fn)" t nil)
-
-(autoload 'lsp-jt-show-report "lsp-jt" "\
-
-
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lsp-jt" '("lsp-" "java-tests--roots")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lsp-jt" '("java-tests--roots" "lsp-")))
 
 ;;;***
 

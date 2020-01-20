@@ -52,9 +52,7 @@
 ;;; Generated autoloads from dap-hydra.el
 
 (autoload 'dap-hydra "dap-hydra" "\
-Run `dap-hydra/body'.
-
-\(fn)" t nil)
+Run `dap-hydra/body'." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-hydra" '("dap-hydra")))
 
@@ -90,9 +88,14 @@ or call the function `dap-mode'.")
 (autoload 'dap-mode "dap-mode" "\
 Global minor mode for DAP mode.
 
+If called interactively, enable Dap mode if ARG is positive, and
+disable it if ARG is zero or negative.  If called from Lisp, also
+enable the mode if ARG is omitted or nil, and toggle it if ARG is
+`toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-mode" '("dash-expand:&dap-session" "dap-")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-mode" '("dap-" "dash-expand:&dap-session")))
 
 ;;;***
 
@@ -111,6 +114,11 @@ or call the function `dap-tooltip-mode'.")
 
 (autoload 'dap-tooltip-mode "dap-mouse" "\
 Toggle the display of GUD tooltips.
+
+If called interactively, enable Dap-Tooltip mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -176,12 +184,15 @@ or call the function `dap-ui-mode'.")
 (autoload 'dap-ui-mode "dap-ui" "\
 Displaying DAP visuals.
 
+If called interactively, enable Dap-Ui mode if ARG is positive,
+and disable it if ARG is zero or negative.  If called from Lisp,
+also enable the mode if ARG is omitted or nil, and toggle it if
+ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (autoload 'dap-ui-breakpoints-list "dap-ui" "\
-List breakpoints.
-
-\(fn)" t nil)
+List breakpoints." t nil)
 
 (defvar dap-ui-controls-mode nil "\
 Non-nil if Dap-Ui-Controls mode is enabled.
@@ -196,17 +207,17 @@ or call the function `dap-ui-controls-mode'.")
 (autoload 'dap-ui-controls-mode "dap-ui" "\
 Displaying DAP visuals.
 
+If called interactively, enable Dap-Ui-Controls mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (autoload 'dap-ui-sessions "dap-ui" "\
-Show currently active sessions.
+Show currently active sessions." t nil)
 
-\(fn)" t nil)
-
-(autoload 'dap-ui-locals "dap-ui" "\
-
-
-\(fn)" t nil)
+(autoload 'dap-ui-locals "dap-ui" nil t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-ui" '("dap-")))
 
@@ -216,11 +227,9 @@ Show currently active sessions.
 ;;; Generated autoloads from dap-ui-repl.el
 
 (autoload 'dap-ui-repl "dap-ui-repl" "\
-Start a JavaScript REPL to be evaluated in the visiting browser.
+Start a JavaScript REPL to be evaluated in the visiting browser." t nil)
 
-\(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-ui-repl" '("dap-ui-" "company-dap-ui-repl")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-ui-repl" '("company-dap-ui-repl" "dap-ui-")))
 
 ;;;***
 
@@ -234,10 +243,7 @@ Start a JavaScript REPL to be evaluated in the visiting browser.
 ;;;### (autoloads nil "dapui" "dapui.el" (0 0 0 0))
 ;;; Generated autoloads from dapui.el
 
-(autoload 'dapui-loaded-sources "dapui" "\
-
-
-\(fn)" t nil)
+(autoload 'dapui-loaded-sources "dapui" nil t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dapui" '("dapui-")))
 

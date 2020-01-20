@@ -13,7 +13,14 @@
 (autoload 'hide-mode-line-mode "hide-mode-line" "\
 Minor mode to hide the mode-line in the current buffer.
 
+If called interactively, enable Hide-Mode-Line mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
+
+(put 'global-hide-mode-line-mode 'globalized-minor-mode t)
 
 (defvar global-hide-mode-line-mode nil "\
 Non-nil if Global Hide-Mode-Line mode is enabled.
@@ -39,14 +46,10 @@ See `hide-mode-line-mode' for more information on Hide-Mode-Line mode.
 
 (autoload 'turn-on-hide-mode-line-mode "hide-mode-line" "\
 Turn on `hide-mode-line-mode'.
-Unless in `fundamental-mode' or `hide-mode-line-excluded-modes'.
-
-\(fn)" nil nil)
+Unless in `fundamental-mode' or `hide-mode-line-excluded-modes'." nil nil)
 
 (autoload 'turn-off-hide-mode-line-mode "hide-mode-line" "\
-Turn off `hide-mode-line-mode'.
-
-\(fn)" nil nil)
+Turn off `hide-mode-line-mode'." nil nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "hide-mode-line" '("hide-mode-line-")))
 

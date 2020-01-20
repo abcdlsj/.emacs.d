@@ -45,3 +45,5 @@ g++ 5315.cpp -o 5315
 ./5315 
 cd ../workspace/alg/OJ/leetcode/
 ./5315
+g++ quine_string.cpp -o quine_string
+./quine_string

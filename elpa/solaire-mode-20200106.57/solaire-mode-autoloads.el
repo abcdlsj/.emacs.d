@@ -13,7 +13,14 @@
 Make source buffers grossly incandescent by remapping common faces (see
 `solaire-mode-remap-alist') to their solaire-mode variants.
 
+If called interactively, enable Solaire mode if ARG is positive,
+and disable it if ARG is zero or negative.  If called from Lisp,
+also enable the mode if ARG is omitted or nil, and toggle it if
+ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
+
+(put 'solaire-global-mode 'globalized-minor-mode t)
 
 (defvar solaire-global-mode nil "\
 Non-nil if Solaire-Global mode is enabled.
@@ -41,19 +48,13 @@ See `solaire-mode' for more information on Solaire mode.
 Conditionally enable `solaire-mode' in the current buffer.
 
 Does nothing if the current buffer doesn't satisfy the function in
-`solaire-mode-real-buffer-fn'.
-
-\(fn)" t nil)
+`solaire-mode-real-buffer-fn'." t nil)
 
 (autoload 'turn-off-solaire-mode "solaire-mode" "\
-Disable `solaire-mode' in the current buffer.
-
-\(fn)" t nil)
+Disable `solaire-mode' in the current buffer." t nil)
 
 (autoload 'solaire-mode-in-minibuffer "solaire-mode" "\
-Highlight the minibuffer whenever it is active.
-
-\(fn)" nil nil)
+Highlight the minibuffer whenever it is active." nil nil)
 
 (autoload 'solaire-mode-reset "solaire-mode" "\
 Reset all buffers with `solaire-mode' enabled.
@@ -71,9 +72,7 @@ Swap the backgrounds of the following faces:
 + `hl-line' <-> `solaire-hl-line-face'
 + `org-hide' <-> `solaire-org-hide-face'
 
-This is necessary for themes in the doom-themes package.
-
-\(fn)" nil nil)
+This is necessary for themes in the doom-themes package." nil nil)
 
 (autoload 'solaire-mode-restore-persp-mode-buffers "solaire-mode" "\
 Restore `solaire-mode' in buffers when `persp-mode' loads a session.

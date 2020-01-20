@@ -17,10 +17,20 @@ A list of contrib packages to load with SLY.")
 (autoload 'sly-mode "sly" "\
 Minor mode for horizontal SLY functionality.
 
+If called interactively, enable Sly mode if ARG is positive, and
+disable it if ARG is zero or negative.  If called from Lisp, also
+enable the mode if ARG is omitted or nil, and toggle it if ARG is
+`toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (autoload 'sly-editing-mode "sly" "\
 Minor mode for editing `lisp-mode' buffers.
+
+If called interactively, enable Sly-Editing mode if ARG is
+positive, and disable it if ARG is zero or negative.  If called
+from Lisp, also enable the mode if ARG is omitted or nil, and
+toggle it if ARG is `toggle'; disable the mode otherwise.
 
 \(fn &optional ARG)" t nil)
 
@@ -74,7 +84,7 @@ Read SLY manual
 
 (if (or (not (memq 'slime-lisp-mode-hook lisp-mode-hook)) noninteractive (prog1 (y-or-n-p "[sly] SLIME detected in `lisp-mode-hook', which causes keybinding conflicts.\nRemove it for this Emacs session?") (warn "To restore SLIME in this session, customize `lisp-mode-hook'\nand replace `sly-editing-mode' with `slime-lisp-mode-hook'.") (remove-hook 'lisp-mode-hook 'slime-lisp-mode-hook))) (add-hook 'lisp-mode-hook 'sly-editing-mode) (warn "`sly.el' loaded OK. To use SLY, customize `lisp-mode-hook' and\nreplace `slime-lisp-mode-hook' with `sly-editing-mode'."))
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "sly" '("sly-" "define-sly-" "make-sly-" "inferior-lisp-program")))
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "sly" '("define-sly-" "inferior-lisp-program" "make-sly-" "sly-")))
 
 ;;;***
 

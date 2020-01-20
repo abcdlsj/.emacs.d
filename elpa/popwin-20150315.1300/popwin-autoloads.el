@@ -18,7 +18,7 @@ non-nil, the popup window will show the last contents. Calling
 that case, the buffer of the popup window will be replaced with
 BUFFER.
 
-\(fn BUFFER &key (width popwin:popup-window-width) (height popwin:popup-window-height) (position popwin:popup-window-position) NOSELECT DEDICATED STICK TAIL)" t nil)
+\(fn BUFFER &key (WIDTH popwin:popup-window-width) (HEIGHT popwin:popup-window-height) (POSITION popwin:popup-window-position) NOSELECT DEDICATED STICK TAIL)" t nil)
 
 (autoload 'popwin:display-buffer "popwin" "\
 Display BUFFER-OR-NAME, if possible, in a popup window, or as
@@ -37,15 +37,11 @@ Same as `pop-to-buffer' except that this function will use
 Call the following command interactively with letting
 `popwin:special-display-config' be
 `popwin:universal-display-config'. This will be useful when
-displaying buffers in popup windows temporarily.
-
-\(fn)" t nil)
+displaying buffers in popup windows temporarily." t nil)
 
 (autoload 'popwin:one-window "popwin" "\
 Delete other window than the popup window. C-g restores the
-original window configuration.
-
-\(fn)" t nil)
+original window configuration." t nil)
 
 (autoload 'popwin:popup-buffer-tail "popwin" "\
 Same as `popwin:popup-buffer' except that the buffer will be
@@ -65,9 +61,7 @@ Edit file FILENAME with popup window by
 \(fn FILE &optional WILDCARD)" t nil)
 
 (autoload 'popwin:messages "popwin" "\
-Display *Messages* buffer in a popup window.
-
-\(fn)" t nil)
+Display *Messages* buffer in a popup window." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "popwin" '("popwin")))
 

@@ -13,6 +13,11 @@
 (autoload 'org-hugo-auto-export-mode "org-hugo-auto-export-mode" "\
 Toggle auto exporting the Org file using `ox-hugo'.
 
+If called interactively, enable Org-Hugo-Auto-Export mode if ARG
+is positive, and disable it if ARG is zero or negative.  If
+called from Lisp, also enable the mode if ARG is omitted or nil,
+and toggle it if ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-hugo-auto-export-mode" '("org-hugo-export-wim-to-md-after-save")))
@@ -54,9 +59,7 @@ The text is assumed to be in Org mode format.
 
 This can be used in any buffer.  For example, you can write an
 itemized list in Org mode syntax in a Markdown buffer and use
-this command to convert it.
-
-\(fn)" t nil)
+this command to convert it." t nil)
 
 (autoload 'org-blackfriday-export-to-markdown "ox-blackfriday" "\
 Export current buffer to a Github Flavored Markdown file.
@@ -243,9 +246,7 @@ The optional argument NOERROR is passed to
 Get Emacs, Org and Hugo version and ox-hugo customization info.
 The information is converted to Markdown format and copied to the
 kill ring.  The same information is displayed in the Messages
-buffer and returned as a string in Org format.
-
-\(fn)" t nil)
+buffer and returned as a string in Org format." t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ox-hugo" '("org-hugo-")))
 

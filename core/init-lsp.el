@@ -1,7 +1,8 @@
 ;;lsp-mode
 (use-package lsp-mode
-  :config
-  (add-hook 'c++-mode-hook #'lsp)
+  :hook
+  (c++-mode . lsp)
+  (c-mode . lsp)
   :commands lsp)
 
 (use-package lsp-ui
@@ -48,14 +49,34 @@
                           (require 'lsp-python-ms)
                           (lsp))))  ; or lsp-deferred
 
-(use-package lsp-java :after lsp
-  :config (add-hook 'java-mode-hook 'lsp))
+(use-package lsp-java
+  :hook (java-mode . (lambda () (require 'lsp-java))))
+
+;; (use-package dap-mode
+;;   :after lsp-mode
+;;   :config
+;;   (dap-mode t)
+;;   (dap-ui-mode t))
 
 (use-package dap-mode
-  :after lsp-mode
-  :config
-  (dap-mode t)
-  (dap-ui-mode t))
+  :diminish
+  :bind (:map lsp-mode-map
+	      ("<f5>" . dap-debug)
+	      ("M-<f5>" . dap-hydra))
+  :hook ((after-init . dap-mode)
+	 (dap-mode . dap-ui-mode)
+	 (dap-session-created . (lambda (_args) (dap-hydra)))
+	 (dap-stopped . (lambda (_args) (dap-hydra)))
+
+	 (python-mode . (lambda () (require 'dap-python)))
+	 (ruby-mode . (lambda () (require 'dap-ruby)))
+	 (go-mode . (lambda () (require 'dap-go)))
+	 (java-mode . (lambda () (require 'dap-java)))
+	 ((c-mode c++-mode objc-mode swift) . (lambda () (require 'dap-lldb)))
+	 (php-mode . (lambda () (require 'dap-php)))
+	 (elixir-mode . (lambda () (require 'dap-elixir)))
+	 ((js-mode js2-mode) . (lambda () (require 'dap-chrome)))
+	 (powershell-mode . (lambda () (require 'dap-pwsh)))))
 
 (use-package dap-java :after (lsp-java))
 

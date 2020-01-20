@@ -22,6 +22,11 @@ or call the function `winum-mode'.")
 (autoload 'winum-mode "winum" "\
 A minor mode that allows for managing windows based on window numbers.
 
+If called interactively, enable Winum mode if ARG is positive,
+and disable it if ARG is zero or negative.  If called from Lisp,
+also enable the mode if ARG is omitted or nil, and toggle it if
+ARG is `toggle'; disable the mode otherwise.
+
 \(fn &optional ARG)" t nil)
 
 (autoload 'winum-select-window-0-or-10 "winum" "\
