@@ -49,8 +49,8 @@
   "as" 'aweshell-dedicated-toggle
   ;;ivy
   "is" 'ivy-baidu-fanyi-suggest
-  "qa" 'awesome-tab-forward-tab
-  "qd" 'awesome-tab-backward-tab
+  "qd" 'awesome-tab-forward-tab
+  "qa" 'awesome-tab-backward-tab
   "qw" 'awesome-tab-forward-group
   "qs" 'awesome-tab-backward-group
   )

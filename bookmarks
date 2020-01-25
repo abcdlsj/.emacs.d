@@ -1,0 +1,15 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("task.org"
+ (filename . "~/Dropbox/org/task.org")
+ (front-context-string . "   :LOGBOOK:\n   ")
+ (rear-context-string . "themes~ 的问题，明天看\n")
+ (position . 3828))
+("org-capture-last-stored"
+ (filename . "~/Dropbox/org/journal.org")
+ (front-context-string . "**** [2020-01-25")
+ (rear-context-string . "题？？ :emacs:org:\n")
+ (position . 13489))
+)

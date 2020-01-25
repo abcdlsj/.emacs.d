@@ -49,3 +49,7 @@ g++ quine_string.cpp -o quine_string
 ./quine_string
 gcc ByteRepresentation.c -o ByteRepresentation
 ./ByteRepresentation
+ls
+cd
+cd .emacs.d
+ls
