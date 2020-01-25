@@ -22,6 +22,7 @@
 			   company
 			   ;; --- Better Editor ---
 			   ;;pyim
+			   avy
 			   projectile
 			   highlight-indent-guides
 			   expand-region
@@ -86,10 +87,11 @@
 			   ;;apps
 			   gist
 			   telega
-			   ;elfeed
-			   ;elfeed-org
+			   ;;elfeed
+			   ;;elfeed-org
 			   ;;blog
-			   ;org-page
+			   ;;org-page
+			   org-download
 			   ox-hugo
 			   ;;mingus
 			   ;;workspace

@@ -30,10 +30,12 @@
                                                            (shell . t)
                                                            (C . t)
 							   (java . t)
+							   (python . t)
                                                            ))
   ;;org-view
   ;(setq org-indent-mode 1)
   (setq org-log-done 'time)
+  (setq org-image-actual-width '(400))
   )
 (use-package ox-hugo
   :after ox)

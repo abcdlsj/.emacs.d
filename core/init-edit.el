@@ -75,4 +75,5 @@
   :defer 1
   :bind (("C-=" . er/expand-region)))
 
+(use-package avy)
 (provide 'init-edit)
