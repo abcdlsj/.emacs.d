@@ -11,8 +11,6 @@
   (with-eval-after-load 'winum
     (define-key winum-keymap (kbd "C-c t") #'treemacs-select-window)))
 
-(use-package treemacs)
-
 (use-package treemacs-evil
   :after treemacs evil)
 
@@ -89,7 +87,7 @@
   :init
   (setq projectile-mode-line-prefix ""
         projectile-sort-order 'recentf
-        ;;projectile-use-git-grep t
+        projectile-use-git-grep t
 	projectile-git-submodule-command nil
         projectile-completion-system 'ivy)
   :config

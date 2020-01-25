@@ -39,7 +39,7 @@
   "bk" 'kill-buffer
   "be" 'eval-buffer
   ;;"/" 'xref-find-definitions
-  "0" 'winum-select-window-0
+  ;;"0" 'winum-select-window-0
   "1" 'winum-select-window-1
   "2" 'winum-select-window-2
   "3" 'winum-select-window-3

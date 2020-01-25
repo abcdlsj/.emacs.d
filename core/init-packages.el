@@ -84,6 +84,7 @@
 			   geiser
 			   ;;vterm
 			   eshell-up
+			   eshell-did-you-mean
 			   ;;apps
 			   gist
 			   telega
