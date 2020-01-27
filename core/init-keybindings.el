@@ -35,6 +35,7 @@
   ;;"fp" 'open-private-config
   "fr" 'counsel-recentf
   "fd" 'delete-file
+  "fe" 'eaf-open
   "bs" 'switch-to-buffer
   "bk" 'kill-buffer
   "be" 'eval-buffer
@@ -49,10 +50,10 @@
   "as" 'aweshell-dedicated-toggle
   ;;ivy
   "is" 'ivy-baidu-fanyi-suggest
-  "qd" 'awesome-tab-forward-tab
-  "qa" 'awesome-tab-backward-tab
-  "qw" 'awesome-tab-forward-group
-  "qs" 'awesome-tab-backward-group
+  ;; "qd" 'awesome-tab-forward-tab
+  ;; "qa" 'awesome-tab-backward-tab
+  ;; "qw" 'awesome-tab-forward-group
+  ;; "qs" 'awesome-tab-backward-group
   )
 
 (global-set-key "\C-s" 'swiper)

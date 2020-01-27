@@ -11,22 +11,20 @@
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
   :config
   (setq lsp-ui-peek-enable t)
-  (setq lsp-ui-doc-enable nil)
+  (setq lsp-ui-doc-enable t)
   (setq lsp-ui-imenu-enable t)
   (setq lsp-ui-flycheck-enable t)
   (setq lsp-ui-sideline-enable nil)
   (setq lsp-ui-sideline-ignore-duplicate t))
 
-(use-package company-lsp
-  :config
-  (push 'company-lsp company-backends)
-  :commands company-lsp)
-
 (use-package ccls
   :defines projectile-project-root-files-top-down-recurring
   :hook ((c-mode c++-mode objc-mode cuda-mode) . (lambda () (require 'ccls)))
   :config
-  (setq ccls-executable "usr/local/bin/ccls")
+  (setq ccls-executable "/usr/bin/ccls")
+  (setq company-transformers nil company-lsp-async t company-lsp-cache-candidates nil)
+  (setq ccls-sem-highlight-method 'font-lock)
+  ;; alternatively, (setq ccls-sem-highlight-method 'overlay)
   (with-eval-after-load 'projectile
     (setq projectile-project-root-files-top-down-recurring
           (append '("compile_commands.json"
@@ -46,17 +44,11 @@
 
 (use-package lsp-python-ms
   :hook (python-mode . (lambda ()
-                          (require 'lsp-python-ms)
-                          (lsp))))  ; or lsp-deferred
+                         (require 'lsp-python-ms)
+                         (lsp))))  ; or lsp-deferred
 
 (use-package lsp-java
   :hook (java-mode . (lambda () (require 'lsp-java))))
-
-;; (use-package dap-mode
-;;   :after lsp-mode
-;;   :config
-;;   (dap-mode t)
-;;   (dap-ui-mode t))
 
 (use-package dap-mode
   :diminish

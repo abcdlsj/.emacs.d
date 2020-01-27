@@ -63,4 +63,25 @@ will also be the width of all other printable characters."
   (switch-to-buffer-other-window
    (nth (1- arg) my/last-buffers)))
 
+(defun company//sort-by-tabnine (candidates)
+  (if (or (functionp company-backend)
+          (not (and (listp company-backend) (memq 'company-tabnine company-backend))))
+      candidates
+    (let ((candidates-table (make-hash-table :test #'equal))
+          candidates-1
+          candidates-2)
+      (dolist (candidate candidates)
+        (if (eq (get-text-property 0 'company-backend candidate)
+                'company-tabnine)
+            (unless (gethash candidate candidates-table)
+              (push candidate candidates-2))
+          (push candidate candidates-1)
+          (puthash candidate t candidates-table)))
+      (setq candidates-1 (nreverse candidates-1))
+      (setq candidates-2 (nreverse candidates-2))
+      (nconc (seq-take candidates-1 2)
+             (seq-take candidates-2 2)
+             (seq-drop candidates-1 2)
+             (seq-drop candidates-2 2)))))
+
 (provide 'init-funcs)

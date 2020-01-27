@@ -58,6 +58,7 @@
 			   lsp-ui
 			   ccls
 			   lsp-python-ms
+			   company-tabnine
 			   yasnippet
 			   yasnippet-snippets
 			   ;;use-package

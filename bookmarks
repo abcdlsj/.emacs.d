@@ -9,7 +9,7 @@
  (position . 3828))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/org/journal.org")
- (front-context-string . "**** [2020-01-25")
- (rear-context-string . "题？？ :emacs:org:\n")
- (position . 13489))
+ (front-context-string . "**** [2020-01-27")
+ (rear-context-string . "ily:\n 如无必要，勿增实体\n")
+ (position . 13821))
 )

@@ -76,13 +76,13 @@ decrease this. If you experience stuttering, increase this.")
 
 ;;awesome
 (require 'init-ivy)
-(require 'init-cc)
 (require 'init-lsp)
 (require 'init-company)
 (require 'init-edit)
 (require 'init-snippet)
 (require 'init-awesome)
 (require 'init-lisp)
+(require 'init-cc)
 (require 'init-org)
 ;;
 (require 'init-keybindings)
