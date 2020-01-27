@@ -50,6 +50,7 @@
   "as" 'aweshell-dedicated-toggle
   ;;ivy
   "is" 'ivy-baidu-fanyi-suggest
+  "ia" 'ivy-yasnippet
   ;; "qd" 'awesome-tab-forward-tab
   ;; "qa" 'awesome-tab-backward-tab
   ;; "qw" 'awesome-tab-forward-group

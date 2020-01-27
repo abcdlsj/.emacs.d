@@ -69,3 +69,7 @@ cd
 cd
 c
 c
+cd ../gitel
+ls
+git clone https://github.com/hlissner/doom-snippets.git
+cd 2:q

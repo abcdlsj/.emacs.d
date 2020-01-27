@@ -76,9 +76,9 @@ decrease this. If you experience stuttering, increase this.")
 
 ;;awesome
 (require 'init-ivy)
-(require 'init-lsp)
-(require 'init-company)
 (require 'init-edit)
+(require 'init-company)
+(require 'init-lsp)
 (require 'init-snippet)
 (require 'init-awesome)
 (require 'init-lisp)

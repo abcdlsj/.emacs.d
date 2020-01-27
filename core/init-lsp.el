@@ -22,7 +22,7 @@
   :hook ((c-mode c++-mode objc-mode cuda-mode) . (lambda () (require 'ccls)))
   :config
   (setq ccls-executable "/usr/bin/ccls")
-  (setq company-transformers nil company-lsp-async t company-lsp-cache-candidates nil)
+  ;;(setq company-transformers nil company-lsp-async t company-lsp-cache-candidates nil)
   (setq ccls-sem-highlight-method 'font-lock)
   ;; alternatively, (setq ccls-sem-highlight-method 'overlay)
   (with-eval-after-load 'projectile

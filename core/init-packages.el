@@ -20,6 +20,8 @@
 			   request
 			   ;; --- Auto-completion ---
 			   company
+			   company-prescient
+			   company-box
 			   ;; --- Better Editor ---
 			   ;;pyim
 			   avy
@@ -31,6 +33,8 @@
 			   ivy-rich
 			   ivy-posframe
 			   ivy-xref
+			   ivy-yasnippet
+			   ivy-prescient
 			   ;;counsel
 			   counsel-projectile
 			   ;;swiper
@@ -60,7 +64,7 @@
 			   lsp-python-ms
 			   company-tabnine
 			   yasnippet
-			   yasnippet-snippets
+			   auto-yasnippet
 			   ;;use-package
 			   use-package
 			   ;;ui
