@@ -32,10 +32,14 @@
 (evil-leader/set-key
   "ff" 'counsel-find-file
   "fw" 'find-file-other-window
+  "fl" 'counsel-library
   ;;"fp" 'open-private-config
-  "fr" 'counsel-recentf
+  "fr" 'counsel-buffer-or-recentf
   "fd" 'delete-file
   "fe" 'eaf-open
+  ;;counsel
+  "ca" 'counsel-ag
+  "cz" 'counsel-fzf
   "bs" 'switch-to-buffer
   "bk" 'kill-buffer
   "be" 'eval-buffer
@@ -50,29 +54,12 @@
   "as" 'aweshell-dedicated-toggle
   ;;ivy
   "is" 'ivy-baidu-fanyi-suggest
-  "ia" 'ivy-yasnippet
+  ;;"ia" 'ivy-yasnippet
   ;; "qd" 'awesome-tab-forward-tab
   ;; "qa" 'awesome-tab-backward-tab
   ;; "qw" 'awesome-tab-forward-group
   ;; "qs" 'awesome-tab-backward-group
   )
-
-(global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(global-set-key (kbd "<f6>") 'ivy-resume)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "<f1> f") 'counsel-describe-function)
-(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
-(global-set-key (kbd "<f1> l") 'counsel-find-library)
-(global-set-key (kbd "<f1> i") 'counsel-info-lookup-symbol)
-(global-set-key (kbd "<f1> u") 'counsel-unicode-char)
-(global-set-key (kbd "C-c g") 'counsel-git)
-(global-set-key (kbd "C-c j") 'counsel-git-grep)
-(global-set-key (kbd "C-c k") 'counsel-ag)
-(global-set-key (kbd "C-x l") 'counsel-locate)
-(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
-(define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history)
 
 (global-set-key
  (kbd "C-c C-n")
@@ -89,24 +76,5 @@
    ;; Converting M-v to V here by analogy.
    ("V" scroll-down-command)
    ("l" recenter-top-bottom)))
-
-(define-key awesome-pair-mode-map (kbd "(") 'awesome-pair-open-round)
-(define-key awesome-pair-mode-map (kbd "[") 'awesome-pair-open-bracket)
-(define-key awesome-pair-mode-map (kbd "{") 'awesome-pair-open-curly)
-(define-key awesome-pair-mode-map (kbd ")") 'awesome-pair-close-round)
-(define-key awesome-pair-mode-map (kbd "]") 'awesome-pair-close-bracket)
-(define-key awesome-pair-mode-map (kbd "}") 'awesome-pair-close-curly)
-(define-key awesome-pair-mode-map (kbd "%") 'awesome-pair-match-paren)
-(define-key awesome-pair-mode-map (kbd "\"") 'awesome-pair-double-quote)
-(define-key awesome-pair-mode-map (kbd "M-o") 'awesome-pair-backward-delete)
-(define-key awesome-pair-mode-map (kbd "C-k") 'awesome-pair-kill)
-(define-key awesome-pair-mode-map (kbd "M-\"") 'awesome-pair-wrap-double-quote)
-(define-key awesome-pair-mode-map (kbd "M-[") 'awesome-pair-wrap-bracket)
-(define-key awesome-pair-mode-map (kbd "M-{") 'awesome-pair-wrap-curly)
-(define-key awesome-pair-mode-map (kbd "M-(") 'awesome-pair-wrap-round)
-(define-key awesome-pair-mode-map (kbd "M-)") 'Awesome-pair-unwrap)
-(define-key awesome-pair-mode-map (kbd "M-p") 'awesome-pair-jump-right)
-(define-key awesome-pair-mode-map (kbd "M-n") 'awesome-pair-jump-left)
-(define-key awesome-pair-mode-map (kbd "M-:") 'awesome-pair-jump-out-pair-and-newline)
 
 (provide 'init-keybindings)

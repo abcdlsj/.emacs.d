@@ -15,14 +15,15 @@
     (setq company-tabnine--disable-next-transform t))
   (apply func args))
 
-;; Customize company backends.
-(setq company-backends (delete 'company-xcode company-backends))
-(setq company-backends (delete 'company-bbdb company-backends))
-(setq company-backends (delete 'company-eclim company-backends))
-(setq company-backends (delete 'company-gtags company-backends))
-(setq company-backends (delete 'company-etags company-backends))
-(setq company-backends (delete 'company-oddmuse company-backends))
+;; ;; Customize company backends.
+;; (setq company-backends (delete 'company-xcode company-backends))
+;; (setq company-backends (delete 'company-bbdb company-backends))
+;; (setq company-backends (delete 'company-eclim company-backends))
+;; (setq company-backends (delete 'company-gtags company-backends))
+;; (setq company-backends (delete 'company-etags company-backends))
+;; (setq company-backends (delete 'company-oddmuse company-backends))
 ;; workaround for company-transformers
+
 (setq company-tabnine--disable-next-transform nil)
 (defun my-company--transform-candidates (func &rest args)
   (if (not company-tabnine--disable-next-transform)
@@ -44,17 +45,6 @@
                (stringp (funcall company-message-func)))
       (unless (string-match "The free version of TabNine only indexes up to" (funcall company-message-func))
         ad-do-it))))
-
-(advice-add #'company--transform-candidates :around #'my-company--transform-candidates)
-(advice-add #'company-tabnine :around #'my-company-tabnine)
-(add-to-list 'company-backends '(company-lsp :with company-yasnippet))
-(add-to-list 'company-transformers 'company//sort-by-tabnine t)
-  ;; `:separate`  使得不同 backend 分开排序
-(add-to-list 'company-backends '(company-lsp :with company-tabnine :separate))
-
-(setq company-lsp-enable-snippet t)
-(setq company-idle-delay 0.5)
-(add-hook 'after-init-hook 'global-company-mode)
 
 (use-package company
   :diminish
@@ -81,7 +71,7 @@
   :config
   (setq company-tooltip-align-annotations t
         company-tooltip-limit 12
-        company-idle-delay 0
+        company-idle-delay 0.5
         company-echo-delay (if (display-graphic-p) nil 0)
         company-minimum-prefix-length 2
         company-require-match nil
@@ -181,5 +171,13 @@
                 (TypeParameter . ,(all-the-icons-faicon "arrows" :height 0.8 :v-adjust -0.05))
                 (Template . ,(all-the-icons-material "format_align_left" :height 0.85 :v-adjust -0.2)))
               company-box-icons-alist 'company-box-icons-all-the-icons)))))
+
+(advice-add #'company--transform-candidates :around #'my-company--transform-candidates)
+(advice-add #'company-tabnine :around #'my-company-tabnine)
+(add-to-list 'company-backends '(company-lsp :with company-yasnippet))
+(add-to-list 'company-transformers 'company//sort-by-tabnine t)
+  ;; `:separate`  使得不同 backend 分开排序
+(add-to-list 'company-backends '(company-lsp :with company-tabnine :separate))
+
 
 (provide 'init-company)

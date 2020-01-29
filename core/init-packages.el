@@ -20,8 +20,10 @@
 			   request
 			   ;; --- Auto-completion ---
 			   company
+			   company-lsp
 			   company-prescient
 			   company-box
+			   company-tabnine
 			   ;; --- Better Editor ---
 			   ;;pyim
 			   avy
@@ -35,7 +37,9 @@
 			   ivy-xref
 			   ivy-yasnippet
 			   ivy-prescient
+			   ivy-fuz
 			   ;;counsel
+			   amx
 			   counsel-projectile
 			   ;;swiper
 			   ;all-the-icons-ivy
@@ -58,11 +62,9 @@
 			   ;;lsp
 			   lsp-java
 			   dap-mode
-			   company-lsp
 			   lsp-ui
 			   ccls
 			   lsp-python-ms
-			   company-tabnine
 			   yasnippet
 			   auto-yasnippet
 			   ;;use-package

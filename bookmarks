@@ -8,8 +8,8 @@
  (rear-context-string . "themes~ 的问题，明天看\n")
  (position . 3828))
 ("org-capture-last-stored"
- (filename . "~/Dropbox/org/journal.org")
- (front-context-string . "**** [2020-01-27")
- (rear-context-string . "ily:\n 如无必要，勿增实体\n")
- (position . 13821))
+ (filename . "~/Dropbox/org/blog.org")
+ (front-context-string . "* TODO Linux 定时任")
+ (rear-context-string . "inux-定时任务\n:END:\n")
+ (position . 7815))
 )

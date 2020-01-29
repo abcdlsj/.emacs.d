@@ -1,0 +1,47 @@
+
+;; ----- amx-history -----
+(
+ yas-insert-snippet
+ blacken-buffer
+ blacken-mode
+ all-the-icons-insert
+ lsp-mode
+ customize
+ org-link-open-from-string
+ awesome-pair-match-paren
+ dap-hydra
+ treemacs-projectile
+ xref-find-definitions
+ xref-find-references
+ counsel-faces
+ counsel-cd
+ counsel-grep
+ counsel-ag
+ make-frame
+ yas-new-snippet
+ man-follow
+ cd
+)
+
+;; ----- amx-data -----
+(
+ (man-follow . 1)
+ (yas-insert-snippet . 3)
+ (yas-new-snippet . 2)
+ (xref-find-definitions . 4)
+ (make-frame . 1)
+ (lsp-mode . 3)
+ (counsel-ag . 1)
+ (counsel-grep . 1)
+ (counsel-cd . 1)
+ (counsel-faces . 1)
+ (xref-find-references . 1)
+ (treemacs-projectile . 1)
+ (dap-hydra . 1)
+ (awesome-pair-match-paren . 1)
+ (org-link-open-from-string . 1)
+ (customize . 1)
+ (all-the-icons-insert . 2)
+ (blacken-buffer . 4)
+ (blacken-mode . 1)
+)

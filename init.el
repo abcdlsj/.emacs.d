@@ -70,10 +70,8 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-const)
 (require 'init-funcs)
 (require 'init-custom)
-
 ;;ui
 (require 'init-ui)
-
 ;;awesome
 (require 'init-ivy)
 (require 'init-edit)
@@ -84,5 +82,5 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-lisp)
 (require 'init-cc)
 (require 'init-org)
-;;
+;;key
 (require 'init-keybindings)

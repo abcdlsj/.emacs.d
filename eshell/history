@@ -73,3 +73,17 @@ cd ../gitel
 ls
 git clone https://github.com/hlissner/doom-snippets.git
 cd 2:q
+g++ L1-003.cpp -o L1-003
+./L1-003
+g++ L1-003.cpp -o L1-003
+./
+./L1-003
+./L1-003
+./L1-003
+g++ L1-003.cpp -o L1-003
+./L
+./L1-003
+g++ L1-004.cpp -o L1-004
+./L1-004
+make
+./wis
