@@ -87,3 +87,13 @@ g++ L1-004.cpp -o L1-004
 ./L1-004
 make
 ./wis
+cd ../gitel
+ls
+curl -O https://raw.githubusercontent.com/emacs-lsp/lsp-ivy/master/lsp-ivy.el
+ls
+nvim lsp-ivy.el
+ls
+cc -std
+cc -std=c99 -Wall -ledit lisp.c -o lisp
+cc -std=c99 -Wall -ledit lisp.c -o lisp
+./lisp

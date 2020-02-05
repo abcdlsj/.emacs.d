@@ -7,15 +7,47 @@
 
 (use-package lsp-ui
   :commands lsp-ui-mode
-  :init
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
+  :hook
+  (lsp-mode . lsp-ui)
+  :bind (("C-c u" . lsp-ui-imenu)
+         :map lsp-ui-mode-map
+         ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
+         ([remap xref-find-references] . lsp-ui-peek-find-references))
+  :init (setq lsp-ui-doc-enable t
+              lsp-ui-doc-use-webkit nil
+              lsp-ui-doc-delay 0.2
+              lsp-ui-doc-include-signature t
+              lsp-ui-doc-position 'at-point
+              lsp-ui-doc-border (face-foreground 'default)
+              lsp-eldoc-enable-hover nil ; Disable eldoc displays in minibuffer
+
+              lsp-ui-imenu-enable t
+              lsp-ui-imenu-colors `(,(face-foreground 'font-lock-keyword-face)
+                                    ,(face-foreground 'font-lock-string-face)
+                                    ,(face-foreground 'font-lock-constant-face)
+                                    ,(face-foreground 'font-lock-variable-name-face))
+
+              lsp-ui-sideline-enable t
+              lsp-ui-sideline-show-hover nil
+              lsp-ui-sideline-show-diagnostics nil
+              lsp-ui-sideline-ignore-duplicate t)
   :config
-  (setq lsp-ui-peek-enable t)
-  (setq lsp-ui-doc-enable t)
-  (setq lsp-ui-imenu-enable t)
-  (setq lsp-ui-flycheck-enable t)
-  (setq lsp-ui-sideline-enable nil)
-  (setq lsp-ui-sideline-ignore-duplicate t))
+  ;; `C-g'to close doc
+  (advice-add #'keyboard-quit :before #'lsp-ui-doc-hide)
+
+  ;; Reset `lsp-ui-doc-background' after loading theme
+  (add-hook 'after-load-theme-hook
+            (lambda ()
+              (setq lsp-ui-doc-border (face-foreground 'default))
+              (set-face-background 'lsp-ui-doc-background
+                                   (face-background 'tooltip))))
+
+  ;; WORKAROUND Hide mode-line of the lsp-ui-imenu buffer
+  ;; @see https://github.com/emacs-lsp/lsp-ui/issues/243
+  (defun my-lsp-ui-imenu-hide-mode-line ()
+    "Hide the mode-line in lsp-ui-imenu."
+    (setq mode-line-format nil))
+  (advice-add #'lsp-ui-imenu :after #'my-lsp-ui-imenu-hide-mode-line))
 
 (use-package ccls
   :defines projectile-project-root-files-top-down-recurring

@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/GithubPro/Leetcode/" "~/GithubPro/wis/" "~/GithubPro/emacs/" "~/GithubPro/abcdlsj.github.io/" "~/.emacs.d/core/")
+("~/GithubPro/ics2019/" "~/.emacs.d/" "~/GithubPro/wis/" "~/.emacs.d/core/")

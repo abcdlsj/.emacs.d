@@ -1,26 +1,26 @@
 
 ;; ----- amx-history -----
 (
+ ielm
+ lsp-ui-imenu
+ lsp
+ highlight-indent-guides-mode
+ lisp-indent-line
+ imenu
+ sly
+ calc
+ customize
+ sly-connect
+ sly-mode
+ lsp-mode
+ magit
  yas-insert-snippet
  blacken-buffer
  blacken-mode
  all-the-icons-insert
- lsp-mode
- customize
- org-link-open-from-string
  awesome-pair-match-paren
  dap-hydra
  treemacs-projectile
- xref-find-definitions
- xref-find-references
- counsel-faces
- counsel-cd
- counsel-grep
- counsel-ag
- make-frame
- yas-new-snippet
- man-follow
- cd
 )
 
 ;; ----- amx-data -----
@@ -30,7 +30,7 @@
  (yas-new-snippet . 2)
  (xref-find-definitions . 4)
  (make-frame . 1)
- (lsp-mode . 3)
+ (lsp-mode . 5)
  (counsel-ag . 1)
  (counsel-grep . 1)
  (counsel-cd . 1)
@@ -40,8 +40,25 @@
  (dap-hydra . 1)
  (awesome-pair-match-paren . 1)
  (org-link-open-from-string . 1)
- (customize . 1)
+ (customize . 2)
  (all-the-icons-insert . 2)
  (blacken-buffer . 4)
  (blacken-mode . 1)
+ (magit . 1)
+ (lsp-ui-imenu . 3)
+ (sly . 10)
+ (sly-mode . 1)
+ (sly-setup . 2)
+ (sly-enable-contrib . 1)
+ (sly-quickload . 1)
+ (sly-connect . 2)
+ (calc . 1)
+ (calc-pi . 1)
+ (calc-cos . 1)
+ (imenu . 1)
+ (lisp-indent-line . 1)
+ (highlight-indent-guides-mode . 2)
+ (lsp . 1)
+ (lsp-ivy-global-workspace-symbol . 1)
+ (ielm . 1)
 )
