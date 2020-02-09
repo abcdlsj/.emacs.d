@@ -1,6 +1,10 @@
 
 ;; ----- amx-history -----
 (
+ sdcv-search-pointer
+ sdcv-mode
+ rename-file
+ telega
  ielm
  lsp-ui-imenu
  lsp
@@ -17,10 +21,6 @@
  yas-insert-snippet
  blacken-buffer
  blacken-mode
- all-the-icons-insert
- awesome-pair-match-paren
- dap-hydra
- treemacs-projectile
 )
 
 ;; ----- amx-data -----
@@ -61,4 +61,8 @@
  (lsp . 1)
  (lsp-ivy-global-workspace-symbol . 1)
  (ielm . 1)
+ (telega . 1)
+ (rename-file . 1)
+ (sdcv-mode . 1)
+ (sdcv-search-pointer . 1)
 )
