@@ -1,1 +1,1 @@
-("~/GithubPro/abcdlsj.github.io/" "~/.emacs.d/" "~/.config/i3blocks/" "~/GithubPro/wis/" "~/GithubPro/nana/" "~/Dropbox/src/unpv13e/" "~/GithubPro/ics2019/" "~/.emacs.d/core/")
+("~/.emacs.d/" "~/GithubPro/OS/ucore_os_lab/labcodes/lab1/" "~/centaur.d/" "~/GithubPro/abcdlsj.github.io/" "~/.config/i3blocks/" "~/GithubPro/wis/" "~/GithubPro/nana/" "~/Dropbox/src/unpv13e/" "~/GithubPro/ics2019/" "~/.emacs.d/core/")
