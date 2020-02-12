@@ -1,0 +1,9 @@
+#+TITLE my emacs config
+
+My emacs config
+
+<img src="./scrot.png"
+alt="" align="left"
+title="scrot.png"
+class="img"
+</img>

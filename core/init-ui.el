@@ -162,8 +162,8 @@
   :config
   (dashboard-setup-startup-hook)
   (add-to-list 'dashboard-items '(agenda) t)
-  (setq dashboard-banner-logo-title "ABCDLSJ!!!"
-	dashboard-startup-banner "~/.emacs.d/banner/MIT_GNU_Scheme_Logo_r.png"
+  (setq dashboard-banner-logo-title "RTFSC – Read The F**king Source Code :)!"
+	dashboard-startup-banner "~/.emacs.d/banner/ue-colorful.png"
 	dashboard-center-content t
 	dashboard-set-heading-icons t
 	dashboard-set-file-icons t

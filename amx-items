@@ -1,10 +1,12 @@
 
 ;; ----- amx-history -----
 (
- eaf-open-camera
+ yas-insert-snippet
+ org-display-inline-images
+ rename-file
+ telega
  calendar
  scroll-down
- eaf-open
  customize-group
  customize
  font-show-log
@@ -19,14 +21,12 @@
  magit-push
  magit
  magit-add-change-log-entry-other-window
- treemacs-projectile
- treemacs
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 6)
+ (yas-insert-snippet . 8)
  (yas-new-snippet . 2)
  (xref-find-definitions . 4)
  (make-frame . 1)
@@ -61,8 +61,8 @@
  (lsp . 1)
  (lsp-ivy-global-workspace-symbol . 1)
  (ielm . 1)
- (telega . 2)
- (rename-file . 1)
+ (telega . 3)
+ (rename-file . 2)
  (sdcv-mode . 1)
  (sdcv-search-pointer . 1)
  (treemacs . 3)
@@ -93,4 +93,5 @@
  (scroll-down . 1)
  (eaf-open-camera . 2)
  (calendar . 1)
+ (org-display-inline-images . 1)
 )

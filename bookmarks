@@ -10,6 +10,6 @@
 ("org-capture-last-stored"
  (filename . "~/Dropbox/org/journal.org")
  (front-context-string . "**** [2020-02-12")
- (rear-context-string . " 2020-02-12 星期三\n")
- (position . 15195))
+ (rear-context-string . "客，写有意思的 :daily:\n")
+ (position . 15251))
 )
