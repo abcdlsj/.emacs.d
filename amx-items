@@ -1,32 +1,32 @@
 
 ;; ----- amx-history -----
 (
- sdcv-search-pointer
- sdcv-mode
- rename-file
- telega
- ielm
- lsp-ui-imenu
- lsp
- highlight-indent-guides-mode
- lisp-indent-line
- imenu
- sly
- calc
+ eaf-open-camera
+ calendar
+ scroll-down
+ eaf-open
+ customize-group
  customize
- sly-connect
- sly-mode
- lsp-mode
+ font-show-log
+ treemacs-find-file
+ treemacs-find-tag
+ treemacs-select-window
+ set-face-font
+ describe-font
+ cnfonts-edit-profile
+ counsel-fonts
+ treemacs-add-project-to-workspace
+ magit-push
  magit
- yas-insert-snippet
- blacken-buffer
- blacken-mode
+ magit-add-change-log-entry-other-window
+ treemacs-projectile
+ treemacs
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 3)
+ (yas-insert-snippet . 6)
  (yas-new-snippet . 2)
  (xref-find-definitions . 4)
  (make-frame . 1)
@@ -36,15 +36,15 @@
  (counsel-cd . 1)
  (counsel-faces . 1)
  (xref-find-references . 1)
- (treemacs-projectile . 1)
+ (treemacs-projectile . 2)
  (dap-hydra . 1)
  (awesome-pair-match-paren . 1)
  (org-link-open-from-string . 1)
- (customize . 2)
+ (customize . 4)
  (all-the-icons-insert . 2)
  (blacken-buffer . 4)
  (blacken-mode . 1)
- (magit . 1)
+ (magit . 2)
  (lsp-ui-imenu . 3)
  (sly . 10)
  (sly-mode . 1)
@@ -61,8 +61,36 @@
  (lsp . 1)
  (lsp-ivy-global-workspace-symbol . 1)
  (ielm . 1)
- (telega . 1)
+ (telega . 2)
  (rename-file . 1)
  (sdcv-mode . 1)
  (sdcv-search-pointer . 1)
+ (treemacs . 3)
+ (gdb . 1)
+ (markdown-preview . 1)
+ (org-latex-export-to-pdf . 1)
+ (org-latex-preview . 1)
+ (eaf-open . 2)
+ (eaf-proxy-zoom_in . 1)
+ (eaf-proxy-zoom_out . 6)
+ (eaf-proxy-scroll_up . 1)
+ (treemacs-add-project . 1)
+ (magit-add-change-log-entry-other-window . 1)
+ (magit-push . 1)
+ (treemacs-add-project-to-workspace . 1)
+ (counsel-fonts . 2)
+ (cnfonts-profile-edit-mode . 1)
+ (cnfonts-edit-profile . 5)
+ (set-face-font . 7)
+ (describe-font . 3)
+ (cnfonts-ui . 1)
+ (lsp-ui-imenu--kill . 1)
+ (treemacs-select-window . 1)
+ (treemacs-find-tag . 1)
+ (treemacs-find-file . 1)
+ (font-show-log . 1)
+ (customize-group . 1)
+ (scroll-down . 1)
+ (eaf-open-camera . 2)
+ (calendar . 1)
 )

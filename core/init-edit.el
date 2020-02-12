@@ -108,4 +108,15 @@
 ;;python format
 (require 'blacken)
 
+(load "auctex.el" nil t t)
+(load "preview.el" nil t t)
+
+(add-hook 'LaTeX-mode-hook
+	  (lambda()
+	    (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
+	    (setq TeX-command-default "XeLaTeX")
+	    (setq TeX-save-querynil )
+	    (setq TeX-show-compilation t)
+	    ))
+
 (provide 'init-edit)

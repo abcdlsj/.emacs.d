@@ -1,1 +1,1 @@
-("~/.emacs.d/" "~/GithubPro/OS/ucore_os_lab/labcodes/lab1/" "~/centaur.d/" "~/GithubPro/abcdlsj.github.io/" "~/.config/i3blocks/" "~/GithubPro/wis/" "~/GithubPro/nana/" "~/Dropbox/src/unpv13e/" "~/GithubPro/ics2019/" "~/.emacs.d/core/")
+("~/.emacs.d/" "~/GithubPro/emacs-application-framework/" "~/GithubPro/wis/" "~/GithubPro/ics2019/" "~/GithubPro/abcdlsj.github.io/" "~/GithubPro/Open-Course-Resources/" "~/GithubPro/OS/ucore_os_lab/labcodes/lab1/" "~/centaur.d/" "~/.config/i3blocks/" "~/GithubPro/nana/" "~/Dropbox/src/unpv13e/" "~/.emacs.d/core/")

@@ -25,6 +25,8 @@
 			   company-box
 			   company-tabnine
 			   ;; --- Better Editor ---
+			   ;;LaTeX
+			   auctex
 			   ;;pyim
 			   avy
 			   projectile
@@ -52,6 +54,7 @@
 			   treemacs
 			   treemacs-evil
 			   treemacs-projectile
+			   treemacs-magit
 			   winum
 			   which-key
 			   ;;key
@@ -101,6 +104,7 @@
 			   ;;org-page
 			   org-download
 			   ox-hugo
+			   org-download
 			   ;;mingus
 			   ;;workspace
 			   persp-mode

@@ -3,3 +3,7 @@
  - path :: ~/Dropbox/workspace
 ** wis
  - path :: ~/GithubPro/wis
+** ics2019
+ - path :: ~/GithubPro/ics2019
+** .emacs.d
+ - path :: ~/.emacs.d

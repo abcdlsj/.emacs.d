@@ -43,12 +43,6 @@
   (setq eaf-grip-token "1f9f6b249d2a08255b89875aebc025fd596805c8")
   (eaf-setq eaf-browser-default-zoom  "1.25"))
 
-;; (when (display-graphic-p)
-;;   (use-package awesome-tab
-;;     :load-path "~/.emacs.d/gitel/awesome-tab/"
-;;     :config
-;;     (awesome-tab-mode t)))
-
 (require 'aweshell)
 
 (provide 'init-awesome)
