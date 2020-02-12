@@ -69,6 +69,7 @@
 			   ccls
 			   lsp-python-ms
 			   yasnippet
+			   yasnippet-snippets
 			   auto-yasnippet
 			   ;;use-package
 			   use-package

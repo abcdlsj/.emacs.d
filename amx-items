@@ -2,6 +2,7 @@
 ;; ----- amx-history -----
 (
  yas-insert-snippet
+ ivy-yasnippet
  org-display-inline-images
  rename-file
  telega
@@ -20,13 +21,12 @@
  treemacs-add-project-to-workspace
  magit-push
  magit
- magit-add-change-log-entry-other-window
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 8)
+ (yas-insert-snippet . 12)
  (yas-new-snippet . 2)
  (xref-find-definitions . 4)
  (make-frame . 1)
@@ -93,5 +93,6 @@
  (scroll-down . 1)
  (eaf-open-camera . 2)
  (calendar . 1)
- (org-display-inline-images . 1)
+ (org-display-inline-images . 3)
+ (ivy-yasnippet . 1)
 )

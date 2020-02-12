@@ -40,6 +40,7 @@
   ;;counsel
   "ca" 'counsel-ag
   "cz" 'counsel-fzf
+  "cy" 'ivy-yasnippet
   "bs" 'switch-to-buffer
   "bk" 'kill-buffer
   "be" 'eval-buffer
