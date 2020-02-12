@@ -1,4 +1,4 @@
-#+TITLE my emacs config
+#+TITLE: my emacs config
 
 My emacs config
 
