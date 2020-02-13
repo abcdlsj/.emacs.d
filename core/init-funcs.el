@@ -84,4 +84,27 @@ will also be the width of all other printable characters."
              (seq-drop candidates-1 2)
              (seq-drop candidates-2 2)))))
 
+;;
+(defun scheme-split-window ()
+  (cond
+   ((= 1 (count-windows))
+    (delete-other-windows)
+    (split-window-vertically (floor (* 0.68 (window-height))))
+    (other-window 1)
+    (switch-to-buffer "*scheme*")
+    (other-window 1))
+   ((not (find "*scheme*"
+               (mapcar (lambda (w) (buffer-name (window-buffer w)))
+                       (window-list))
+               :test 'equal))
+    (other-window 1)
+    (switch-to-buffer "*scheme*")
+    (other-window -1))))
+
+(defun open-eshell-on-other-window ()
+  (interactive)
+  (split-window-vertically (floor (* 0.7 (window-height))))
+  (other-window 1)
+  (eshell))
+
 (provide 'init-funcs)

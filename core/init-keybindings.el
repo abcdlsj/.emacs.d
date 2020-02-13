@@ -6,6 +6,7 @@
 ;;|___/                             |___/
 ;;
 ;evil
+
 (use-package evil
   :init
   (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
@@ -59,6 +60,7 @@
   ;; "qa" 'awesome-tab-backward-tab
   ;; "qw" 'awesome-tab-forward-group
   ;; "qs" 'awesome-tab-backward-group
+  "as" 'open-eshell-on-other-window
   )
 
 (global-set-key
