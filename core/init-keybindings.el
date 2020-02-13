@@ -52,7 +52,6 @@
   "4" 'winum-select-window-4
   "oc" 'counsel-org-capture
   "oa" 'org-agenda
-  "as" 'aweshell-dedicated-toggle
   ;;ivy
   "is" 'ivy-baidu-fanyi-suggest
   ;;"ia" 'ivy-yasnippet

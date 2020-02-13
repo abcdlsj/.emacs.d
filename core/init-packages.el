@@ -92,7 +92,6 @@
 			   sly
 			   sly-quicklisp
 			   racket-mode
-			   geiser
 			   ;;vterm
 			   eshell-up
 			   eshell-did-you-mean

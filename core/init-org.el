@@ -36,6 +36,7 @@
   ;(setq org-indent-mode 1)
   (setq org-log-done 'time)
   (setq org-image-actual-width '(400))
+  (add-hook 'org-mode-hook 'toggle-truncate-lines)
   )
 (use-package ox-hugo
   :after ox)

@@ -103,3 +103,7 @@ ls
 cc SumOfMini.cpp
 cc SumOfMini.cpp
 g++ SumOfMini.cpp -o SumOfMini
+scheme
+racket 2.8.ss
+ls
+cd

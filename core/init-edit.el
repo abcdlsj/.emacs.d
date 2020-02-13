@@ -45,6 +45,8 @@
                'lua-mode-hook
                'swift-mode-hook
                'minibuffer-inactive-mode-hook
+	       'scheme-mode-hook
+	       'racket-mode-hook
                ))
   (add-hook hook '(lambda () (awesome-pair-mode 1))))
 

@@ -1,7 +1,17 @@
 
 ;; ----- amx-history -----
 (
+ eshell-command
+ counsel-esh-history
+ eshell
+ racket-mode
+ run-scheme
+ company-capf
+ company-tabnine
+ clipboard-yank
  yas-insert-snippet
+ global-visual-line-mode
+ toggle-truncate-lines
  ivy-yasnippet
  org-display-inline-images
  rename-file
@@ -10,23 +20,13 @@
  scroll-down
  customize-group
  customize
- font-show-log
- treemacs-find-file
- treemacs-find-tag
- treemacs-select-window
- set-face-font
- describe-font
- cnfonts-edit-profile
- counsel-fonts
- treemacs-add-project-to-workspace
- magit-push
- magit
+ sly
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 12)
+ (yas-insert-snippet . 18)
  (yas-new-snippet . 2)
  (xref-find-definitions . 4)
  (make-frame . 1)
@@ -95,4 +95,16 @@
  (calendar . 1)
  (org-display-inline-images . 3)
  (ivy-yasnippet . 1)
+ (toggle-truncate-lines . 1)
+ (global-visual-line-mode . 2)
+ (run-geiser . 10)
+ (clipboard-yank . 1)
+ (company-capf . 2)
+ (company-tabnine . 1)
+ (run-scheme . 2)
+ (eshell . 2)
+ (racket-mode . 1)
+ (counsel-esh-history . 1)
+ (eshell-toggle-direct-send . 1)
+ (eshell-command . 1)
 )
