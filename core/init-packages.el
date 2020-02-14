@@ -88,6 +88,7 @@
 			   tao-theme
 			   hide-mode-line
 			   ;;lang
+			   nasm-mode
 			   google-c-style
 			   sly
 			   sly-quicklisp

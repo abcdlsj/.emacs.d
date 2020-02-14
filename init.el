@@ -80,7 +80,7 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-snippet)
 (require 'init-awesome)
 (require 'init-lisp)
-(require 'init-cc)
+(require 'init-lang)
 (require 'init-org)
 ;;key
 (require 'init-keybindings)

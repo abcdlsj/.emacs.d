@@ -112,3 +112,11 @@ scheme 2.2.scm
 scheme 2.2.scm
 ls
 scheme 2.2.1.scm
+nasm -f elf64 -o helloworld.o helloworld.asm
+ld -o helloworld helloworld.o
+./helloworld
+c
+cd
+c
+c
+c

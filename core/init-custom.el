@@ -96,7 +96,6 @@
       sentence-end-double-space nil)
 
 (fset 'yes-or-no-p 'y-or-n-p)
-
 (setq user-full-name "abcdlsj")
 (setq user-mail-address "lisongjianshuai@gmail.com")
 

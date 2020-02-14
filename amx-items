@@ -1,6 +1,13 @@
 
 ;; ----- amx-history -----
 (
+ async-shell-command
+ counsel-search
+ make-local-variable
+ lsp-ui-imenu
+ imenu
+ image-reverse-speed
+ org-toggle-inline-images
  scheme-mode
  racket-mode
  evil-mode
@@ -14,13 +21,6 @@
  run-scheme
  company-capf
  company-tabnine
- clipboard-yank
- yas-insert-snippet
- global-visual-line-mode
- toggle-truncate-lines
- ivy-yasnippet
- org-display-inline-images
- rename-file
 )
 
 ;; ----- amx-data -----
@@ -45,7 +45,7 @@
  (blacken-buffer . 4)
  (blacken-mode . 1)
  (magit . 2)
- (lsp-ui-imenu . 3)
+ (lsp-ui-imenu . 4)
  (sly . 11)
  (sly-mode . 1)
  (sly-setup . 2)
@@ -55,7 +55,7 @@
  (calc . 1)
  (calc-pi . 1)
  (calc-cos . 1)
- (imenu . 1)
+ (imenu . 2)
  (lisp-indent-line . 1)
  (highlight-indent-guides-mode . 2)
  (lsp . 1)
@@ -116,4 +116,9 @@
  (eval-buffer . 1)
  (evil-mode . 1)
  (scheme-mode . 1)
+ (org-toggle-inline-images . 1)
+ (image-reverse-speed . 1)
+ (make-local-variable . 1)
+ (counsel-search . 1)
+ (async-shell-command . 1)
 )
