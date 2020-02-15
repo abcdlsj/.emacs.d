@@ -8,8 +8,8 @@
  (rear-context-string . "themes~ 的问题，明天看\n")
  (position . 3828))
 ("org-capture-last-stored"
- (filename . "~/Dropbox/org/journal.org")
- (front-context-string . "**** [2020-02-13")
- (rear-context-string . " 2020-02-13 星期四\n")
- (position . 15352))
+ (filename . "~/Dropbox/org/task.org")
+ (front-context-string . "** TODO 一周 SICP ")
+ (rear-context-string . " [2020-01-11 六]\n")
+ (position . 4013))
 )

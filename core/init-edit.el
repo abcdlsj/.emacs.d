@@ -58,16 +58,16 @@
 (define-key awesome-pair-mode-map (kbd "}") 'awesome-pair-close-curly)
 (define-key awesome-pair-mode-map (kbd "$") 'awesome-pair-match-paren)
 (define-key awesome-pair-mode-map (kbd "\"") 'awesome-pair-double-quote)
-(define-key awesome-pair-mode-map (kbd "M-o") 'awesome-pair-backward-delete)
-(define-key awesome-pair-mode-map (kbd "C-k") 'awesome-pair-kill)
-(define-key awesome-pair-mode-map (kbd "M-\"") 'awesome-pair-wrap-double-quote)
-(define-key awesome-pair-mode-map (kbd "M-[") 'awesome-pair-wrap-bracket)
-(define-key awesome-pair-mode-map (kbd "M-{") 'awesome-pair-wrap-curly)
-(define-key awesome-pair-mode-map (kbd "M-(") 'awesome-pair-wrap-round)
-(define-key awesome-pair-mode-map (kbd "M-)") 'Awesome-pair-unwrap)
-(define-key awesome-pair-mode-map (kbd "M-p") 'awesome-pair-jump-right)
-(define-key awesome-pair-mode-map (kbd "M-n") 'awesome-pair-jump-left)
-(define-key awesome-pair-mode-map (kbd "M-:") 'awesome-pair-jump-out-pair-and-newline)
+(define-key awesome-pair-mode-map (kbd "C-k o") 'awesome-pair-backward-delete)
+(define-key awesome-pair-mode-map (kbd "C-k k") 'awesome-pair-kill)
+(define-key awesome-pair-mode-map (kbd "C-k \"") 'awesome-pair-wrap-double-quote)
+(define-key awesome-pair-mode-map (kbd "C-k [") 'awesome-pair-wrap-bracket)
+(define-key awesome-pair-mode-map (kbd "C-k {") 'awesome-pair-wrap-curly)
+(define-key awesome-pair-mode-map (kbd "C-k (") 'awesome-pair-wrap-round)
+(define-key awesome-pair-mode-map (kbd "C-k )") 'Awesome-pair-unwrap)
+(define-key awesome-pair-mode-map (kbd "C-k p") 'awesome-pair-jump-right)
+(define-key awesome-pair-mode-map (kbd "C-k n") 'awesome-pair-jump-left)
+(define-key awesome-pair-mode-map (kbd "C-k :") 'awesome-pair-jump-out-pair-and-newline)
 
 ;; (use-package highlight-indent-guides
 ;;   :config
@@ -120,5 +120,11 @@
 	    (setq TeX-save-querynil )
 	    (setq TeX-show-compilation t)
 	    ))
+
+(require 'auto-save)
+(auto-save-enable)
+
+(setq auto-save-silent t)   ; quietly save
+(setq auto-save-delete-trailing-whitespace t)  ; automatically delete spaces at the end of the line when saving
 
 (provide 'init-edit)

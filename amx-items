@@ -1,40 +1,40 @@
 
 ;; ----- amx-history -----
 (
+ add-file-local-variable
+ yas-new-snippet
+ scheme-send-last-sexp-split-window
+ eshell
+ counsel-faces
+ org-deadline
+ org-toggle-inline-images
+ yas-insert-snippet
  async-shell-command
  counsel-search
  make-local-variable
  lsp-ui-imenu
  imenu
  image-reverse-speed
- org-toggle-inline-images
  scheme-mode
  racket-mode
  evil-mode
  eval-buffer
  open-eshell-on-other-window
  split-window-below
- sly
- eshell-command
- counsel-esh-history
- eshell
- run-scheme
- company-capf
- company-tabnine
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 18)
- (yas-new-snippet . 2)
+ (yas-insert-snippet . 19)
+ (yas-new-snippet . 3)
  (xref-find-definitions . 4)
  (make-frame . 1)
  (lsp-mode . 5)
  (counsel-ag . 1)
  (counsel-grep . 1)
  (counsel-cd . 1)
- (counsel-faces . 1)
+ (counsel-faces . 2)
  (xref-find-references . 1)
  (treemacs-projectile . 2)
  (dap-hydra . 1)
@@ -102,10 +102,10 @@
  (company-capf . 2)
  (company-tabnine . 1)
  (run-scheme . 2)
- (eshell . 2)
+ (eshell . 4)
  (racket-mode . 3)
  (counsel-esh-history . 1)
- (eshell-toggle-direct-send . 1)
+ (eshell-toggle-direct-send . 3)
  (eshell-command . 1)
  (scheme-send-definition . 4)
  (scheme-send-region . 1)
@@ -116,9 +116,13 @@
  (eval-buffer . 1)
  (evil-mode . 1)
  (scheme-mode . 1)
- (org-toggle-inline-images . 1)
+ (org-toggle-inline-images . 2)
  (image-reverse-speed . 1)
  (make-local-variable . 1)
  (counsel-search . 1)
  (async-shell-command . 1)
+ (org-deadline . 1)
+ (eshell/clear . 1)
+ (scheme-send-last-sexp-split-window . 1)
+ (add-file-local-variable . 1)
 )

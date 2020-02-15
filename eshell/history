@@ -1,20 +1,3 @@
-cc helloworld.cpp 
-g++ helloworld.cpp -o helloworld
-./helloworld 
-cc L1-002.cpp 
-c
-gcc L1-002.cpp -o L1-002
-c
-g++ uva_156.cpp -o uva_156
-./uva_156.cpp
-./uva_156
-ls
-./test.py
-chmod +x test.py 
-./test.py
-g++ AB1.cpp -o AB1
-./AB1 
-c
 alias c="clear"
 a
 c
@@ -118,5 +101,28 @@ ld -o helloworld helloworld.o
 c
 cd
 c
+c
+c
+scheme 2.2.1.scm
+ls
+ls
+cd
+c
+c
+c
+cd 
+cd Downloads/ioccc/
+ls
+ks
+ls
+ls -l
+cd ../
+ls
+ls
+cd Dropbox/workspace/lisp/SICP/2/
+ls
+scheme 2.17.scm
+scheme 2.17.scm
+cd
 c
 c

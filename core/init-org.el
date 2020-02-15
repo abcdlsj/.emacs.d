@@ -31,6 +31,7 @@
                                                            (C . t)
 							   (java . t)
 							   (python . t)
+							   (dot . t)
                                                            ))
   ;;org-view
   ;(setq org-indent-mode 1)

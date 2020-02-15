@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: sicp
+# key: <si
+# --
+
+#lang sicp
+
+$0
