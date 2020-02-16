@@ -1,14 +1,14 @@
 
 ;; ----- amx-history -----
 (
- add-file-local-variable
+ yas-insert-snippet
  yas-new-snippet
- scheme-send-last-sexp-split-window
+ ielm
+ add-file-local-variable
  eshell
  counsel-faces
  org-deadline
  org-toggle-inline-images
- yas-insert-snippet
  async-shell-command
  counsel-search
  make-local-variable
@@ -20,14 +20,14 @@
  evil-mode
  eval-buffer
  open-eshell-on-other-window
- split-window-below
+ sly
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 19)
- (yas-new-snippet . 3)
+ (yas-insert-snippet . 21)
+ (yas-new-snippet . 4)
  (xref-find-definitions . 4)
  (make-frame . 1)
  (lsp-mode . 5)
@@ -60,7 +60,7 @@
  (highlight-indent-guides-mode . 2)
  (lsp . 1)
  (lsp-ivy-global-workspace-symbol . 1)
- (ielm . 1)
+ (ielm . 2)
  (telega . 3)
  (rename-file . 2)
  (sdcv-mode . 1)

@@ -121,10 +121,10 @@
 	    (setq TeX-show-compilation t)
 	    ))
 
-(require 'auto-save)
-(auto-save-enable)
+;; (require 'auto-save)
+;; (auto-save-enable)
 
-(setq auto-save-silent t)   ; quietly save
-(setq auto-save-delete-trailing-whitespace t)  ; automatically delete spaces at the end of the line when saving
+;; (setq auto-save-silent t)   ; quietly save
+;; (setq auto-save-delete-trailing-whitespace t)  ; automatically delete spaces at the end of the line when saving
 
 (provide 'init-edit)
