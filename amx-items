@@ -1,34 +1,34 @@
 
 ;; ----- amx-history -----
 (
- yas-insert-snippet
- yas-new-snippet
- ielm
- add-file-local-variable
- eshell
- counsel-faces
- org-deadline
+ run-haskell
+ haskell-mode
+ undo-tree-visualize
+ undo-tree-undo
+ xref-find-definitions
  org-toggle-inline-images
- async-shell-command
- counsel-search
- make-local-variable
- lsp-ui-imenu
- imenu
- image-reverse-speed
- scheme-mode
- racket-mode
- evil-mode
- eval-buffer
- open-eshell-on-other-window
- sly
+ yas-insert-snippet
+ dired-find-file
+ markdown-preview
+ markdown
+ org-todo
+ org-todo-list
+ company-mode
+ company-capf
+ undo-tree-redo
+ org-toggle-item
+ eshell
+ org-indent-mode
+ telega-root-mode
+ telega
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 21)
+ (yas-insert-snippet . 26)
  (yas-new-snippet . 4)
- (xref-find-definitions . 4)
+ (xref-find-definitions . 6)
  (make-frame . 1)
  (lsp-mode . 5)
  (counsel-ag . 1)
@@ -61,13 +61,13 @@
  (lsp . 1)
  (lsp-ivy-global-workspace-symbol . 1)
  (ielm . 2)
- (telega . 3)
+ (telega . 4)
  (rename-file . 2)
  (sdcv-mode . 1)
  (sdcv-search-pointer . 1)
  (treemacs . 3)
- (gdb . 1)
- (markdown-preview . 1)
+ (gdb . 2)
+ (markdown-preview . 3)
  (org-latex-export-to-pdf . 1)
  (org-latex-preview . 1)
  (eaf-open . 2)
@@ -99,10 +99,10 @@
  (global-visual-line-mode . 2)
  (run-geiser . 10)
  (clipboard-yank . 1)
- (company-capf . 2)
+ (company-capf . 3)
  (company-tabnine . 1)
  (run-scheme . 2)
- (eshell . 4)
+ (eshell . 5)
  (racket-mode . 3)
  (counsel-esh-history . 1)
  (eshell-toggle-direct-send . 3)
@@ -116,7 +116,7 @@
  (eval-buffer . 1)
  (evil-mode . 1)
  (scheme-mode . 1)
- (org-toggle-inline-images . 2)
+ (org-toggle-inline-images . 8)
  (image-reverse-speed . 1)
  (make-local-variable . 1)
  (counsel-search . 1)
@@ -125,4 +125,17 @@
  (eshell/clear . 1)
  (scheme-send-last-sexp-split-window . 1)
  (add-file-local-variable . 1)
+ (undo-tree-redo . 2)
+ (telega-root-mode . 1)
+ (org-indent-mode . 2)
+ (org-toggle-item . 1)
+ (undo-tree-visualize . 2)
+ (company-mode . 2)
+ (org-todo-list . 1)
+ (org-todo . 3)
+ (markdown . 1)
+ (dired-find-file . 1)
+ (undo-tree-undo . 1)
+ (haskell-mode . 1)
+ (run-haskell . 1)
 )

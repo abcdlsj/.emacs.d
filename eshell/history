@@ -1,16 +1,3 @@
-alias c="clear"
-a
-c
-c
-c
-c
-g++ AB2.cpp -o AB2
-./AB2
-g++ AB3.cpp -o AB3
-./AB3
-g++ AB3.cpp -o AB3
-./AB3
-g++ sstream.cpp -o sstream
 ls
 l
 ls -al
@@ -126,3 +113,16 @@ scheme 2.17.scm
 cd
 c
 c
+ls
+cd Downloads/
+ls
+cd ..
+ls
+gcc -o hello_ncurses hello_ncurses.c -lncurses
+./hello_ncurses
+ls
+ghci WC.hs
+ghci WC.hs qu.txt
+runghc -v
+runghc -version
+runghc WC.hs > qu.txt

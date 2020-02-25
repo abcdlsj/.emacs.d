@@ -9,7 +9,7 @@
  (position . 3828))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/org/journal.org")
- (front-context-string . "**** [2020-02-16")
- (rear-context-string . "住不是更好？？ :learn:\n")
- (position . 15661))
+ (front-context-string . "**** [2020-02-24")
+ (rear-context-string . " 2020-02-24 星期一\n")
+ (position . 17451))
 )

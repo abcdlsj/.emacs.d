@@ -1,2 +1,0 @@
-;;; Generated package description from /home/abcdlsj/.emacs.d/elpa/which-key-20200207.221/which-key.el  -*- no-byte-compile: t -*-
-(define-package "which-key" "20200207.221" "Display available keybindings in popup" '((emacs "24.4")) :commit "c4b7aaefc160478b7bbd07251a9772c75944ffe5" :authors '(("Justin Burkett" . "justin@burkett.cc")) :maintainer '("Justin Burkett" . "justin@burkett.cc") :url "https://github.com/justbur/emacs-which-key")

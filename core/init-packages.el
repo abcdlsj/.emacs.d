@@ -64,6 +64,7 @@
 			   lsp-mode
 			   ;;lsp
 			   lsp-java
+			   lsp-haskell
 			   dap-mode
 			   lsp-ui
 			   ccls

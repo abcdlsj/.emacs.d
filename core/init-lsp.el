@@ -105,4 +105,9 @@
 
 (use-package dap-java :after (lsp-java))
 
+(use-package lsp-haskell
+  :config
+  (add-hook 'haskell-mode-hook #'lsp)
+  (setq lsp-haskell-process-path-hie "hie-wrapper"))
+
 (provide 'init-lsp)

@@ -32,12 +32,14 @@
 							   (java . t)
 							   (python . t)
 							   (dot . t)
+							   (racket . t)
                                                            ))
   ;;org-view
   ;(setq org-indent-mode 1)
   (setq org-log-done 'time)
   (setq org-image-actual-width '(400))
   (add-hook 'org-mode-hook 'toggle-truncate-lines)
+  (setq org-babel-racket-command "/usr/bin/racket")
   )
 (use-package ox-hugo
   :after ox)
