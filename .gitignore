@@ -6,3 +6,4 @@ transient/*
 var/*
 history
 recentf
+eshell/*
