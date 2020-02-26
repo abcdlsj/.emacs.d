@@ -1,5 +1,5 @@
-/elpa/*
-/bookmarks
-/auto-save-list/*
-/tramsient/*
-/var/*
+elpa/*
+bookmarks
+auto-save-list/*
+tramsient/*
+var/*
