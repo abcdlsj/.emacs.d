@@ -1,1 +1,0 @@
-("~/.emacs.d/" "~/GithubPro/wis/" "~/GithubPro/ics2019/" "~/GithubPro/abcdlsj.github.io/" "~/GithubPro/OS/ucore_os_lab/labcodes/lab1/" "~/.config/i3blocks/" "~/GithubPro/nana/" "~/Dropbox/src/unpv13e/" "~/.emacs.d/core/")

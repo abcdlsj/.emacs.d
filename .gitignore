@@ -1,5 +1,8 @@
 elpa/*
 bookmarks
+projectile-bookmarks.eld
 auto-save-list/*
-tramsient/*
+transient/*
 var/*
+history
+recentf
