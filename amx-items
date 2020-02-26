@@ -1,13 +1,14 @@
 
 ;; ----- amx-history -----
 (
+ yas-insert-snippet
+ lsp-mode
  run-haskell
  haskell-mode
  undo-tree-visualize
  undo-tree-undo
  xref-find-definitions
  org-toggle-inline-images
- yas-insert-snippet
  dired-find-file
  markdown-preview
  markdown
@@ -19,18 +20,17 @@
  org-toggle-item
  eshell
  org-indent-mode
- telega-root-mode
- telega
+ sly
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 26)
+ (yas-insert-snippet . 29)
  (yas-new-snippet . 4)
  (xref-find-definitions . 6)
  (make-frame . 1)
- (lsp-mode . 5)
+ (lsp-mode . 6)
  (counsel-ag . 1)
  (counsel-grep . 1)
  (counsel-cd . 1)
@@ -138,4 +138,5 @@
  (undo-tree-undo . 1)
  (haskell-mode . 1)
  (run-haskell . 1)
+ (dap-chrome-setup . 1)
 )
