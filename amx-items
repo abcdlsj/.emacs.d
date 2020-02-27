@@ -1,6 +1,8 @@
 
 ;; ----- amx-history -----
 (
+ xref-find-references
+ org-toggle-inline-images
  yas-insert-snippet
  lsp-mode
  run-haskell
@@ -8,7 +10,6 @@
  undo-tree-visualize
  undo-tree-undo
  xref-find-definitions
- org-toggle-inline-images
  dired-find-file
  markdown-preview
  markdown
@@ -20,7 +21,6 @@
  org-toggle-item
  eshell
  org-indent-mode
- sly
 )
 
 ;; ----- amx-data -----
@@ -35,7 +35,7 @@
  (counsel-grep . 1)
  (counsel-cd . 1)
  (counsel-faces . 2)
- (xref-find-references . 1)
+ (xref-find-references . 2)
  (treemacs-projectile . 2)
  (dap-hydra . 1)
  (awesome-pair-match-paren . 1)
@@ -116,7 +116,7 @@
  (eval-buffer . 1)
  (evil-mode . 1)
  (scheme-mode . 1)
- (org-toggle-inline-images . 8)
+ (org-toggle-inline-images . 10)
  (image-reverse-speed . 1)
  (make-local-variable . 1)
  (counsel-search . 1)
