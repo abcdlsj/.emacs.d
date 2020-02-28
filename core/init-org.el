@@ -14,9 +14,9 @@
           ("t" "Task To Do!" entry
            (file+headline "task.org" "GTD")
            "* TODO %^{Task Name:}\n%u\n%a\n" :clock-in t :clock-resume t)
-         ("r" "Book Reading Task" entry
-          (file+headline "task.org" "Reading")
-          "* TODO %^{Book Name:}\n%u\n%a\n" :clock-in t :clock-resume t)
+         ("r" "Media.Reaing.Relaxing" entry
+          (file+olp+datetree "media.org")
+          "* %U - %^{heading} %^g\n %?\n" :clock-in t :clock-resume t)
          ("j" "Journal!!!" entry
           (file+olp+datetree "journal.org")
           "* %U - %^{heading} %^g\n %?\n" :tree-type week)

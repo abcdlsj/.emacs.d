@@ -1,8 +1,9 @@
 
 ;; ----- amx-history -----
 (
- xref-find-references
+ markdown-preview
  org-toggle-inline-images
+ xref-find-references
  yas-insert-snippet
  lsp-mode
  run-haskell
@@ -11,7 +12,6 @@
  undo-tree-undo
  xref-find-definitions
  dired-find-file
- markdown-preview
  markdown
  org-todo
  org-todo-list
@@ -67,7 +67,7 @@
  (sdcv-search-pointer . 1)
  (treemacs . 3)
  (gdb . 2)
- (markdown-preview . 3)
+ (markdown-preview . 4)
  (org-latex-export-to-pdf . 1)
  (org-latex-preview . 1)
  (eaf-open . 2)
@@ -116,7 +116,7 @@
  (eval-buffer . 1)
  (evil-mode . 1)
  (scheme-mode . 1)
- (org-toggle-inline-images . 10)
+ (org-toggle-inline-images . 12)
  (image-reverse-speed . 1)
  (make-local-variable . 1)
  (counsel-search . 1)
