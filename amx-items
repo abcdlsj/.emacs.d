@@ -1,41 +1,41 @@
 
 ;; ----- amx-history -----
 (
+ yas-insert-snippet
+ org-date-from-calendar
+ lsp-ui-peek-find-definitions
+ lsp-ui-imenu
+ xref-find-definitions
+ xref-find-references
+ counsel-colors-emacs
+ org-deadline
+ lsp-rename
+ org-timer-stop
+ org-todo
+ org-timer
  markdown-preview
  org-toggle-inline-images
- xref-find-references
- yas-insert-snippet
  lsp-mode
  run-haskell
  haskell-mode
  undo-tree-visualize
  undo-tree-undo
- xref-find-definitions
  dired-find-file
- markdown
- org-todo
- org-todo-list
- company-mode
- company-capf
- undo-tree-redo
- org-toggle-item
- eshell
- org-indent-mode
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 29)
+ (yas-insert-snippet . 33)
  (yas-new-snippet . 4)
- (xref-find-definitions . 6)
+ (xref-find-definitions . 7)
  (make-frame . 1)
  (lsp-mode . 6)
  (counsel-ag . 1)
  (counsel-grep . 1)
  (counsel-cd . 1)
  (counsel-faces . 2)
- (xref-find-references . 2)
+ (xref-find-references . 3)
  (treemacs-projectile . 2)
  (dap-hydra . 1)
  (awesome-pair-match-paren . 1)
@@ -45,7 +45,7 @@
  (blacken-buffer . 4)
  (blacken-mode . 1)
  (magit . 2)
- (lsp-ui-imenu . 4)
+ (lsp-ui-imenu . 5)
  (sly . 11)
  (sly-mode . 1)
  (sly-setup . 2)
@@ -121,7 +121,7 @@
  (make-local-variable . 1)
  (counsel-search . 1)
  (async-shell-command . 1)
- (org-deadline . 1)
+ (org-deadline . 2)
  (eshell/clear . 1)
  (scheme-send-last-sexp-split-window . 1)
  (add-file-local-variable . 1)
@@ -132,11 +132,17 @@
  (undo-tree-visualize . 2)
  (company-mode . 2)
  (org-todo-list . 1)
- (org-todo . 3)
+ (org-todo . 4)
  (markdown . 1)
  (dired-find-file . 1)
  (undo-tree-undo . 1)
  (haskell-mode . 1)
  (run-haskell . 1)
  (dap-chrome-setup . 1)
+ (org-timer . 1)
+ (org-timer-stop . 1)
+ (lsp-rename . 2)
+ (counsel-colors-emacs . 4)
+ (lsp-ui-peek-find-definitions . 2)
+ (org-date-from-calendar . 1)
 )
