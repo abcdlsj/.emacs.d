@@ -1,26 +1,26 @@
 
 ;; ----- amx-history -----
 (
+ gdb-next
+ gdb-advance
+ gdb-start
+ gdb-run
+ gdb-executable
+ package-install
+ eval-buffer
+ ediff
+ xref-find-definitions
+ save-some-buffers
+ counsel-rg
+ counsel-ag
+ counsel-load-theme
+ counsel-faces
+ customize-face
+ counsel-colors-emacs
  yas-insert-snippet
- org-date-from-calendar
  lsp-ui-peek-find-definitions
  lsp-ui-imenu
- xref-find-definitions
- xref-find-references
- counsel-colors-emacs
- org-deadline
- lsp-rename
- org-timer-stop
- org-todo
- org-timer
- markdown-preview
- org-toggle-inline-images
- lsp-mode
- run-haskell
- haskell-mode
- undo-tree-visualize
- undo-tree-undo
- dired-find-file
+ sly
 )
 
 ;; ----- amx-data -----
@@ -28,13 +28,13 @@
  (man-follow . 1)
  (yas-insert-snippet . 33)
  (yas-new-snippet . 4)
- (xref-find-definitions . 7)
+ (xref-find-definitions . 8)
  (make-frame . 1)
  (lsp-mode . 6)
- (counsel-ag . 1)
+ (counsel-ag . 2)
  (counsel-grep . 1)
  (counsel-cd . 1)
- (counsel-faces . 2)
+ (counsel-faces . 3)
  (xref-find-references . 3)
  (treemacs-projectile . 2)
  (dap-hydra . 1)
@@ -113,10 +113,10 @@
  (open-eshell-on-other-window . 9)
  (split-window-below . 1)
  (greeting . 1)
- (eval-buffer . 1)
+ (eval-buffer . 3)
  (evil-mode . 1)
  (scheme-mode . 1)
- (org-toggle-inline-images . 12)
+ (org-toggle-inline-images . 14)
  (image-reverse-speed . 1)
  (make-local-variable . 1)
  (counsel-search . 1)
@@ -142,7 +142,23 @@
  (org-timer . 1)
  (org-timer-stop . 1)
  (lsp-rename . 2)
- (counsel-colors-emacs . 4)
+ (counsel-colors-emacs . 5)
  (lsp-ui-peek-find-definitions . 2)
- (org-date-from-calendar . 1)
+ (org-date-from-calendar . 2)
+ (org-table-create . 1)
+ (org-table-export . 1)
+ (org-table-paste-rectangle . 4)
+ (org-table-copy-region . 3)
+ (counsel-load-theme . 13)
+ (customize-face . 1)
+ (counsel-rg . 1)
+ (org-cancel-repeater . 1)
+ (save-some-buffers . 1)
+ (ediff . 1)
+ (package-install . 1)
+ (gdb-executable . 7)
+ (gdb-run . 2)
+ (gdb-start . 1)
+ (gdb-advance . 1)
+ (gdb-next . 1)
 )

@@ -5,14 +5,19 @@
   (push '(tool-bar-lines . 0) default-frame-alist)
   (push '(vertical-scroll-bars) default-frame-alist))
 
+;; (use-package base16-theme
+;;  :config
+;;  (load-theme 'base16-gruvbox-dark-pale t))
+
 ;; ;;; Code:
 (use-package doom-themes
+  :if (display-graphic-p)
   :config
   ;; Global settings (defaults)
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
-  (load-theme 'doom-gruvbox t)
+  (load-theme 'doom-one t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
 
@@ -22,12 +27,8 @@
   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
   (doom-themes-treemacs-config)
   ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config)
+  ;; (doom-themes-org-config)
   )
-
-;; (use-package base16-theme
-;;   :config
-;;   (load-theme 'base16-gruvbox-dark-pale t))
 
 (use-package doom-modeline
   :config

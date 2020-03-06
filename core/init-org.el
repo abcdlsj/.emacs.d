@@ -11,22 +11,21 @@
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
   (setq org-capture-templates
         '(
-          ("t" "Task To Do!" entry
-           (file+headline "task.org" "GTD")
-           "* TODO %^{Task Name:}\n%u\n%a\n" :clock-in t :clock-resume t)
-         ("r" "Media.Reaing.Relaxing" entry
-          (file+olp+datetree "media.org")
-          "* %U - %^{heading} %^g\n %?\n" :clock-in t :clock-resume t)
-         ("j" "Journal!!!" entry
-          (file+olp+datetree "journal.org")
-          "* %U - %^{heading} %^g\n %?\n" :tree-type week)
-         ("n" "Notes!!!" entry
-          (file+headline "notes.org" "NOTES")
-          "* %U - %^{heading} %^g\n %?\n")))
+          ("t" "Task To Do!" plain
+           (file "task.org")
+           "* TODO %^{Task Name:} \n%^t\n%?\n")
+          ("m" "Media.Reading.Relaxing.Ideas" entry
+           (file+olp+datetree "mongo.org")
+           "* %U - %^{heading} %^g\n%?\n" :tree-type week)
+          ("j" "Journal!!!" entry
+           (file+olp+datetree "journal.org")
+           "* %U - %^{heading} %^g\n%?\n" :tree-type week)
+          ("n" "Notes!!!" plain
+           (file "notes.org")
+           "* %U - %^{heading} %^g\n%?\n")))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(
-                                                           (scheme . t)
-                                                           (lisp . t)
+                                                         (lisp . t)
                                                            (shell . t)
                                                            (C . t)
 							   (java . t)
@@ -35,14 +34,17 @@
 							   (racket . t)
                                                            ))
   ;;org-view
-  ;(setq org-indent-mode 1)
+  ;;(setq org-indent-mode 1)
   (setq org-log-done 'time)
   (setq org-image-actual-width '(400))
+  ;;(setq org-src-preserve-indentation t)
   (add-hook 'org-mode-hook 'toggle-truncate-lines)
   (setq org-babel-racket-command "/usr/bin/racket")
   )
+
 (use-package ox-hugo
   :after ox)
+
 (with-eval-after-load 'org-capture
   (defun org-hugo-new-subtree-post-capture-template ()
     "Returns `org-capture' template string for new Hugo post.
@@ -57,9 +59,9 @@ See `org-capture-templates' for more information."
                    ":END:"
                    "%?\n")          ;Place the cursor here finally
                  "\n")))
-    (add-to-list 'org-capture-templates
-                 '("h" "Hugo post Blog" entry
-                   (file "~/Dropbox/org/blog.org")
-                   (function org-hugo-new-subtree-post-capture-template))))
+  (add-to-list 'org-capture-templates
+               '("h" "Hugo post Blog" entry
+                 (file "~/Dropbox/org/blog.org")
+                 (function org-hugo-new-subtree-post-capture-template))))
 
 (provide 'init-org)
