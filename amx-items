@@ -1,11 +1,8 @@
 
 ;; ----- amx-history -----
 (
- gdb-next
- gdb-advance
- gdb-start
- gdb-run
- gdb-executable
+ org-deadline
+ gdb
  package-install
  eval-buffer
  ediff
@@ -20,7 +17,10 @@
  yas-insert-snippet
  lsp-ui-peek-find-definitions
  lsp-ui-imenu
+ org-toggle-inline-images
  sly
+ open-eshell-on-other-window
+ set-face-font
 )
 
 ;; ----- amx-data -----
@@ -66,7 +66,7 @@
  (sdcv-mode . 1)
  (sdcv-search-pointer . 1)
  (treemacs . 3)
- (gdb . 2)
+ (gdb . 4)
  (markdown-preview . 4)
  (org-latex-export-to-pdf . 1)
  (org-latex-preview . 1)
@@ -121,7 +121,7 @@
  (make-local-variable . 1)
  (counsel-search . 1)
  (async-shell-command . 1)
- (org-deadline . 2)
+ (org-deadline . 3)
  (eshell/clear . 1)
  (scheme-send-last-sexp-split-window . 1)
  (add-file-local-variable . 1)
