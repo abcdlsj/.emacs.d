@@ -1,34 +1,34 @@
 
 ;; ----- amx-history -----
 (
- org-deadline
- gdb
- package-install
- eval-buffer
- ediff
- xref-find-definitions
- save-some-buffers
- counsel-rg
- counsel-ag
- counsel-load-theme
- counsel-faces
- customize-face
- counsel-colors-emacs
  yas-insert-snippet
- lsp-ui-peek-find-definitions
- lsp-ui-imenu
- org-toggle-inline-images
- sly
- open-eshell-on-other-window
- set-face-font
+ eshell
+ diff
+ evil-mode
+ xref-find-definitions
+ emacs-version
+ benchmark
+ dired-find-alternate-file
+ dired-find-file
+ gdb-next
+ gdb-start
+ gdb-executable
+ gdb-breakpoints-mode
+ gdb-run
+ gdb-continue
+ undo-tree-visualize
+ undo
+ counsel-org-tag
+ byte-recompile-file
+ byte-compile-file
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 33)
+ (yas-insert-snippet . 37)
  (yas-new-snippet . 4)
- (xref-find-definitions . 8)
+ (xref-find-definitions . 10)
  (make-frame . 1)
  (lsp-mode . 6)
  (counsel-ag . 2)
@@ -102,7 +102,7 @@
  (company-capf . 3)
  (company-tabnine . 1)
  (run-scheme . 2)
- (eshell . 5)
+ (eshell . 6)
  (racket-mode . 3)
  (counsel-esh-history . 1)
  (eshell-toggle-direct-send . 3)
@@ -114,7 +114,7 @@
  (split-window-below . 1)
  (greeting . 1)
  (eval-buffer . 3)
- (evil-mode . 1)
+ (evil-mode . 2)
  (scheme-mode . 1)
  (org-toggle-inline-images . 14)
  (image-reverse-speed . 1)
@@ -129,12 +129,12 @@
  (telega-root-mode . 1)
  (org-indent-mode . 2)
  (org-toggle-item . 1)
- (undo-tree-visualize . 2)
+ (undo-tree-visualize . 3)
  (company-mode . 2)
  (org-todo-list . 1)
  (org-todo . 4)
  (markdown . 1)
- (dired-find-file . 1)
+ (dired-find-file . 2)
  (undo-tree-undo . 1)
  (haskell-mode . 1)
  (run-haskell . 1)
@@ -156,9 +156,20 @@
  (save-some-buffers . 1)
  (ediff . 1)
  (package-install . 1)
- (gdb-executable . 7)
- (gdb-run . 2)
- (gdb-start . 1)
+ (gdb-executable . 9)
+ (gdb-run . 3)
+ (gdb-start . 5)
  (gdb-advance . 1)
- (gdb-next . 1)
+ (gdb-next . 2)
+ (byte-compile-file . 4)
+ (byte-force-recompile . 2)
+ (byte-recompile-file . 3)
+ (counsel-org-tag . 4)
+ (undo . 1)
+ (gdb-continue . 1)
+ (gdb-breakpoints-mode . 1)
+ (dired-find-alternate-file . 1)
+ (benchmark . 1)
+ (emacs-version . 1)
+ (diff . 1)
 )
