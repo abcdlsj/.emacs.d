@@ -7,21 +7,6 @@
 ;;
 ;evil
 
-(use-package evil
-  :init
-  (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
-  (setq evil-want-keybinding nil)
-  :config
-  (evil-mode 1))
-
-(use-package evil-leader
-  :after evil
-  :config
-  (global-evil-leader-mode 1))
-(use-package evil-collection
-  :after evil
-  :config
-  (evil-collection-init))
 
 (global-set-key (kbd "M-m") 'set-mark-command)
 (global-set-key (kbd "M--") 'shell-command)

@@ -1,6 +1,23 @@
 (eval-when-compile
   (require 'init-const))
 
+(use-package evil
+  :init
+  (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
+  (setq evil-want-keybinding nil)
+  :config
+  (evil-mode 1))
+
+(use-package evil-leader
+  :after evil
+  :config
+  (global-evil-leader-mode 1))
+
+(use-package evil-collection
+  :after evil
+  :custom (evil-collection-setup-minibuffer t)
+  :init (evil-collection-init))
+
 ;;which-key
 (use-package which-key
   :config

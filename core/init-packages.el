@@ -35,6 +35,7 @@
 			   ;;swiper
 			   ivy
 			   ivy-rich
+			   all-the-icons-ivy-rich
 			   ivy-posframe
 			   ivy-xref
 			   ivy-yasnippet

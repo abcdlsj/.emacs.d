@@ -1,63 +1,18 @@
-(require 'company)
-(require 'company-lsp)
 (require 'company-tabnine)
-
-;; workaround for company-transformers
-(setq company-tabnine--disable-next-transform nil)
-(defun my-company--transform-candidates (func &rest args)
-  (if (not company-tabnine--disable-next-transform)
-      (apply func args)
-    (setq company-tabnine--disable-next-transform nil)
-    (car args)))
-
-(defun my-company-tabnine (func &rest args)
-  (when (eq (car args) 'candidates)
-    (setq company-tabnine--disable-next-transform t))
-  (apply func args))
-
-;; ;; Customize company backends.
-;; (setq company-backends (delete 'company-xcode company-backends))
-;; (setq company-backends (delete 'company-bbdb company-backends))
-;; (setq company-backends (delete 'company-eclim company-backends))
-;; (setq company-backends (delete 'company-gtags company-backends))
-;; (setq company-backends (delete 'company-etags company-backends))
-;; (setq company-backends (delete 'company-oddmuse company-backends))
-;; workaround for company-transformers
-
-(setq company-tabnine--disable-next-transform nil)
-(defun my-company--transform-candidates (func &rest args)
-  (if (not company-tabnine--disable-next-transform)
-      (apply func args)
-    (setq company-tabnine--disable-next-transform nil)
-    (car args)))
-
-(defun my-company-tabnine (func &rest args)
-  (when (eq (car args) 'candidates)
-    (setq company-tabnine--disable-next-transform t))
-  (apply func args))
-
-;; The free version of TabNine is good enough,
-;; and below code is recommended that TabNine not always
-;; prompt me to purchase a paid version in a large project.
-(defadvice company-echo-show (around disable-tabnine-upgrade-message activate)
-  (let ((company-message-func (ad-get-arg 0)))
-    (when (and company-message-func
-               (stringp (funcall company-message-func)))
-      (unless (string-match "The free version of TabNine only indexes up to" (funcall company-message-func))
-        ad-do-it))))
 
 (use-package company
   :diminish
   :defines (company-dabbrev-ignore-case company-dabbrev-downcase)
   :commands company-abort
   :bind (("M-/" . company-complete)
+         ("C-M-i" . company-complete)
+         :map company-mode-map
          ("<backtab>" . company-yasnippet)
          :map company-active-map
          ("C-p" . company-select-previous)
          ("C-n" . company-select-next)
          ("<tab>" . company-complete-common-or-cycle)
          ("<backtab>" . my-company-yasnippet)
-         ;; ("C-c C-y" . my-company-yasnippet)
          :map company-search-map
          ("C-p" . company-select-previous)
          ("C-n" . company-select-next))
@@ -71,16 +26,49 @@
   :config
   (setq company-tooltip-align-annotations t
         company-tooltip-limit 12
-        company-idle-delay 0.5
+        company-idle-delay 0
         company-echo-delay (if (display-graphic-p) nil 0)
         company-minimum-prefix-length 2
         company-require-match nil
         company-dabbrev-ignore-case nil
         company-dabbrev-downcase nil
-        company-global-modes '(not erc-mode message-mode help-mode gud-mode eshell-mode shell-mode)
-        company-backends '(company-capf)
+        company-global-modes '(not erc-mode message-mode help-mode
+                                   gud-mode eshell-mode shell-mode)
         company-frontends '(company-pseudo-tooltip-frontend
                             company-echo-metadata-frontend))
+
+  ;; `yasnippet' integration
+  (with-no-warnings
+    (defun company-backend-with-yas (backend)
+      "Add `yasnippet' to company backend."
+      (if (and (listp backend) (member 'company-yasnippet backend))
+          backend
+        (append (if (consp backend) backend (list backend))
+                '(:with company-yasnippet))))
+
+    (defun my-company-enbale-yas (&rest _)
+      "Enable `yasnippet' in `company'."
+      (setq company-backends (mapcar #'company-backend-with-yas company-backends)))
+    ;; Enable in current backends
+    (my-company-enbale-yas)
+    ;; Support `company-lsp'
+    (advice-add #'lsp--auto-configure :after #'my-company-enbale-yas)
+
+    (defun my-company-yasnippet-disable-inline (fun command &optional arg &rest _ignore)
+      "Enable yasnippet but disable it inline."
+      (if (eq command 'prefix)
+          (when-let ((prefix (funcall fun 'prefix)))
+            (unless (memq (char-before (- (point) (length prefix))) '(?. ?> ?\())
+              prefix))
+        (progn
+          (when (and arg (not (get-text-property 0 'yas-annotation-patch arg)))
+            (let* ((name (get-text-property 0 'yas-annotation arg))
+                   (snip (format "%s (Snippet)" name))
+                   (len (length arg)))
+              (put-text-property 0 len 'yas-annotation snip arg)
+              (put-text-property 0 len 'yas-annotation-patch t arg)))
+          (funcall fun command arg))))
+    (advice-add #'company-yasnippet :around #'my-company-yasnippet-disable-inline))
 
   ;; Better sorting and filtering
   (use-package company-prescient
@@ -91,7 +79,8 @@
     (use-package company-box
       :diminish
       :hook (company-mode . company-box-mode)
-      :init (setq company-box-backends-colors nil
+      :init (setq company-box-enable-icon t
+                  company-box-backends-colors nil
                   company-box-show-single-candidate t
                   company-box-max-candidates 50
                   company-box-doc-delay 0.5)
@@ -107,8 +96,12 @@
                                             (substring (propertize candidate 'face 'company-box-candidate)
                                                        (length company-common) nil)))
                   (align-string (when annotation
-                                  (concat " " (and company-tooltip-align-annotations
-                                                   (propertize " " 'display `(space :align-to (- right-fringe ,(or len-a 0) 1)))))))
+                                  (concat
+                                   " "
+                                   (and company-tooltip-align-annotations
+                                        (propertize " "
+                                                    'display
+                                                    `(space :align-to (- right-fringe ,(or len-a 0) 1)))))))
                   (space company-box--space)
                   (icon-p company-box-enable-icon)
                   (annotation-string (and annotation (propertize annotation 'face 'company-box-annotation)))
@@ -137,8 +130,6 @@
                     (t . nil)))))
         (advice-add #'company-box-icons--elisp :override #'my-company-box-icons--elisp))
 
-      (when (and (display-graphic-p)
-                 (require 'all-the-icons nil t))
         (declare-function all-the-icons-faicon 'all-the-icons)
         (declare-function all-the-icons-material 'all-the-icons)
         (declare-function all-the-icons-octicon 'all-the-icons)
@@ -170,14 +161,58 @@
                 (Operator . ,(all-the-icons-material "control_point" :height 0.85 :v-adjust -0.2))
                 (TypeParameter . ,(all-the-icons-faicon "arrows" :height 0.8 :v-adjust -0.05))
                 (Template . ,(all-the-icons-material "format_align_left" :height 0.85 :v-adjust -0.2)))
-              company-box-icons-alist 'company-box-icons-all-the-icons)))))
+              company-box-icons-alist 'company-box-icons-all-the-icons)))
 
-(advice-add #'company--transform-candidates :around #'my-company--transform-candidates)
-(advice-add #'company-tabnine :around #'my-company-tabnine)
-(add-to-list 'company-backends '(company-lsp :with company-yasnippet))
-(add-to-list 'company-transformers 'company//sort-by-tabnine t)
+  ;; Popup documentation for completion candidates
+  (when (and (not emacs/>=26p) (display-graphic-p))
+    (use-package company-quickhelp
+      :defines company-quickhelp-delay
+      :bind (:map company-active-map
+		  ([remap company-show-doc-buffer] . company-quickhelp-manual-begin))
+      :hook (global-company-mode . company-quickhelp-mode)
+      :init (setq company-quickhelp-delay 0.5)))
+
+  ;; workaround for company-transformers
+  (setq company-tabnine--disable-next-transform nil)
+  (defun my-company--transform-candidates (func &rest args)
+    (if (not company-tabnine--disable-next-transform)
+	(apply func args)
+      (setq company-tabnine--disable-next-transform nil)
+      (car args)))
+
+  (defun my-company-tabnine (func &rest args)
+    (when (eq (car args) 'candidates)
+      (setq company-tabnine--disable-next-transform t))
+    (apply func args))
+
+  (setq company-tabnine--disable-next-transform nil)
+  (defun my-company--transform-candidates (func &rest args)
+    (if (not company-tabnine--disable-next-transform)
+	(apply func args)
+      (setq company-tabnine--disable-next-transform nil)
+      (car args)))
+
+  (defun my-company-tabnine (func &rest args)
+    (when (eq (car args) 'candidates)
+      (setq company-tabnine--disable-next-transform t))
+    (apply func args))
+
+  ;; The free version of TabNine is good enough,
+  ;; and below code is recommended that TabNine not always
+  ;; prompt me to purchase a paid version in a large project.
+  (defadvice company-echo-show (around disable-tabnine-upgrade-message activate)
+    (let ((company-message-func (ad-get-arg 0)))
+      (when (and company-message-func
+		 (stringp (funcall company-message-func)))
+	(unless (string-match "The free version of TabNine only indexes up to" (funcall company-message-func))
+          ad-do-it))))
+
+  (add-to-list 'company-backends #'company-tabnine)
+  (advice-add #'company--transform-candidates :around #'my-company--transform-candidates)
+  (advice-add #'company-tabnine :around #'my-company-tabnine)
+  (add-to-list 'company-backends '(company-lsp :with company-yasnippet))
+  (add-to-list 'company-transformers 'company//sort-by-tabnine t)
   ;; `:separate`  使得不同 backend 分开排序
-(add-to-list 'company-backends '(company-lsp :with company-tabnine :separate))
-
+  (add-to-list 'company-backends '(company-lsp :with company-tabnine :separate)))
 
 (provide 'init-company)

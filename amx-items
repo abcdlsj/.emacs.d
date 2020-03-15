@@ -1,26 +1,26 @@
 
 ;; ----- amx-history -----
 (
- leetcode-show
- leetcode-login
+ xref-find-definitions-other-frame
+ xref-find-definitions
+ lsp-mode
+ company-tabnine
+ company-tabnine-call-other-backends
+ company-tabnine-install-binary
+ company-box-mode
+ counsel-rg
+ counsel-ag
+ counsel-linux-app
  cnfonts-edit-profile
  cnfonts-increase-fontsize
- +my/better-font
- gdb-executable
  compile
  todo-show
  all-the-icons-insert
  org-table-fedit-toggle-ref-type
- xref-find-definitions
  eshell
  org-toggle-inline-images
- yas-insert-snippet
- org-sparse-tree
- diff
- evil-mode
- emacs-version
- benchmark
- dired-find-alternate-file
+ counsel-load-theme
+ sly
 )
 
 ;; ----- amx-data -----
@@ -28,10 +28,10 @@
  (man-follow . 1)
  (yas-insert-snippet . 42)
  (yas-new-snippet . 4)
- (xref-find-definitions . 12)
+ (xref-find-definitions . 13)
  (make-frame . 1)
- (lsp-mode . 6)
- (counsel-ag . 2)
+ (lsp-mode . 8)
+ (counsel-ag . 3)
  (counsel-grep . 1)
  (counsel-cd . 1)
  (counsel-faces . 3)
@@ -100,7 +100,7 @@
  (run-geiser . 10)
  (clipboard-yank . 1)
  (company-capf . 3)
- (company-tabnine . 1)
+ (company-tabnine . 8)
  (run-scheme . 2)
  (eshell . 7)
  (racket-mode . 3)
@@ -151,7 +151,7 @@
  (org-table-copy-region . 3)
  (counsel-load-theme . 13)
  (customize-face . 1)
- (counsel-rg . 1)
+ (counsel-rg . 2)
  (org-cancel-repeater . 1)
  (save-some-buffers . 1)
  (ediff . 1)
@@ -181,4 +181,9 @@
  (leetcode . 1)
  (leetcode-login . 1)
  (leetcode-show . 1)
+ (counsel-linux-app . 1)
+ (company-box-mode . 2)
+ (company-tabnine-install-binary . 1)
+ (company-tabnine-call-other-backends . 1)
+ (xref-find-definitions-other-frame . 1)
 )
