@@ -35,18 +35,18 @@
   :init (setq amx-history-length 20))
 
 ;;(use-package ivy-posframe
-;;:after ivy
-;;  :config
- ;; (setq ivy-posframe-display-functions-alist
+;; :after ivy
+;; :config
+;; (setq ivy-posframe-display-functions-alist
 ;;	'((swiper          . ivy-posframe-display-at-window-center)
 ;;	  (complete-symbol . ivy-posframe-display-at-point)
 ;;	  (counsel-M-x     . ivy-posframe-display-at-window-center)
 ;;	  (t               . ivy-posframe-display-at-frame-center)))
 ;;(ivy-posframe-mode 1))
 
-;; More friendly display transformer for Ivy
-;; (use-package all-the-icons-ivy-rich
-;;   :init (all-the-icons-ivy-rich-mode 1))
+;;More friendly display transformer for Ivy
+(use-package all-the-icons-ivy-rich
+  :init (all-the-icons-ivy-rich-mode 1))
 
 (use-package ivy-rich
   :init (ivy-rich-mode 1))

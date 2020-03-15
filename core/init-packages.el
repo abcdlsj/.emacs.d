@@ -23,7 +23,7 @@
 			   company-lsp
 			   company-prescient
 			   company-box
-			   company-tabnine
+			   ;;company-tabnine
 			   ;; --- Better Editor ---
 			   ;;LaTeX
 			   auctex

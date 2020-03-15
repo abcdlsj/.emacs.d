@@ -3,7 +3,6 @@
   :defines (company-dabbrev-ignore-case company-dabbrev-downcase)
   :commands company-abort
   :bind (("M-/" . company-complete)
-         ("<tab>" . company-complete)
          :map company-mode-map
          ("<backtab>" . company-yasnippet)
          :map company-active-map
