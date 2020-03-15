@@ -1,34 +1,34 @@
 
 ;; ----- amx-history -----
 (
- yas-insert-snippet
+ leetcode-show
+ leetcode-login
+ cnfonts-edit-profile
+ cnfonts-increase-fontsize
+ +my/better-font
+ gdb-executable
+ compile
+ todo-show
+ all-the-icons-insert
+ org-table-fedit-toggle-ref-type
+ xref-find-definitions
  eshell
+ org-toggle-inline-images
+ yas-insert-snippet
+ org-sparse-tree
  diff
  evil-mode
- xref-find-definitions
  emacs-version
  benchmark
  dired-find-alternate-file
- dired-find-file
- gdb-next
- gdb-start
- gdb-executable
- gdb-breakpoints-mode
- gdb-run
- gdb-continue
- undo-tree-visualize
- undo
- counsel-org-tag
- byte-recompile-file
- byte-compile-file
 )
 
 ;; ----- amx-data -----
 (
  (man-follow . 1)
- (yas-insert-snippet . 37)
+ (yas-insert-snippet . 42)
  (yas-new-snippet . 4)
- (xref-find-definitions . 10)
+ (xref-find-definitions . 12)
  (make-frame . 1)
  (lsp-mode . 6)
  (counsel-ag . 2)
@@ -41,7 +41,7 @@
  (awesome-pair-match-paren . 1)
  (org-link-open-from-string . 1)
  (customize . 4)
- (all-the-icons-insert . 2)
+ (all-the-icons-insert . 3)
  (blacken-buffer . 4)
  (blacken-mode . 1)
  (magit . 2)
@@ -80,7 +80,7 @@
  (treemacs-add-project-to-workspace . 1)
  (counsel-fonts . 2)
  (cnfonts-profile-edit-mode . 1)
- (cnfonts-edit-profile . 5)
+ (cnfonts-edit-profile . 9)
  (set-face-font . 7)
  (describe-font . 3)
  (cnfonts-ui . 1)
@@ -102,7 +102,7 @@
  (company-capf . 3)
  (company-tabnine . 1)
  (run-scheme . 2)
- (eshell . 6)
+ (eshell . 7)
  (racket-mode . 3)
  (counsel-esh-history . 1)
  (eshell-toggle-direct-send . 3)
@@ -116,7 +116,7 @@
  (eval-buffer . 3)
  (evil-mode . 2)
  (scheme-mode . 1)
- (org-toggle-inline-images . 14)
+ (org-toggle-inline-images . 17)
  (image-reverse-speed . 1)
  (make-local-variable . 1)
  (counsel-search . 1)
@@ -156,7 +156,7 @@
  (save-some-buffers . 1)
  (ediff . 1)
  (package-install . 1)
- (gdb-executable . 9)
+ (gdb-executable . 10)
  (gdb-run . 3)
  (gdb-start . 5)
  (gdb-advance . 1)
@@ -172,4 +172,13 @@
  (benchmark . 1)
  (emacs-version . 1)
  (diff . 1)
+ (org-sparse-tree . 1)
+ (org-table-fedit-toggle-ref-type . 1)
+ (todo-show . 1)
+ (compile . 1)
+ (+my/better-font . 1)
+ (cnfonts-increase-fontsize . 3)
+ (leetcode . 1)
+ (leetcode-login . 1)
+ (leetcode-show . 1)
 )

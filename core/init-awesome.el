@@ -43,4 +43,11 @@
 ;;   (setq eaf-grip-token "1f9f6b249d2a08255b89875aebc025fd596805c8")
 ;;   (eaf-setq eaf-browser-default-zoom  "1.25"))
 
+(use-package leetcode
+  :load-path "~/GithubPro/leetcode-emacs/"
+  :config
+  (setq leetcode-path "/home/abcdlsj/Dropbox/workspace/alg/leetcode"
+        leetcode-language "c++")
+  )
+
 (provide 'init-awesome)

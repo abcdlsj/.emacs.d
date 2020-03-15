@@ -73,7 +73,7 @@ decrease this. If you experience stuttering, increase this.")
 
 ;; (add-to-list 'load-path "~/.emacs.d/core/")
 ;; (add-to-list 'load-path "~/.emacs.d/myel/")
-;; (add-to-list 'load-path "~/.emacs.d/gitel/")
+(add-to-list 'load-path "~/.emacs.d/gitel/emacs-ctable/")
 
 (setq custom-file "~/.emacs.d/core/init-custom.el")
 

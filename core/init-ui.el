@@ -243,17 +243,16 @@
  :font (font-spec :name "-APPL-Monaco-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
                   :weight 'normal
                   :slant 'normal
-                  :size 12.5))
+                  :size 16.0))
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font
+   (frame-parameter nil 'font)
+   charset
+   (font-spec :name "-WQYF-文泉驿等宽微米黑-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
+              :weight 'normal
+              :slant 'normal
+              :size 19.5)))
 
-(when (display-graphic-p)
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font
-     (frame-parameter nil 'font)
-     charset
-     (font-spec :name "-WQYF-文泉驿等宽微米黑-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
-		:weight 'normal
-		:slant 'normal
-		:size 15.0))))
 
 (set-fontset-font t 'symbol (font-spec :family "Noto Color Emoji")
 		  nil 'prepend)

@@ -25,13 +25,14 @@
            "* %U - %^{heading} %^g\n%?\n")))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(
-                                                         (lisp . t)
+                                                           (lisp . t)
                                                            (shell . t)
                                                            (C . t)
 							   (java . t)
 							   (python . t)
 							   (dot . t)
 							   (racket . t)
+							   (latex . t)
                                                            ))
   ;;org-view
   ;;(setq org-indent-mode 1)

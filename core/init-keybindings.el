@@ -45,7 +45,8 @@
   "bs" 'switch-to-buffer
   "bk" 'kill-buffer
   "be" 'eval-buffer
-  ;;"/" 'xref-find-definitions
+  "xd" 'xref-find-definitions
+  "xf" 'xref-find-references
   ;;"0" 'winum-select-window-0
   "1" 'winum-select-window-1
   "2" 'winum-select-window-2
