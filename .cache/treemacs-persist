@@ -7,3 +7,5 @@
  - path :: ~/GithubPro/ics2019
 ** .emacs.d
  - path :: ~/.emacs.d
+** dotfiles
+ - path :: ~/GithubPro/dotfiles

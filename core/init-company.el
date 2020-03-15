@@ -1,11 +1,9 @@
-(require 'company-tabnine)
-
 (use-package company
   :diminish
   :defines (company-dabbrev-ignore-case company-dabbrev-downcase)
   :commands company-abort
   :bind (("M-/" . company-complete)
-         ("C-M-i" . company-complete)
+         ("<tab>" . company-complete)
          :map company-mode-map
          ("<backtab>" . company-yasnippet)
          :map company-active-map
@@ -16,13 +14,16 @@
          :map company-search-map
          ("C-p" . company-select-previous)
          ("C-n" . company-select-next))
+
   :hook (after-init . global-company-mode)
+
   :init
   (defun my-company-yasnippet ()
     "Hide the current completeions and show snippets."
     (interactive)
     (company-abort)
     (call-interactively 'company-yasnippet))
+
   :config
   (setq company-tooltip-align-annotations t
         company-tooltip-limit 12
@@ -68,6 +69,7 @@
               (put-text-property 0 len 'yas-annotation snip arg)
               (put-text-property 0 len 'yas-annotation-patch t arg)))
           (funcall fun command arg))))
+
     (advice-add #'company-yasnippet :around #'my-company-yasnippet-disable-inline))
 
   ;; Better sorting and filtering
@@ -170,49 +172,49 @@
       :bind (:map company-active-map
 		  ([remap company-show-doc-buffer] . company-quickhelp-manual-begin))
       :hook (global-company-mode . company-quickhelp-mode)
-      :init (setq company-quickhelp-delay 0.5)))
+      :init (setq company-quickhelp-delay 0.5))))
 
-  ;; workaround for company-transformers
-  (setq company-tabnine--disable-next-transform nil)
-  (defun my-company--transform-candidates (func &rest args)
-    (if (not company-tabnine--disable-next-transform)
-	(apply func args)
-      (setq company-tabnine--disable-next-transform nil)
-      (car args)))
+  ;; ;; workaround for company-transformers
+  ;; (setq company-tabnine--disable-next-transform nil)
+  ;; (defun my-company--transform-candidates (func &rest args)
+  ;;   (if (not company-tabnine--disable-next-transform)
+  ;; 	(apply func args)
+  ;;     (setq company-tabnine--disable-next-transform nil)
+  ;;     (car args)))
 
-  (defun my-company-tabnine (func &rest args)
-    (when (eq (car args) 'candidates)
-      (setq company-tabnine--disable-next-transform t))
-    (apply func args))
+  ;; (defun my-company-tabnine (func &rest args)
+  ;;   (when (eq (car args) 'candidates)
+  ;;     (setq company-tabnine--disable-next-transform t))
+  ;;   (apply func args))
 
-  (setq company-tabnine--disable-next-transform nil)
-  (defun my-company--transform-candidates (func &rest args)
-    (if (not company-tabnine--disable-next-transform)
-	(apply func args)
-      (setq company-tabnine--disable-next-transform nil)
-      (car args)))
+  ;; (setq company-tabnine--disable-next-transform nil)
+  ;; (defun my-company--transform-candidates (func &rest args)
+  ;;   (if (not company-tabnine--disable-next-transform)
+  ;; 	(apply func args)
+  ;;     (setq company-tabnine--disable-next-transform nil)
+  ;;     (car args)))
 
-  (defun my-company-tabnine (func &rest args)
-    (when (eq (car args) 'candidates)
-      (setq company-tabnine--disable-next-transform t))
-    (apply func args))
+  ;; (defun my-company-tabnine (func &rest args)
+  ;;   (when (eq (car args) 'candidates)
+  ;;     (setq company-tabnine--disable-next-transform t))
+  ;;   (apply func args))
 
-  ;; The free version of TabNine is good enough,
-  ;; and below code is recommended that TabNine not always
-  ;; prompt me to purchase a paid version in a large project.
-  (defadvice company-echo-show (around disable-tabnine-upgrade-message activate)
-    (let ((company-message-func (ad-get-arg 0)))
-      (when (and company-message-func
-		 (stringp (funcall company-message-func)))
-	(unless (string-match "The free version of TabNine only indexes up to" (funcall company-message-func))
-          ad-do-it))))
+  ;; ;; The free version of TabNine is good enough,
+  ;; ;; and below code is recommended that TabNine not always
+  ;; ;; prompt me to purchase a paid version in a large project.
+  ;; (defadvice company-echo-show (around disable-tabnine-upgrade-message activate)
+  ;;   (let ((company-message-func (ad-get-arg 0)))
+  ;;     (when (and company-message-func
+  ;; 		 (stringp (funcall company-message-func)))
+  ;; 	(unless (string-match "The free version of TabNine only indexes up to" (funcall company-message-func))
+  ;;         ad-do-it))))
 
-  (add-to-list 'company-backends #'company-tabnine)
-  (advice-add #'company--transform-candidates :around #'my-company--transform-candidates)
-  (advice-add #'company-tabnine :around #'my-company-tabnine)
-  (add-to-list 'company-backends '(company-lsp :with company-yasnippet))
-  (add-to-list 'company-transformers 'company//sort-by-tabnine t)
-  ;; `:separate`  使得不同 backend 分开排序
-  (add-to-list 'company-backends '(company-lsp :with company-tabnine :separate)))
+  ;; (add-to-list 'company-backends #'company-tabnine)
+  ;; (advice-add #'company--transform-candidates :around #'my-company--transform-candidates)
+  ;; (advice-add #'company-tabnine :around #'my-company-tabnine)
+  ;; (add-to-list 'company-backends '(company-lsp :with company-yasnippet))
+  ;; (add-to-list 'company-transformers 'company//sort-by-tabnine t)
+  ;; ;; `:separate`  使得不同 backend 分开排序
+  ;; (add-to-list 'company-backends '(company-lsp :with company-tabnine :separate))
 
 (provide 'init-company)

@@ -60,10 +60,12 @@
 			   which-key
 			   ;;key
 			   hydra
+			   pretty-hydra
 			   ;;Major Mode
 			   markdown-mode
 			   lsp-mode
 			   ;;lsp
+			   eglot
 			   lsp-java
 			   lsp-haskell
 			   dap-mode
@@ -90,6 +92,7 @@
 			   tao-theme
 			   hide-mode-line
 			   ;;lang
+			   modern-cpp-font-lock
 			   nasm-mode
 			   google-c-style
 			   sly

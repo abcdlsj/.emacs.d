@@ -1,12 +1,18 @@
 
 ;; ----- amx-history -----
 (
- xref-find-definitions-other-frame
- xref-find-definitions
- lsp-mode
+ yas-minor-mode-on
+ company-ignore
  company-tabnine
- company-tabnine-call-other-backends
- company-tabnine-install-binary
+ company-lsp
+ company-capf
+ company-yasnippet
+ xref-find-definitions
+ eval-buffer
+ lsp-ui-mode
+ treemacs-projectile
+ treemacs
+ xref-find-definitions-other-frame
  company-box-mode
  counsel-rg
  counsel-ag
@@ -15,12 +21,6 @@
  cnfonts-increase-fontsize
  compile
  todo-show
- all-the-icons-insert
- org-table-fedit-toggle-ref-type
- eshell
- org-toggle-inline-images
- counsel-load-theme
- sly
 )
 
 ;; ----- amx-data -----
@@ -28,15 +28,15 @@
  (man-follow . 1)
  (yas-insert-snippet . 42)
  (yas-new-snippet . 4)
- (xref-find-definitions . 13)
+ (xref-find-definitions . 14)
  (make-frame . 1)
- (lsp-mode . 8)
+ (lsp-mode . 10)
  (counsel-ag . 3)
  (counsel-grep . 1)
  (counsel-cd . 1)
  (counsel-faces . 3)
  (xref-find-references . 3)
- (treemacs-projectile . 2)
+ (treemacs-projectile . 3)
  (dap-hydra . 1)
  (awesome-pair-match-paren . 1)
  (org-link-open-from-string . 1)
@@ -65,7 +65,7 @@
  (rename-file . 2)
  (sdcv-mode . 1)
  (sdcv-search-pointer . 1)
- (treemacs . 3)
+ (treemacs . 4)
  (gdb . 4)
  (markdown-preview . 4)
  (org-latex-export-to-pdf . 1)
@@ -99,8 +99,8 @@
  (global-visual-line-mode . 2)
  (run-geiser . 10)
  (clipboard-yank . 1)
- (company-capf . 3)
- (company-tabnine . 8)
+ (company-capf . 4)
+ (company-tabnine . 9)
  (run-scheme . 2)
  (eshell . 7)
  (racket-mode . 3)
@@ -113,7 +113,7 @@
  (open-eshell-on-other-window . 9)
  (split-window-below . 1)
  (greeting . 1)
- (eval-buffer . 3)
+ (eval-buffer . 5)
  (evil-mode . 2)
  (scheme-mode . 1)
  (org-toggle-inline-images . 17)
@@ -143,7 +143,7 @@
  (org-timer-stop . 1)
  (lsp-rename . 2)
  (counsel-colors-emacs . 5)
- (lsp-ui-peek-find-definitions . 2)
+ (lsp-ui-peek-find-definitions . 3)
  (org-date-from-calendar . 2)
  (org-table-create . 1)
  (org-table-export . 1)
@@ -185,5 +185,12 @@
  (company-box-mode . 2)
  (company-tabnine-install-binary . 1)
  (company-tabnine-call-other-backends . 1)
- (xref-find-definitions-other-frame . 1)
+ (xref-find-definitions-other-frame . 2)
+ (lsp-find-definition . 3)
+ (lsp-describe-session . 2)
+ (lsp-ui-mode . 1)
+ (company-yasnippet . 4)
+ (company-lsp . 1)
+ (company-ignore . 1)
+ (yas-minor-mode-on . 1)
 )
