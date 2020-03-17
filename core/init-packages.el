@@ -120,6 +120,7 @@
 			   ;;nov
 			   benchmark-init
 			   ;;
+			   prescient
 ))
 ;; ...
 (setq package-selected-packages abcdlsj/packages)

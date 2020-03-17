@@ -7,3 +7,8 @@ var/*
 history
 recentf
 eshell/*
+cnfonts/*
+.dap-breakpoints
+.lsp-session-v1
+amx-items
+.cache/*

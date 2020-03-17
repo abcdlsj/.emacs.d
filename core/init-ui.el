@@ -163,8 +163,9 @@
   :config
   (dashboard-setup-startup-hook)
   (add-to-list 'dashboard-items '(agenda) t)
-  (setq dashboard-banner-logo-title "RTFSC – Read The F**king Source Code :)!"
-	dashboard-startup-banner "~/.emacs.d/banner/ue-colorful.png"
+  (setq ;;dashboard-banner-logo-title "RTFSC – Read The F**king Source Code :)!"
+   dashboard-banner-logo-title "Recursion or Iteration? That's a question!"
+   dashboard-startup-banner "~/.emacs.d/banner/ue-colorful.png"
 	dashboard-center-content t
 	dashboard-set-heading-icons t
 	dashboard-set-file-icons t
@@ -245,15 +246,15 @@
  :font (font-spec :name "-APPL-Monaco-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
                   :weight 'normal
                   :slant 'normal
-                  :size 15))
+                  :size 12.5))
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font
    (frame-parameter nil 'font)
    charset
-   (font-spec :name "-ADBO-思源黑体 CN-light-normal-normal-*-*-*-*-*-*-0-iso10646-1"
+   (font-spec :name "-MS  -微软雅黑-light-normal-normal-*-*-*-*-*-*-0-iso10646-1"
               :weight 'normal
               :slant 'normal
-              :size 18.0)))
+              :size 15.0)))
 
 
 (set-fontset-font t 'symbol (font-spec :family "Noto Color Emoji")

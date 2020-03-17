@@ -114,4 +114,9 @@
  ;; If there is more than one, they won't work right.
  '(eshell-prompt ((t (:foreground "steel blue" :weight bold)))))
 
+(defcustom centaur-icon (display-graphic-p)
+  "Display icons or not."
+  :group 'centaur
+  :type 'boolean)
+
 (provide 'init-custom)
