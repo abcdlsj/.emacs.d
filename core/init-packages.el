@@ -108,6 +108,7 @@
 			   ;;elfeed-org
 			   ;;blog
 			   ;;org-page
+			   org-bullets
 			   org-download
 			   ox-hugo
 			   org-download

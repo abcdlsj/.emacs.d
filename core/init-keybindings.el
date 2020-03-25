@@ -16,6 +16,8 @@
 ;;evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
+  "ll" 'evil-avy-goto-line
+  "lc" 'evil-avy-goto-char
   "ff" 'counsel-find-file
   "fw" 'find-file-other-window
   "fl" 'counsel-library
@@ -32,7 +34,7 @@
   "be" 'eval-buffer
   "xd" 'xref-find-definitions
   "xf" 'xref-find-references
-  ;;"0" 'winum-select-window-0
+  "0" 'treemacs-select-window
   "1" 'winum-select-window-1
   "2" 'winum-select-window-2
   "3" 'winum-select-window-3
@@ -46,7 +48,6 @@
   ;; "qa" 'awesome-tab-backward-tab
   ;; "qw" 'awesome-tab-forward-group
   ;; "qs" 'awesome-tab-backward-group
-  "as" 'open-eshell-on-other-window
   )
 
 (global-set-key
