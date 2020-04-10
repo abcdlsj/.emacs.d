@@ -1,11 +1,7 @@
 * Default
-** workspace
- - path :: ~/Dropbox/workspace
-** wis
- - path :: ~/GithubPro/wis
 ** ics2019
  - path :: ~/GithubPro/ics2019
-** .emacs.d
- - path :: ~/.emacs.d
-** dotfiles
- - path :: ~/GithubPro/dotfiles
+** Aurora
+ - path :: ~/GithubPro/Aurora
+** courses-learning
+ - path :: ~/GithubPro/courses-learning

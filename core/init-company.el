@@ -26,7 +26,7 @@
   :config
   (setq company-tooltip-align-annotations t
         company-tooltip-limit 12
-        company-idle-delay 0.2
+        company-idle-delay 0.5
         company-echo-delay (if (display-graphic-p) nil 0)
         company-minimum-prefix-length 2
         company-require-match nil

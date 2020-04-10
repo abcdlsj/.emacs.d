@@ -98,6 +98,7 @@
 			   sly
 			   sly-quicklisp
 			   racket-mode
+			   go-mode
 			   ;;vterm
 			   eshell-up
 			   eshell-did-you-mean
