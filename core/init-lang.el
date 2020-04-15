@@ -1,7 +1,9 @@
 (use-package google-c-style
   :hook
   (c-mode-common-hook . google-set-c-style)
-  (c-mode-common-hook . google-make-newline-indent))
+  (c-mode-common-hook . google-make-newline-indent)
+  :config
+  (electric-indent-mode +1))
 
 ;; (require 'clang-format)
 ;; (setq clang-format-style-option "google")

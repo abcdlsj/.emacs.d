@@ -25,14 +25,14 @@
 
 ;;auto-pair
 
-;(electric-pair-mode t)
-;(setq electric-pair-pairs '(
-;                            (?\" . ?\")
-;                            (?\` . ?\`)
-;                            (?\( . ?\))
-;                            (?\{ . ?\})
-;                            ))
-;(setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit)
+;;(electric-pair-mode t)
+;; (setq electric-pair-pairs '(
+;;                            (?\" . ?\")
+;;                            (?\` . ?\`)
+;;                            (?\( . ?\))
+;;                            (?\{ . ?\})
+;;                            ))
+;; (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit)
 
 (require 'awesome-pair)
 (dolist (hook (list

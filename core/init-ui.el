@@ -177,6 +177,7 @@
 		     (bookmarks . 5)
 		     (projects . 5)
 		     (agenda . 5))))
+
 (use-package winum
   :config
   (winum-mode 1))
@@ -245,19 +246,33 @@
 
 (set-face-attribute
  'default nil
- :font (font-spec :name "-GOOG-Noto Mono-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"
+ :font (font-spec :name "-WQYF-文泉驿等宽微米黑-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
                   :weight 'normal
                   :slant 'normal
-                  :size 15.0))
+                  :size 14.0))
 
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-  (set-fontset-font
-   (frame-parameter nil 'font)
-   charset
-   (font-spec :name "-WQYF-文泉驿等宽微米黑-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
-              :weight 'normal
-              :slant 'normal
-              :size 18.0)))
+;; (let ((emacs-font-size 15)
+;;       (emacs-font-name "WenQuanYi Micro Hei Mono"))
+;;   (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
+;;   (set-fontset-font (frame-parameter nil 'font) 'unicode (eval emacs-font-name)))
+
+(with-eval-after-load 'org
+  (defun org-buffer-face-mode-variable ()
+    (interactive)
+    (make-face 'width-font-face)
+    (set-face-attribute 'width-font-face nil :font "等距更纱黑体 SC 14")
+    (setq buffer-face-mode-face 'width-font-face)
+    (buffer-face-mode))
+  (add-hook 'org-mode-hook 'org-buffer-face-mode-variable))
+
+;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;   (set-fontset-font
+;;    (frame-parameter nil 'font)
+;;    charset
+;;    (font-spec :name "-WQYF-文泉驿等宽微米黑-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
+;;               :weight 'normal
+;;               :slant 'normal
+;;               :size 18.0)))
 
 (provide 'init-ui)
 
