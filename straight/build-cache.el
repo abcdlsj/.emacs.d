@@ -3,9 +3,63 @@
 
 "28.0.50"
 
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("org-elpa" ("2020-04-15 18:12:03" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2020-04-15 18:12:03" nil (:type git :host github :repo "melpa/melpa" :no-build t :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2020-04-15 18:12:03" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :no-build t :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "emacsmirror-mirror" ("2020-04-15 18:12:03" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :no-build t :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "straight" ("2020-04-15 18:12:03" ("emacs") (:type git :host github :repo "raxod502/straight.el" :files ("straight*.el") :branch "master" :package "straight" :local-repo "straight.el")) "gdb-mi" ("2020-04-15 18:12:03" ("emacs" "hydra") (:host github :repo "weirdNox/emacs-gdb" :files ("*.el" "*.c" "*.h" "Makefile") :package "gdb-mi" :type git :local-repo "emacs-gdb")) "hydra" ("2020-04-15 18:12:03" ("cl-lib" "lv") (:type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra" :package "hydra" :local-repo "hydra")) "lv" ("2020-04-15 18:12:03" nil (:flavor melpa :files ("lv.el" "lv-pkg.el") :package "lv" :local-repo "hydra" :type git :repo "abo-abo/hydra" :host github))))
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("org-elpa" ("2020-04-24 15:17:09" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2020-04-24 15:17:09" nil (:type git :host github :repo "melpa/melpa" :no-build t :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2020-04-24 15:17:09" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :no-build t :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "emacsmirror-mirror" ("2020-04-24 15:17:09" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :no-build t :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "straight" ("2020-04-24 15:17:09" ("emacs") (:type git :host github :repo "raxod502/straight.el" :files ("straight*.el") :branch "master" :package "straight" :local-repo "straight.el")) "gdb-mi" ("2020-04-24 15:17:10" ("emacs" "hydra") (:host github :repo "weirdNox/emacs-gdb" :files ("*.el" "*.c" "*.h" "Makefile") :package "gdb-mi" :type git :local-repo "emacs-gdb")) "hydra" ("2020-04-24 15:17:10" ("cl-lib" "lv") (:type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra" :package "hydra" :local-repo "hydra")) "lv" ("2020-04-24 15:17:10" nil (:flavor melpa :files ("lv.el" "lv-pkg.el") :package "lv" :local-repo "hydra" :type git :repo "abo-abo/hydra" :host github))))
 
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("straight" ((straight straight-autoloads straight-x) (autoload 'straight-get-recipe "straight" "Interactively select a recipe from one of the recipe repositories.
+#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("lv" ((lv lv-autoloads) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lv" '("lv-"))) (provide 'lv-autoloads)) "hydra" ((hydra-examples hydra hydra-ox hydra-autoloads) (autoload 'defhydra "hydra" "Create a Hydra - a family of functions with prefix NAME.
+
+NAME should be a symbol, it will be the prefix of all functions
+defined here.
+
+BODY has the format:
+
+    (BODY-MAP BODY-KEY &rest BODY-PLIST)
+
+DOCSTRING will be displayed in the echo area to identify the
+Hydra.  When DOCSTRING starts with a newline, special Ruby-style
+substitution will be performed by `hydra--format'.
+
+Functions are created on basis of HEADS, each of which has the
+format:
+
+    (KEY CMD &optional HINT &rest PLIST)
+
+BODY-MAP is a keymap; `global-map' is used quite often.  Each
+function generated from HEADS will be bound in BODY-MAP to
+BODY-KEY + KEY (both are strings passed to `kbd'), and will set
+the transient map so that all following heads can be called
+though KEY only.  BODY-KEY can be an empty string.
+
+CMD is a callable expression: either an interactive function
+name, or an interactive lambda, or a single sexp (it will be
+wrapped in an interactive lambda).
+
+HINT is a short string that identifies its head.  It will be
+printed beside KEY in the echo erea if `hydra-is-helpful' is not
+nil.  If you don't even want the KEY to be printed, set HINT
+explicitly to nil.
+
+The heads inherit their PLIST from BODY-PLIST and are allowed to
+override some keys.  The keys recognized are :exit, :bind, and :column.
+:exit can be:
+
+- nil (default): this head will continue the Hydra state.
+- t: this head will stop the Hydra state.
+
+:bind can be:
+- nil: this head will not be bound in BODY-MAP.
+- a lambda taking KEY and CMD used to bind a head.
+
+:column is a string that sets the column for all subsequent heads.
+
+It is possible to omit both BODY-MAP and BODY-KEY if you don't
+want to bind anything.  In that case, typically you will bind the
+generated NAME/body command.  This command is also the return
+result of `defhydra'.
+
+(fn NAME BODY &optional DOCSTRING &rest HEADS)" nil t) (function-put 'defhydra 'lisp-indent-function 'defun) (function-put 'defhydra 'doc-string-elt '3) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "hydra" '("defhydra" "hydra-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "hydra-examples" '("hydra-" "org-agenda-cts" "whitespace-mode"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "hydra-ox" '("hydra-ox"))) (provide 'hydra-autoloads)) "gdb-mi" ((gdb-mi gdb-mi-autoloads) (autoload 'gdb-create-session "gdb-mi" "Create GDB session. This will not associate any target with it." t nil) (autoload 'gdb-executable "gdb-mi" "Start debugging an executable at DEBUGGEE-PATH in the current session.
+If no session is available, one is automatically created.
+
+(fn DEBUGGEE-PATH)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gdb-mi" '("gdb-"))) (provide 'gdb-mi-autoloads)) "straight" ((straight-x straight straight-autoloads) (autoload 'straight-get-recipe "straight" "Interactively select a recipe from one of the recipe repositories.
 All recipe repositories in `straight-recipe-repositories' will
 first be cloned. After the recipe is selected, it will be copied
 to the kill ring. With a prefix argument, first prompt for a
@@ -246,63 +300,9 @@ be removed in the future.
 Multiple lockfiles may be written (one for each profile),
 according to the value of `straight-profiles'.
 
-(fn &optional FORCE)" t nil) (autoload 'straight-thaw-versions "straight" "Read version lockfiles and restore package versions to those listed." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "straight" '("straight-"))) (defvar straight-x-pinned-packages nil "List of pinned packages.") (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "straight-x" '("straight-x-"))) (provide 'straight-autoloads)) "lv" ((lv-autoloads lv) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "lv" '("lv-"))) (provide 'lv-autoloads)) "hydra" ((hydra-ox hydra hydra-autoloads hydra-examples) (autoload 'defhydra "hydra" "Create a Hydra - a family of functions with prefix NAME.
+(fn &optional FORCE)" t nil) (autoload 'straight-thaw-versions "straight" "Read version lockfiles and restore package versions to those listed." t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "straight" '("straight-"))) (defvar straight-x-pinned-packages nil "List of pinned packages.") (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "straight-x" '("straight-x-"))) (provide 'straight-autoloads))))
 
-NAME should be a symbol, it will be the prefix of all functions
-defined here.
-
-BODY has the format:
-
-    (BODY-MAP BODY-KEY &rest BODY-PLIST)
-
-DOCSTRING will be displayed in the echo area to identify the
-Hydra.  When DOCSTRING starts with a newline, special Ruby-style
-substitution will be performed by `hydra--format'.
-
-Functions are created on basis of HEADS, each of which has the
-format:
-
-    (KEY CMD &optional HINT &rest PLIST)
-
-BODY-MAP is a keymap; `global-map' is used quite often.  Each
-function generated from HEADS will be bound in BODY-MAP to
-BODY-KEY + KEY (both are strings passed to `kbd'), and will set
-the transient map so that all following heads can be called
-though KEY only.  BODY-KEY can be an empty string.
-
-CMD is a callable expression: either an interactive function
-name, or an interactive lambda, or a single sexp (it will be
-wrapped in an interactive lambda).
-
-HINT is a short string that identifies its head.  It will be
-printed beside KEY in the echo erea if `hydra-is-helpful' is not
-nil.  If you don't even want the KEY to be printed, set HINT
-explicitly to nil.
-
-The heads inherit their PLIST from BODY-PLIST and are allowed to
-override some keys.  The keys recognized are :exit, :bind, and :column.
-:exit can be:
-
-- nil (default): this head will continue the Hydra state.
-- t: this head will stop the Hydra state.
-
-:bind can be:
-- nil: this head will not be bound in BODY-MAP.
-- a lambda taking KEY and CMD used to bind a head.
-
-:column is a string that sets the column for all subsequent heads.
-
-It is possible to omit both BODY-MAP and BODY-KEY if you don't
-want to bind anything.  In that case, typically you will bind the
-generated NAME/body command.  This command is also the return
-result of `defhydra'.
-
-(fn NAME BODY &optional DOCSTRING &rest HEADS)" nil t) (function-put 'defhydra 'lisp-indent-function 'defun) (function-put 'defhydra 'doc-string-elt '3) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "hydra" '("defhydra" "hydra-"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "hydra-examples" '("hydra-" "org-agenda-cts" "whitespace-mode"))) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "hydra-ox" '("hydra-ox"))) (provide 'hydra-autoloads)) "gdb-mi" ((gdb-mi-autoloads gdb-mi) (autoload 'gdb-create-session "gdb-mi" "Create GDB session. This will not associate any target with it." t nil) (autoload 'gdb-executable "gdb-mi" "Start debugging an executable at DEBUGGEE-PATH in the current session.
-If no session is available, one is automatically created.
-
-(fn DEBUGGEE-PATH)" t nil) (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "gdb-mi" '("gdb-"))) (provide 'gdb-mi-autoloads))))
-
-#s(hash-table size 65 test eq rehash-size 1.5 rehash-threshold 0.8125 data (org-elpa #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 1 "hydra" nil "cl-lib" nil "lv" nil)) melpa #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "hydra" (hydra :type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra") "cl-lib" nil "lv" (lv :type git :flavor melpa :files ("lv.el" "lv-pkg.el") :host github :repo "abo-abo/hydra"))) gnu-elpa-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 3 "cl-lib" nil)) emacsmirror-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "cl-lib" nil))))
+#s(hash-table size 65 test eq rehash-size 1.5 rehash-threshold 0.8125 data (org-elpa #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 1 "hydra" nil "cl-lib" nil "lv" nil "melpa" nil "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil "gdb-mi" nil)) melpa #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "gdb-mi" nil "hydra" (hydra :type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra") "cl-lib" nil "lv" (lv :type git :flavor melpa :files ("lv.el" "lv-pkg.el") :host github :repo "abo-abo/hydra") "gnu-elpa-mirror" nil "emacsmirror-mirror" nil "straight" nil)) gnu-elpa-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 3 "gdb-mi" nil "cl-lib" nil "emacsmirror-mirror" nil "straight" nil)) emacsmirror-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "straight" (straight :type git :host github :repo "emacsmirror/straight") "gdb-mi" nil "cl-lib" nil))))
 
 ("org-elpa" "melpa" "gnu-elpa-mirror" "emacsmirror-mirror" "straight" "emacs" "gdb-mi" "hydra" "cl-lib" "lv")
 

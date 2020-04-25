@@ -13,8 +13,7 @@
 
 (defun asm-mode-setup ()
   (set (make-local-variable 'gofmt-command) "asmfmt")
-  (add-hook 'before-save-hook 'gofmt nil t)
-  )
+  (add-hook 'before-save-hook 'gofmt nil t))
 
 (use-package nasm-mode
   :config

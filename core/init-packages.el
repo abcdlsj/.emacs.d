@@ -8,9 +8,9 @@
 (when (>= emacs-major-version 25)
     (require 'package)
     (package-initialize)
-    (setq package-archives '(("gnu"   . "~/media/emacs/gnu")
-			     ("melpa" . "~/media/emacs/melpa/")
-			     ("org" . 	"~/media/emacs/org/"))))
+    (setq package-archives '(("gnu"   . "~/mnt/D/elpa/emacs/gnu")
+			     ("melpa" . "~/mnt/D/elpa/emacs/melpa/")
+			     ("org" . 	"~/mnt/D/elpa/emacs/org/"))))
 ;; cl - Common Lisp Extension
 (require 'cl)
 
