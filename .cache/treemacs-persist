@@ -1,9 +1,5 @@
 * Default
-** courses-learning
- - path :: ~/GithubPro/courses-learning
-** ics2019
- - path :: ~/GithubPro/ics2019
-** Aurora
- - path :: ~/GithubPro/Aurora
-** Montainer
- - path :: ~/GithubPro/Montainer
+** MIT-6.824
+ - path :: ~/github/courses-learning/MIT-6.824-SP2020
+** ucore_os_lab
+ - path :: ~/github/ucore_os_lab

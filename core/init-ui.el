@@ -26,7 +26,7 @@
   ;;(doom-themes-neotree-config)
   ;; or for treemacs users
   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  ;;(setq doom-themes-treemacs-enable-variable-pitch nil)
+  (setq doom-themes-treemacs-enable-variable-pitch nil)
   (doom-themes-treemacs-config)
   ;;(setq doom-variable-pitch-font (font-spec :family "Noto Sans" :size 10))
 
