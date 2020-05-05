@@ -18,7 +18,7 @@
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
   ;;(load-theme 'doom-oceanic-next t)
-  (load-theme 'doom-peacock t)
+  (load-theme 'doom-one t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
 
@@ -26,14 +26,11 @@
   ;;(doom-themes-neotree-config)
   ;; or for treemacs users
   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  (setq doom-themes-treemacs-enable-variable-pitch nil)
+  ;;(setq doom-themes-treemacs-enable-variable-pitch nil)
   (doom-themes-treemacs-config)
-  ;;(setq doom-variable-pitch-font (font-spec :family "Noto Sans" :size 10))
-
-
+  ;;(setq doom-variable-pitch-font (font-spec :family "Menlo" :size 10))
   ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config)
-  )
+  (doom-themes-org-config))
 
 (use-package doom-modeline
   :config
@@ -174,9 +171,9 @@
    dashboard-set-heading-icons t
    dashboard-set-file-icons t
    dashboard-items '((recents  . 10)
-		     (bookmarks . 5)
-		     (projects . 5)
-		     (agenda . 5))))
+					 (bookmarks . 5)
+					 (projects . 5)
+					 (agenda . 5))))
 
 (use-package winum
   :config
@@ -204,7 +201,7 @@
           treemacs-is-never-other-window   t
           treemacs-silent-filewatch        t
           treemacs-silent-refresh          t
-          treemacs-width                   18)
+          treemacs-width                   30)
 
     :config
     (treemacs-follow-mode t)
@@ -223,7 +220,7 @@
     (use-package treemacs-projectile
       :after projectile
       :bind (:map projectile-command-map
-		  ("h" . treemacs-projectile)))
+				  ("h" . treemacs-projectile)))
 
     (use-package treemacs-magit
       :after magit
@@ -246,10 +243,10 @@
 
 (set-face-attribute
  'default nil
- :font (font-spec :name "-WQYF-文泉驿等宽微米黑-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
+ :font (font-spec :name "Menlo"
                   :weight 'normal
                   :slant 'normal
-                  :size 14.0))
+                  :size 18))
 
 ;; (let ((emacs-font-size 15)
 ;;       (emacs-font-name "WenQuanYi Micro Hei Mono"))
@@ -260,20 +257,11 @@
   (defun org-buffer-face-mode-variable ()
     (interactive)
     (make-face 'width-font-face)
-    (set-face-attribute 'width-font-face nil :font "等距更纱黑体 SC 15")
-    (setq buffer-face-mode-face 'width-font-face)
+    (set-face-attribute 'width-font-face nil :font "等距更纱黑体 SC 14")
+	(setq buffer-face-mode-face 'width-font-face)
     (buffer-face-mode))
 
   (add-hook 'org-mode-hook 'org-buffer-face-mode-variable))
-
-;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
-;;   (set-fontset-font
-;;    (frame-parameter nil 'font)
-;;    charset
-;;    (font-spec :name "-WQYF-文泉驿等宽微米黑-normal-normal-normal-*-*-*-*-*-*-0-iso10646-1"
-;;               :weight 'normal
-;;               :slant 'normal
-;;               :size 18.0)))
 
 (provide 'init-ui)
 

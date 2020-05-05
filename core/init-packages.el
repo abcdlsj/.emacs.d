@@ -87,9 +87,6 @@
 			   ;;theme
 			   doom-themes
 			   doom-modeline
-			   solaire-mode
-			   base16-theme
-			   tao-theme
 			   hide-mode-line
 			   ;;lang
 			   modern-cpp-font-lock
@@ -112,6 +109,7 @@
 			   org-bullets
 			   org-download
 			   ox-hugo
+			   ;;org-roam
 			   org-download
 			   ;;mingus
 			   ;;workspace

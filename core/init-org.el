@@ -15,7 +15,7 @@
            (file "task.org")
            "* TODO %^{Task Name:} \n%^t\n%?\n")
           ("m" "Media.Reading.Relaxing.Ideas" entry
-           (file+olp+datetree "monde.org")
+           (file+olp+datetree "media.org")
            "* %U - %^{heading} %^g\n%?\n" :tree-type week)
           ("j" "Journal!!!" entry
            (file+olp+datetree "journal.org")
@@ -68,5 +68,18 @@ See `org-capture-templates' for more information."
                '("h" "Hugo post Blog" entry
                  (file "~/Dropbox/org/blog.org")
                  (function org-hugo-new-subtree-post-capture-template))))
+
+
+;; (use-package org-roam
+;;       :hook
+;;       (after-init . org-roam-mode)
+;;       :custom
+;;       (org-roam-directory "~/Dropbox/org/")
+;;       :bind (:map org-roam-mode-map
+;;               (("C-c n l" . org-roam)
+;;                ("C-c n f" . org-roam-find-file)
+;;                ("C-c n g" . org-roam-show-graph))
+;;               :map org-mode-map
+;;               (("C-c n i" . org-roam-insert))))
 
 (provide 'init-org)
