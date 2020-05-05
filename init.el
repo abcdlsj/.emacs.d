@@ -71,7 +71,7 @@ decrease this. If you experience stuttering, increase this.")
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-;;懒猫的好东西
+;;懒猫的好东西，有时间了探究下，自己准备弄一个
 ;;(add-to-list 'load-path "~/.emacs.d/gitel/nox/")
 
 (setq custom-file "~/.emacs.d/core/init-custom.el")
