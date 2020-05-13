@@ -4,3 +4,6 @@ My emacs config
 
 #+caption: scrot
 [[file:./scrot.png]]
+
+#+caption: scrot-light
+[[file:./scrot-light.png]]

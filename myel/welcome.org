@@ -1,0 +1,22 @@
+*Welcome to Emacs*
+ 
+  Emacs is an  extensible, customizable, free/libre text  editor — and
+  more. At its core is an interpreter for Emacs Lisp, a dialect of the
+  Lisp programming language with extensions to support text editing.
+
+*Quick help*
+
+  Learn basic Emacs keystroke commands ...................... [[elisp:help-with-tutorial][Tutorial]]
+  See an overview of Emacs features at [[https://gnu.org][gnu.org]] ........... [[https://www.gnu.org/software/emacs/tour][Guided Tour]]
+  Read the extensive documentation ..................... [[info:emacs][Documentation]]
+  Search for an answer ................................ [[https://emacs.stackexchange.com][Stack Exchange]]
+
+*Quick commands*        /C is for Control, M is for Meta (Alt or Command)/
+
+  Save ............... =[C-x]= =[C-s]=    Help ..................... =[C-h]=
+  Save as ............ =[C-x]= =[C-w]=    Cancel ................... =[C-g]=
+  Open a new file .... =[C-x]= =[C-f]=    Undo ................. =[C-x]= =[u]=
+  Close buffer ....... =[C-x]= =[C-k]=    Quit ............... =[C-x]= =[C-c]=
+  
+
+                       [[elisp:(kill-buffer%20(current-buffer))][ *— Close this buffer —* ]]

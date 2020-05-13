@@ -2,7 +2,7 @@
 # name: hugo
 # key: hugo
 # --
-#+HUGO_BASE_DIR: ~/GithubPro/abcdlsj.github.io/
+#+HUGO_BASE_DIR: ~/github/blog/
 #+HUGO_SECTION: post
 #+TITLE: $1
 #+DATE: `(format-time-string "%Y-%m-%d")`

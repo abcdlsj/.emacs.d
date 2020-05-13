@@ -14,3 +14,5 @@
                'haskell-mode-hook
                ))
   (add-hook hook '(lambda () (nox-ensure))))
+
+(provide 'init-nox)

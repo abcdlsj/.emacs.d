@@ -20,19 +20,20 @@
           ("j" "Journal!!!" entry
            (file+olp+datetree "journal.org")
            "* %U - %^{heading} %^g\n%?\n" :tree-type week)
-          ("n" "Notes!!!" plain
-           (file "notes.org")
-           "* %U - %^{heading} %^g\n%?\n")))
+          ;; ("n" "Notes!!!" plain
+          ;;  (file "notes.org")
+          ;;  "* %U - %^{heading} %^g\n%?\n")
+		  ))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(
                                                            (lisp . t)
                                                            (shell . t)
                                                            (C . t)
-							   (java . t)
-							   (python . t)
-							   (dot . t)
-							   (racket . t)
-							   (latex . t)
+														   (java . t)
+														   (python . t)
+														   (dot . t)
+														   (racket . t)
+														   (latex . t)
                                                            ))
   ;;org-view
   ;;(setq org-indent-mode 1)
@@ -69,6 +70,24 @@ See `org-capture-templates' for more information."
                  (file "~/Dropbox/org/blog.org")
                  (function org-hugo-new-subtree-post-capture-template))))
 
+
+(use-package org-brain :ensure t
+  :init
+  (setq org-brain-path "~/Dropbox/n/org-brain")
+  ;; For Evil users
+  (with-eval-after-load 'evil
+    (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
+  :config
+  (setq org-id-track-globally t)
+  (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
+  (add-hook 'before-save-hook #'org-brain-ensure-ids-in-buffer)
+  (push '("b" "Brain" plain (function org-brain-goto-end)
+          "* %i%?" :empty-lines 1)
+        org-capture-templates)
+  (setq org-brain-visualize-default-choices 'all)
+  (setq org-brain-title-max-length 12)
+  (setq org-brain-include-file-entries nil
+        org-brain-file-entries-use-title nil))
 
 ;; (use-package org-roam
 ;;       :hook

@@ -18,7 +18,8 @@
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
   ;;(load-theme 'doom-oceanic-next t)
-  (load-theme 'doom-one t)
+  (load-theme 'doom-vibrant t)
+  ;;(load-theme 'doom-one-light t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
 
@@ -30,7 +31,8 @@
   (doom-themes-treemacs-config)
   ;;(setq doom-variable-pitch-font (font-spec :family "Menlo" :size 10))
   ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config))
+  ;;(doom-themes-org-config)
+  )
 
 (use-package doom-modeline
   :config
@@ -166,8 +168,8 @@
   (add-to-list 'dashboard-items '(agenda) t)
   (setq ;;dashboard-banner-logo-title "RTFSC – Read The F**king Source Code :)!"
    dashboard-banner-logo-title "Recursion or Iteration? That's a question!"
-   dashboard-startup-banner "~/.emacs.d/banner/ue-colorful.png"
-   dashboard-center-content t
+   ;;dashboard-startup-banner "~/.emacs.d/banner/ue-colorful.png"
+   ;;dashboard-center-content t
    dashboard-set-heading-icons t
    dashboard-set-file-icons t
    dashboard-items '((recents  . 10)
@@ -241,26 +243,26 @@
 ;; (use-package cnfonts
 ;;   :config (cnfonts-enable))
 
-(set-face-attribute
- 'default nil
- :font (font-spec :name "Menlo"
-                  :weight 'normal
-                  :slant 'normal
-                  :size 18))
-
 ;; (let ((emacs-font-size 15)
 ;;       (emacs-font-name "WenQuanYi Micro Hei Mono"))
 ;;   (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
 ;;   (set-fontset-font (frame-parameter nil 'font) 'unicode (eval emacs-font-name)))
 
+
+(set-face-attribute
+ 'default nil
+ :font (font-spec :name "Menlo"
+                  :weight 'normal
+                  :slant 'normal
+                  :size 19))
+
 (with-eval-after-load 'org
   (defun org-buffer-face-mode-variable ()
     (interactive)
     (make-face 'width-font-face)
-    (set-face-attribute 'width-font-face nil :font "等距更纱黑体 SC 14")
+	(set-face-attribute 'width-font-face nil :font "Sarasa Nerd 15")
 	(setq buffer-face-mode-face 'width-font-face)
     (buffer-face-mode))
-
   (add-hook 'org-mode-hook 'org-buffer-face-mode-variable))
 
 (provide 'init-ui)

@@ -8,13 +8,13 @@
 ;;   :load-path "~/.emacs.d/gitel/emacs-libvterm")
 
 ;;sdcv
-(use-package sdcv
-  :load-path "~/.emacs.d/gitel/"
-  :config
-  (setq sdcv-say-word-p nil)               ;say word after translation
-  (setq sdcv-dictionary-data-dir "~/.stardict/dic/") ;setup directory of stardict dictionary
-  (setq sdcv-dictionary-simple-list '())
-  (setq sdcv-dictionary-complete-list '()))
+;; (use-package sdcv
+;;   :load-path "~/.emacs.d/gitel/"
+;;   :config
+;;   (setq sdcv-say-word-p nil)               ;say word after translation
+;;   (setq sdcv-dictionary-data-dir "~/.stardict/dic/") ;setup directory of stardict dictionary
+;;   (setq sdcv-dictionary-simple-list '())
+;;   (setq sdcv-dictionary-complete-list '()))
 
 ;;nov
 ;;(use-package nov
