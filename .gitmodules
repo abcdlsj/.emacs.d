@@ -1,0 +1,3 @@
+[submodule "gitel/valign"]
+	path = gitel/valign
+	url = https://github.com/casouri/valign.git

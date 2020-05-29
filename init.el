@@ -73,7 +73,7 @@ decrease this. If you experience stuttering, increase this.")
 
 ;;懒猫的好东西，有时间了探究下，自己准备弄一个
 ;;(add-to-list 'load-path "~/.emacs.d/gitel/nox/")
-
+(add-to-list 'load-path "~/.emacs.d/gitel/valign/")
 (setq custom-file "~/.emacs.d/core/init-custom.el")
 
 ;;init
