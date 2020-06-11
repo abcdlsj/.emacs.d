@@ -511,7 +511,7 @@ This is for use in `ivy-re-builders-alist'."
 	(setq ivy-posframe-display-functions-alist
 		  '((swiper          . ivy-display-function-fallback)
 			(complete-symbol . ivy-posframe-display-at-point)
-			(counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+			(counsel-M-x     . ivy-posframe-display-at-frame-bottom-left)
 
 			(t               . ivy-posframe-display-at-frame-center)))
 	(ivy-posframe-mode 1)))
