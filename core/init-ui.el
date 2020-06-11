@@ -27,9 +27,9 @@
   ;;(doom-themes-neotree-config)
   ;; or for treemacs users
   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  ;;(setq doom-themes-treemacs-enable-variable-pitch nil)
+  (setq doom-themes-treemacs-enable-variable-pitch nil)
   (doom-themes-treemacs-config)
-  ;;(setq doom-variable-pitch-font (font-spec :family "Menlo" :size 10))
+  (setq doom-variable-pitch-font (font-spec :family "Noto Sans" :size 10))
   ;; Corrects (and improves) org-mode's native fontification.
   ;;(doom-themes-org-config)
   )
@@ -37,19 +37,12 @@
 (setq light-theme 'doom-one-light)
 (setq dark-theme 'doom-vibrant)
 
-(defun light-font-set()
+(defun my-font-set()
   (set-face-attribute 'default nil :font
-                      (format   "%s:pixelsize=%d" "Fira Code" 18))
+                      (format "%s:pixelsize=%d" "ubuntu Mono" 18))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
 					  (font-spec :family "Sarasa Mono SC" :size 16))))
-
-(defun dark-font-set()
-  (set-face-attribute 'default nil :font
-                      (format   "%s:pixelsize=%d" "Fira Code" 18))
-  (dolist (charset '(kana han cjk-misc bopomofo))
-	(set-fontset-font (frame-parameter nil 'font) charset
-					  (font-spec :family "Sarasa Mono SC" :size 18))))
 
 (defun change-light-theme()
   (interactive)
@@ -57,13 +50,12 @@
 
 (defun change-dark-theme()
   (interactive)
-  (load-theme 'doom-vibrant)
-  (dark-font-set))
+  (load-theme 'doom-vibrant))
 
-(dark-font-set)
+(my-font-set)
 
 (load "~/.emacs.d/gitel/valign/valign.el")
-(valign-setup)
+(valign-mode)
 
 (use-package doom-modeline
   :config

@@ -9,8 +9,7 @@
       (append (list '(width . 72) '(height . 40))))
 
 (setq org-confirm-elisp-link-function nil)
-      
-				  
+
 (global-set-key [(control z)]         'undo)
 (global-set-key "\C-x\C-x"            'execute-extended-command)
 
@@ -47,57 +46,57 @@
 
 
 (setq-default header-line-format
-  '(:eval (mode-line-render
+			  '(:eval (mode-line-render
 
-   (format-mode-line
-    (list
-     (propertize "File " 'face `(:weight regular))
-     "%b "
-     '(:eval (if (and buffer-file-name (buffer-modified-p))
-         (propertize "(modified)" 
-		     'face `(:weight light
-			     :foreground "#aaaaaa"))))))
-   
-   (format-mode-line
-    (propertize "%3l:%2c "
-	'face `(:weight light :foreground "#aaaaaa"))))))
+					   (format-mode-line
+						(list
+						 (propertize "File " 'face `(:weight regular))
+						 "%b "
+						 '(:eval (if (and buffer-file-name (buffer-modified-p))
+									 (propertize "(modified)"
+												 'face `(:weight light
+																 :foreground "#aaaaaa"))))))
+
+					   (format-mode-line
+						(propertize "%3l:%2c "
+									'face `(:weight light :foreground "#aaaaaa"))))))
 
 (set-face-attribute 'region nil
-		    :background "#f0f0f0")
+					:background "#f0f0f0")
 (set-face-attribute 'highlight nil
-		    :foreground "black"
-		    :background "#f0f0f0")
+					:foreground "black"
+					:background "#f0f0f0")
 (set-face-attribute 'org-level-1 nil
-		    :foreground "black"
-		    :weight 'regular)
+					:foreground "black"
+					:weight 'regular)
 (set-face-attribute 'org-link nil
-		    :underline nil
-		    :foreground "dark blue")
+					:underline nil
+					:foreground "dark blue")
 (set-face-attribute 'org-verbatim nil
-		    :foreground "dark blue")
+					:foreground "dark blue")
 (set-face-attribute 'bold nil
- 		    :foreground "black"
-		    :weight 'regular)
+ 					:foreground "black"
+					:weight 'regular)
 
 
 (setq-default mode-line-format   "")
 
 (set-face-attribute 'header-line nil
-;;                    :weight 'regular
-		    :height 140
+					;;                    :weight 'regular
+					:height 140
                     :underline "black"
                     :foreground "black"
-		    :background "white"
+					:background "white"
                     :box `(:line-width 3 :color "white" :style nil))
 (set-face-attribute 'mode-line nil
                     :height 10
                     :underline "black"
                     :background "white"
-		                :foreground "white"
+		            :foreground "white"
                     :box nil)
 (set-face-attribute 'mode-line-inactive nil
                     :box nil
                     :inherit 'mode-line)
-(set-face-attribute 'mode-line-buffer-id nil 
+(set-face-attribute 'mode-line-buffer-id nil
                     :weight 'light)
 (setq org-hide-emphasis-markers t)

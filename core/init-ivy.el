@@ -69,7 +69,7 @@
          ("C-c o" . counsel-outline)
          ("C-c r" . counsel-rg)
          ("C-c z" . counsel-fzf)
-	 ("C-c m" . counsel-linux-app)
+		 ("C-c m" . counsel-linux-app)
 
          ("C-c c B" . counsel-bookmarked-directory)
          ("C-c c F" . counsel-faces)
@@ -116,7 +116,7 @@
 
   (setq ivy-use-selectable-prompt t
         iivy-fixed-height-minibuffer t
-	ivy-use-virtual-buffers t    ; Enable bookmarks and recentf
+		ivy-use-virtual-buffers t    ; Enable bookmarks and recentf
         ivy-height 10
         ivy-fixed-height-minibuffer t
         ivy-count-format "(%d/%d) "
@@ -263,7 +263,7 @@
       "Toggle `counsel-rg' and `swiper'/`swiper-isearch' with the current input."
       (interactive)
       (ivy-quit-and-run
-	(if (memq (ivy-state-caller ivy-last) '(swiper swiper-isearch))
+		(if (memq (ivy-state-caller ivy-last) '(swiper swiper-isearch))
             (my-ivy-switch-to-counsel-rg)
           (my-ivy-switch-to-swiper-isearch))))
     (bind-key "<C-return>" #'my-swiper-toggle-counsel-rg swiper-map)
@@ -282,7 +282,7 @@
       "Toggle `swiper' and `swiper-isearch' with the current input."
       (interactive)
       (ivy-quit-and-run
-	(if (eq (ivy-state-caller ivy-last) 'swiper-isearch)
+		(if (eq (ivy-state-caller ivy-last) 'swiper-isearch)
             (swiper ivy-text)
           (swiper-isearch ivy-text))))
     (bind-key "<s-return>" #'my-swiper-toggle-swiper-isearch swiper-map)
@@ -291,7 +291,7 @@
       "Toggle `counsel-fzf' with the current `counsel-find-file' input."
       (interactive)
       (ivy-quit-and-run
-	(counsel-fzf (or ivy-text "") default-directory)))
+		(counsel-fzf (or ivy-text "") default-directory)))
     (bind-key "<C-return>" #'my-counsel-find-file-toggle-fzf counsel-find-file-map)
 
     (defun my-swiper-toggle-rg-dwim ()
@@ -305,7 +305,7 @@
       "Toggle `swiper' and `swiper-isearch' with the current input."
       (interactive)
       (ivy-quit-and-run
-	(if (eq (ivy-state-caller ivy-last) 'swiper-isearch)
+		(if (eq (ivy-state-caller ivy-last) 'swiper-isearch)
             (my-ivy-switch-to-swiper)
           (my-ivy-switch-to-swiper-isearch))))
     (bind-key "<s-return>" #'my-swiper-toggle-swiper-isearch swiper-map)
@@ -411,8 +411,8 @@ This is for use in `ivy-re-builders-alist'."
             (t . ivy-prescient-re-builder))
           ivy-prescient-sort-commands
           '(:not swiper swiper-isearch ivy-switch-buffer
-		 counsel-grep counsel-git-grep counsel-ag counsel-imenu
-		 counsel-yank-pop counsel-recentf counsel-buffer-or-recentf))
+				 counsel-grep counsel-git-grep counsel-ag counsel-imenu
+				 counsel-yank-pop counsel-recentf counsel-buffer-or-recentf))
 
     (ivy-prescient-mode 1))
 
@@ -444,17 +444,17 @@ This is for use in `ivy-re-builders-alist'."
    (sys/macp
     (use-package counsel-osx-app
       :bind (:map counsel-mode-map
-		  ("s-<f6>" . counsel-osx-app)))))
+				  ("s-<f6>" . counsel-osx-app)))))
 
   ;; Display world clock using Ivy
   (use-package counsel-world-clock
     :bind (:map counsel-mode-map
-		("C-c c k" . counsel-world-clock)))
+				("C-c c k" . counsel-world-clock)))
 
   ;; Tramp ivy interface
   (use-package counsel-tramp
     :bind (:map counsel-mode-map
-		("C-c c T" . counsel-tramp)))
+				("C-c c T" . counsel-tramp)))
 
   ;; Support pinyin in Ivy
   ;; Input prefix ':' to match pinyin
@@ -504,7 +504,17 @@ This is for use in `ivy-re-builders-alist'."
                                  ivy--regex-plus))
              (setf (alist-get key ivy-re-builders-alist)
                    #'ivy--regex-pinyin))))
-       ivy-re-builders-alist))))
+       ivy-re-builders-alist)))
+
+  (use-package ivy-posframe
+	:config
+	(setq ivy-posframe-display-functions-alist
+		  '((swiper          . ivy-display-function-fallback)
+			(complete-symbol . ivy-posframe-display-at-point)
+			(counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+
+			(t               . ivy-posframe-display-at-frame-center)))
+	(ivy-posframe-mode 1)))
 
 ;; ;; Better experience with icons
 ;; ;; Enable it before`ivy-rich-mode' for better performance
