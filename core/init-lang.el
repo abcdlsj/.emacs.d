@@ -7,6 +7,7 @@
 
 ;; (require 'clang-format)
 ;; (setq clang-format-style-option "google")
+
 (use-package modern-cpp-font-lock
     :diminish
     :init (modern-c++-font-lock-global-mode t))

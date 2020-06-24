@@ -21,6 +21,7 @@
 ;;  :config
 ;;  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
 
+(global-wakatime-mode)
 
 ;;company-english-helper
 (require 'company-english-helper)
@@ -49,5 +50,9 @@
 ;;   (setq leetcode-path "/home/abcdlsj/Dropbox/workspace/alg/leetcode"
 ;;         leetcode-language "c++")
 ;;   )
+
+;;(use-package rainbow-fart
+;;  :quelpa (rainbow-fart :fetcher "github" :repo "stardiviner/emacs-rainbow-fart")
+;;  :hook (prog-mode . rainbow-fart-mode))
 
 (provide 'init-awesome)

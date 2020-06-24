@@ -7,7 +7,7 @@
 
 ;; (use-package base16-theme
 ;;  :config
-;;  (load-theme 'base16-gruvbox-dark-pale t))
+;;  (load-theme 'base16-google-dark t))
 
 ;; ;;; Code:
 (use-package doom-themes
@@ -29,9 +29,9 @@
   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
   (setq doom-themes-treemacs-enable-variable-pitch nil)
   (doom-themes-treemacs-config)
-  (setq doom-variable-pitch-font (font-spec :family "Noto Sans" :size 10))
-  ;; Corrects (and improves) org-mode's native fontification.
-  ;;(doom-themes-org-config)
+  ;;(setq doom-variable-pitch-font (font-spec :family "Ubuntu Mono" :size 4))
+  ;;Corrects (and improves) org-mode's native fontification.
+  ;; (doom-themes-org-config)
   )
 
 (setq light-theme 'doom-one-light)
@@ -39,7 +39,7 @@
 
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" "ubuntu Mono" 18))
+                      (format "%s:pixelsize=%d" "ubuntu Mono" 20))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
 					  (font-spec :family "Sarasa Mono SC" :size 16))))

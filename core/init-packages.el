@@ -107,6 +107,7 @@
 						   ;;apps
 						   gist
 						   telega
+						   wakatime-mode
 						   ;;elfeed
 						   ;;elfeed-org
 						   ;;blog

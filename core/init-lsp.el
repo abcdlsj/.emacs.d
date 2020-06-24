@@ -373,6 +373,14 @@ Return a list of strings as the completion candidates."
       :hook (java-mode . (lambda () (require 'lsp-java))))
 
 
+	(lsp-register-custom-settings
+	 '(("gopls.completeUnimported" t t)
+	   ("gopls.staticcheck" t t)))
+
+	;; Call Gofmt before saving
+	(setq gofmt-command "goimports")
+	(add-hook 'before-save-hook 'gofmt-before-save)
+
     ;; (use-package lsp-go
     ;;   :hook
     ;;   (go-mode . (lambda () (require 'lsp-go)))
