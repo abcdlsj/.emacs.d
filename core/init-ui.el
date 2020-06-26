@@ -18,7 +18,8 @@
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
   ;;(load-theme 'doom-oceanic-next t)
-  (load-theme 'doom-vibrant t)
+  ;;(load-theme 'doom-vibrant t)
+  (load-theme 'doom-monokai-pro t)
   ;;(load-theme 'doom-one-light t)
   ;; Enable flashing mode-line on errors
   (doom-themes-visual-bell-config)
