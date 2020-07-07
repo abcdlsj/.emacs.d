@@ -50,7 +50,7 @@
 						   amx
 						   counsel-projectile
 						   ;;swiper
-										;all-the-icons-ivy
+						   ;;all-the-icons-ivy
 						   smartparens
 						   popwin
 						   evil
@@ -93,6 +93,7 @@
 						   doom-themes
 						   doom-modeline
 						   hide-mode-line
+						   spacemacs-theme
 						   ;;lang
 						   modern-cpp-font-lock
 						   nasm-mode

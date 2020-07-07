@@ -9,49 +9,51 @@
 ;;  :config
 ;;  (load-theme 'base16-google-dark t))
 
+(load-theme 'spacemacs-dark)
+
 ;; ;;; Code:
-(use-package doom-themes
-  :if (display-graphic-p)
-  :config
-  ;; Global settings (defaults)
-  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+;; (use-package doom-themes
+;;   :if (display-graphic-p)
+;;   :config
+;;   ;; Global settings (defaults)
+;;   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+;;         doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
-  ;;(load-theme 'doom-oceanic-next t)
-  ;;(load-theme 'doom-vibrant t)
-  (load-theme 'doom-monokai-pro t)
-  ;;(load-theme 'doom-one-light t)
-  ;; Enable flashing mode-line on errors
-  (doom-themes-visual-bell-config)
+;;   ;; (load-theme 'doom-oceanic-next t)
+;;   ;; (load-theme 'doom-vibrant t)
+;;   ;; (load-theme 'doom-monokai-pro t)
+;;   ;; (load-theme 'doom-one-light t)
+;;   ;; Enable flashing mode-line on errors
+;;   (doom-themes-visual-bell-config)
 
-  ;; Enable custom neotree theme (all-the-icons must be installed!)
-  ;;(doom-themes-neotree-config)
-  ;; or for treemacs users
-  (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  (setq doom-themes-treemacs-enable-variable-pitch nil)
-  (doom-themes-treemacs-config)
-  ;;(setq doom-variable-pitch-font (font-spec :family "Ubuntu Mono" :size 4))
-  ;;Corrects (and improves) org-mode's native fontification.
-  ;; (doom-themes-org-config)
-  )
+;;   ;; Enable custom neotree theme (all-the-icons must be installed!)
+;;   ;;(doom-themes-neotree-config)
+;;   ;; or for treemacs users
+;;   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+;;   (setq doom-themes-treemacs-enable-variable-pitch nil)
+;;   (doom-themes-treemacs-config)
+;;   ;;(setq doom-variable-pitch-font (font-spec :family "Ubuntu Mono" :size 4))
+;;   ;;Corrects (and improves) org-mode's native fontification.
+;;   ;; (doom-themes-org-config)
+;;   )
 
-(setq light-theme 'doom-one-light)
-(setq dark-theme 'doom-vibrant)
+;; (setq light-theme 'doom-one-light)
+;; (setq dark-theme 'doom-vibrant)
+
+;; (defun change-light-theme()
+;;   (interactive)
+;;   (load-theme 'doom-one-light))
+
+;; (defun change-dark-theme()
+;;   (interactive)
+;;   (load-theme 'doom-vibrant))
 
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" "ubuntu Mono" 20))
+                      (format "%s:pixelsize=%d" "Ubuntu Mono" 21))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
 					  (font-spec :family "Sarasa Mono SC" :size 16))))
-
-(defun change-light-theme()
-  (interactive)
-  (load-theme 'doom-one-light))
-
-(defun change-dark-theme()
-  (interactive)
-  (load-theme 'doom-vibrant))
 
 (my-font-set)
 
