@@ -56,6 +56,9 @@
   :init (setq display-time-24hr-format t
               display-time-day-and-date t))
 
+(setq system-time-locale "C")
+(format-time-string "%Y-%m-%d %a")
+
 (use-package simple
   :ensure nil
   :hook ((window-setup . size-indication-mode)

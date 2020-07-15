@@ -13,16 +13,13 @@
         '(
           ("t" "Task To Do!" plain
            (file "task.org")
-           "* TODO %^{Task Name:} \n%^t\n%?\n")
+           "* TODO %^{Task Name:} \n%?\n")
           ("m" "Media.Reading.Relaxing.Ideas" entry
            (file+olp+datetree "media.org")
            "* %U - %^{heading} %^g\n%?\n" :tree-type week)
           ("j" "Journal!!!" entry
            (file+olp+datetree "journal.org")
            "* %U - %^{heading} %^g\n%?\n" :tree-type week)
-          ;; ("n" "Notes!!!" plain
-          ;;  (file "notes.org")
-          ;;  "* %U - %^{heading} %^g\n%?\n")
 		  ))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(
@@ -46,6 +43,17 @@
   (use-package org-bullets
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+
+  (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+
+  (setq org-highest-priority ?A)
+  (setq org-lowest-priority  ?C)
+  (setq org-default-priority ?B)
+  (setq org-priority-faces
+		'((?A . (:background "red" :foreground "white" :weight bold))
+		  (?B . (:background "DarkOrange" :foreground "white" :weight bold))
+		  (?C . (:background "yellow" :foreground "DarkGreen" :weight bold))
+		  ))
   )
 
 (use-package ox-hugo
@@ -70,35 +78,23 @@ See `org-capture-templates' for more information."
                  (file "~/Dropbox/org/blog.org")
                  (function org-hugo-new-subtree-post-capture-template))))
 
+;; (use-package org-brain :ensure t
+;;   :init
+;;   (setq org-brain-path "~/Dropbox/n/org-brain")
+;;   ;; For Evil users
+;;   (with-eval-after-load 'evil
+;;     (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
+;;   :config
+;;   (setq org-id-track-globally t)
+;;   (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
+;;   (add-hook 'before-save-hook #'org-brain-ensure-ids-in-buffer)
+;;   (push '("b" "Brain" plain (function org-brain-goto-end)
+;;           "* %i%?" :empty-lines 1)
+;;         org-capture-templates)
+;;   (setq org-brain-visualize-default-choices 'all)
+;;   (setq org-brain-title-max-length 12)
+;;   (setq org-brain-include-file-entries nil
+;;         org-brain-file-entries-use-title nil))
 
-(use-package org-brain :ensure t
-  :init
-  (setq org-brain-path "~/Dropbox/n/org-brain")
-  ;; For Evil users
-  (with-eval-after-load 'evil
-    (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
-  :config
-  (setq org-id-track-globally t)
-  (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
-  (add-hook 'before-save-hook #'org-brain-ensure-ids-in-buffer)
-  (push '("b" "Brain" plain (function org-brain-goto-end)
-          "* %i%?" :empty-lines 1)
-        org-capture-templates)
-  (setq org-brain-visualize-default-choices 'all)
-  (setq org-brain-title-max-length 12)
-  (setq org-brain-include-file-entries nil
-        org-brain-file-entries-use-title nil))
-
-;; (use-package org-roam
-;;       :hook
-;;       (after-init . org-roam-mode)
-;;       :custom
-;;       (org-roam-directory "~/Dropbox/org/")
-;;       :bind (:map org-roam-mode-map
-;;               (("C-c n l" . org-roam)
-;;                ("C-c n f" . org-roam-find-file)
-;;                ("C-c n g" . org-roam-show-graph))
-;;               :map org-mode-map
-;;               (("C-c n i" . org-roam-insert))))
 
 (provide 'init-org)

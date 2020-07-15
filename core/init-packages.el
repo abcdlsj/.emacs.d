@@ -88,7 +88,6 @@
 						   page-break-lines
 						   all-the-icons
 						   posframe
-						   cnfonts
 						   ;;theme
 						   doom-themes
 						   doom-modeline

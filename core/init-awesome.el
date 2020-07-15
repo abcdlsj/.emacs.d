@@ -1,26 +1,3 @@
-;;telega
-(use-package telega
-  :config
-  (telega-mode-line-mode 1))
-
-;;vterm
-;; (use-package vterm
-;;   :load-path "~/.emacs.d/gitel/emacs-libvterm")
-
-;;sdcv
-;; (use-package sdcv
-;;   :load-path "~/.emacs.d/gitel/"
-;;   :config
-;;   (setq sdcv-say-word-p nil)               ;say word after translation
-;;   (setq sdcv-dictionary-data-dir "~/.stardict/dic/") ;setup directory of stardict dictionary
-;;   (setq sdcv-dictionary-simple-list '())
-;;   (setq sdcv-dictionary-complete-list '()))
-
-;;nov
-;;(use-package nov
-;;  :config
-;;  (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode)))
-
 (global-wakatime-mode)
 (custom-set-variables '(wakatime-api-key "df51420e-e377-44cf-80a5-4ca97c847496"))
 
@@ -31,29 +8,5 @@
 
 ;;magit
 ;;(use-package magit)
-
-(use-package eaf
-  :load-path "~/.emacs.d/gitel/emacs-application-framework"
-  :custom
-  (eaf-find-alternate-file-in-dired t)
-  :config
-  (eaf-bind-key scroll_up "RET" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_down_page "DEL" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
-  (eaf-bind-key take_photo "p" eaf-camera-keybinding)
-  (setq eaf-grip-token "1f9f6b249d2a08255b89875aebc025fd596805c8")
-  (eaf-setq eaf-browser-default-zoom  "1.25"))
-
-;; (use-package leetcode
-;;   :load-path "~/GithubPro/leetcode-emacs/"
-;;   :config
-;;   (setq leetcode-path "/home/abcdlsj/Dropbox/workspace/alg/leetcode"
-;;         leetcode-language "c++")
-;;   )
-
-;;(use-package rainbow-fart
-;;  :quelpa (rainbow-fart :fetcher "github" :repo "stardiviner/emacs-rainbow-fart")
-;;  :hook (prog-mode . rainbow-fart-mode))
 
 (provide 'init-awesome)
