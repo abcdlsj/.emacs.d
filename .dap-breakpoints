@@ -1,1 +1,0 @@
-#s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("/home/abcdlsj/.emacs.d/core/init-edit.el" ((:point 1)) "/home/abcdlsj/Dropbox/n/Algorithms/基本排序.org" ((:point 1))))

@@ -8,6 +8,7 @@
 (when (>= emacs-major-version 25)
   (require 'package)
   (package-initialize)
+  ;; my-local-mirrors
   ;; (setq package-archives '(("gnu"   . "~/mnt/D/elpa/emacs/gnu")
   ;; 						   ("melpa" . "~/mnt/D/elpa/emacs/melpa/")
   ;; 						   ("org" . 	"~/mnt/D/elpa/emacs/org/")))
@@ -57,10 +58,12 @@
 						   evil-leader
 						   evil-collection
 						   evil-nerd-commenter
-						   treemacs
-						   treemacs-evil
-						   treemacs-projectile
-						   treemacs-magit
+						   ;;
+						   ;; neotree
+						   ;; treemacs
+						   ;; treemacs-evil
+						   ;; treemacs-projectile
+						   ;; treemacs-magit
 						   winum
 						   which-key
 						   ;;key
@@ -101,9 +104,9 @@
 						   sly-quicklisp
 						   racket-mode
 						   go-mode
-						   ;;vterm
-						   eshell-up
-						   eshell-did-you-mean
+						   vterm
+						   ;;eshell-up
+						   ;;eshell-did-you-mean
 						   ;;apps
 						   gist
 						   telega

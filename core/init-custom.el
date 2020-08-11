@@ -116,6 +116,11 @@
  '(evil-collection-setup-minibuffer t)
  '(package-selected-packages
    '(gdb-mi quelpa-use-package request quelpa company company-lsp company-prescient company-box company-tabnine auctex avy projectile highlight-indent-guides expand-region ivy ivy-rich ivy-posframe ivy-xref ivy-yasnippet ivy-prescient ivy-fuz amx counsel-projectile smartparens popwin evil evil-leader evil-collection evil-nerd-commenter treemacs treemacs-evil treemacs-projectile treemacs-magit winum which-key hydra markdown-mode lsp-mode lsp-java lsp-haskell dap-mode lsp-ui ccls lsp-python-ms yasnippet yasnippet-snippets auto-yasnippet use-package dashboard page-break-lines all-the-icons posframe cnfonts doom-themes doom-modeline solaire-mode base16-theme tao-theme hide-mode-line nasm-mode google-c-style sly sly-quicklisp racket-mode eshell-up eshell-did-you-mean gist telega org-download ox-hugo org-download persp-mode magit benchmark-init))
+ '(spacemacs-theme-comment-bg nil)
+ '(spacemacs-theme-org-bold nil)
+ '(spacemacs-theme-org-height nil)
+ '(spacemacs-theme-org-priority-bold nil)
+ '(spacemacs-theme-underline-parens nil)
  '(tab-width 4)
  '(wakatime-api-key "df51420e-e377-44cf-80a5-4ca97c847496"))
 (custom-set-faces

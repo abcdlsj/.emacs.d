@@ -48,7 +48,11 @@
   ;; "qa" 'awesome-tab-backward-tab
   ;; "qw" 'awesome-tab-forward-group
   ;; "qs" 'awesome-tab-backward-group
+  "mc" 'comment-region
+  "mu" 'uncomment-region
+  "v" 'vterm
   )
+
 
 (global-set-key
  (kbd "C-c C-n")

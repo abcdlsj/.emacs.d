@@ -86,12 +86,14 @@ decrease this. If you experience stuttering, increase this.")
 ;;ui
 (require 'init-ui)
 ;;awesome
+(require 'init-filetree)
 (require 'init-kill-ring)
 (require 'init-ivy)
 (require 'init-edit)
 (require 'init-hydra)
 (require 'init-company)
 (require 'init-lsp)
+
 ;; (require 'init-nox)
 (require 'init-gdb)
 (require 'init-snippet)

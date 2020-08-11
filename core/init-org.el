@@ -44,6 +44,7 @@
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
+
   (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
 
   (setq org-highest-priority ?A)
