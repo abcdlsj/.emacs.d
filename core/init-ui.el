@@ -12,7 +12,8 @@
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
-  (load-theme 'doom-vibrant t)
+  ;; (load-theme 'doom-vibrant t)
+  (load-theme 'doom-monokai-pro t)
   (doom-themes-visual-bell-config)
 
   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
@@ -28,10 +29,10 @@
 ;; 字体设置
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" "Ubuntu Mono" 26))
+                      (format "%s:pixelsize=%d" "Menlo" 24))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
-					  (font-spec :family "Noto Sans CJK SC" :size 20))))
+					  (font-spec :family "Noto Sans CJK SC" :size 24))))
 
 (when (display-graphic-p)
   (my-font-set))

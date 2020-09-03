@@ -92,7 +92,7 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-edit)
 (require 'init-hydra)
 (require 'init-company)
-(require 'init-lsp)
+;; (require 'init-lsp)
 
 ;; (require 'init-nox)
 (require 'init-gdb)
