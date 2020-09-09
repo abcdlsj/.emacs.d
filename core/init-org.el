@@ -20,17 +20,17 @@
           ("j" "Journal!!!" entry
            (file+olp+datetree "journal.org")
            "* %U - %^{heading} %^g\n%?\n" :tree-type week)
-		  ))
+	  ))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(
                                                            (lisp . t)
                                                            (shell . t)
                                                            (C . t)
-														   (java . t)
-														   (python . t)
-														   (dot . t)
-														   (racket . t)
-														   (latex . t)
+							   (java . t)
+							   (python . t)
+							   (dot . t)
+							   (racket . t)
+							   (latex . t)
                                                            ))
   ;;org-view
   ;;(setq org-indent-mode 1)
@@ -51,10 +51,10 @@
   (setq org-lowest-priority  ?C)
   (setq org-default-priority ?B)
   (setq org-priority-faces
-		'((?A . (:background "red" :foreground "white" :weight bold))
-		  (?B . (:background "DarkOrange" :foreground "white" :weight bold))
-		  (?C . (:background "yellow" :foreground "DarkGreen" :weight bold))
-		  ))
+	'((?A . (:background "red" :foreground "white" :weight bold))
+	  (?B . (:background "DarkOrange" :foreground "white" :weight bold))
+	  (?C . (:background "yellow" :foreground "DarkGreen" :weight bold))
+	  ))
   )
 
 (use-package ox-hugo

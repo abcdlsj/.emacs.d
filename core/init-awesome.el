@@ -6,7 +6,4 @@
 
 (require 'ivy-baidu-fanyi-sug)
 
-;;magit
-;;(use-package magit)
-
 (provide 'init-awesome)

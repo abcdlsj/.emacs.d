@@ -1,6 +1,3 @@
-(eval-when-compile
-  (require 'init-const))
-
 (use-package evil
   :init
   (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
@@ -22,17 +19,6 @@
 (use-package which-key
   :config
   (which-key-mode))
-
-;;auto-pair
-
-;;(electric-pair-mode t)
-;; (setq electric-pair-pairs '(
-;;                            (?\" . ?\")
-;;                            (?\` . ?\`)
-;;                            (?\( . ?\))
-;;                            (?\{ . ?\})
-;;                            ))
-;; (setq electric-pair-inhibit-predicate 'electric-pair-conservative-inhibit)
 
 (require 'awesome-pair)
 (dolist (hook (list
@@ -137,11 +123,5 @@
 	    (setq TeX-save-querynil )
 	    (setq TeX-show-compilation t)
 	    ))
-
-;; (require 'auto-save)
-;; (auto-save-enable)
-
-;; (setq auto-save-silent t)   ; quietly save
-;; (setq auto-save-delete-trailing-whitespace t)  ; automatically delete spaces at the end of the line when saving
 
 (provide 'init-edit)

@@ -1,4 +1,3 @@
-										;for emacs-27 early-init
 (when (<= emacs-major-version 27)
   (menu-bar-mode -1)
   (tool-bar-mode -1)
@@ -20,8 +19,8 @@
       mouse-wheel-scroll-amount '(5 ((shift) . 2))
       mouse-wheel-progressive-speed nil)  ; don't accelerate scrolling
 
-;; (set-frame-parameter (selected-frame) 'alpha '(98 100))
-;; (add-to-list 'default-frame-alist (cons 'alpha '(95 100)))
+(set-frame-parameter (selected-frame) 'alpha '(85 100))
+(add-to-list 'default-frame-alist (cons 'alpha '(95 100)))
 
 (setq frame-title-format "Emacs @ %b")
 

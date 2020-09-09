@@ -1,9 +1,6 @@
-;;; init-ui.el --- description -*- lexical-binding: t; -*-
-
-(unless emacs/>=27p
-  (push '(menu-bar-lines . 0) default-frame-alist)
-  (push '(tool-bar-lines . 0) default-frame-alist)
-  (push '(vertical-scroll-bars) default-frame-alist))
+(push '(menu-bar-lines . 0) default-frame-alist)
+(push '(tool-bar-lines . 0) default-frame-alist)
+(push '(vertical-scroll-bars) default-frame-alist)
 
 (use-package doom-themes
   :if (display-graphic-p)
@@ -12,8 +9,7 @@
   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
         doom-themes-enable-italic t) ; if nil, italics is universally disabled
 
-  ;; (load-theme 'doom-vibrant t)
-  (load-theme 'doom-monokai-pro t)
+  ;; (load-theme 'doom-one-light t)
   (doom-themes-visual-bell-config)
 
   (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
@@ -24,7 +20,7 @@
   (doom-themes-org-config)
   )
 
-;; (load-theme 'spacemacs-dark)
+(load-theme 'spacemacs-dark)
 
 ;; 字体设置
 (defun my-font-set()
@@ -79,5 +75,3 @@
   (winum-mode 1))
 
 (provide 'init-ui)
-
-;;; init-ui.el ends here

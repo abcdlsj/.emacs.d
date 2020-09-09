@@ -71,48 +71,21 @@ decrease this. If you experience stuttering, increase this.")
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-;; 懒猫的好东西，有时间了探究下，自己准备弄一个
-;; (add-to-list 'load-path "~/.emacs.d/gitel/nox/")
 (add-to-list 'load-path "~/.emacs.d/gitel/valign/")
 (setq custom-file "~/.emacs.d/core/init-custom.el")
 
 ;;init
 (require 'init-packages)
 (require 'init-optimize)
-(require 'init-const)
-(require 'init-funcs)
 (require 'init-custom)
-
-;;ui
 (require 'init-ui)
-;;awesome
-(require 'init-filetree)
-(require 'init-kill-ring)
 (require 'init-ivy)
 (require 'init-edit)
-(require 'init-hydra)
 (require 'init-company)
-;; (require 'init-lsp)
-
-;; (require 'init-nox)
-(require 'init-gdb)
+(require 'init-lsp)
 (require 'init-snippet)
 (require 'init-awesome)
 (require 'init-lisp)
 (require 'init-lang)
 (require 'init-org)
-;;key
 (require 'init-keybindings)
-
-
-;; (unless (package-installed-p 'quelpa)
-;;    (with-temp-buffer
-;;      (url-insert-file-contents "https://github.com/quelpa/quelpa/raw/master/quelpa.el")
-;;      (eval-buffer)
-;;      (quelpa-self-upgrade)))
-
-;; (quelpa
-;; '(quelpa-use-package
-;;   :fetcher git
-;;   :url "https://github.com/quelpa/quelpa-use-package.git"))
-;; (require 'quelpa-use-package)
