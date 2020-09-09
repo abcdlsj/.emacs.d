@@ -1,9 +1,3 @@
 #+TITLE: my emacs config
 
 My emacs config
-
-#+caption: dashboard
-[[file:./scrot-dashboard.png]]
-
-#+caption: main
-[[file:./scrot-main.png]]
