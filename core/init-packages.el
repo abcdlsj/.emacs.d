@@ -1,17 +1,14 @@
 ;;                  _
-;; _ __   __ _  ___| | ____ _  __ _  ___
-;;| '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \
-;;| |_) | (_| | (__|   < (_| | (_| |  __/
-;;| .__/ \__,_|\___|_|\_\__,_|\__, |\___|
-;;|_|                         |___/
+;;   _ __   __ _  ___| | ____ _  __ _  ___
+;;  | '_ \ / _` |/ __| |/ / _` |/ _` |/ _ \
+;;  | |_) | (_| | (__|   < (_| | (_| |  __/
+;;  | .__/ \__,_|\___|_|\_\__,_|\__, |\___|
+;;  |_|                         |___/
 ;;
+
 (when (>= emacs-major-version 25)
   (require 'package)
   (package-initialize)
-  ;; my-local-mirrors
-  ;; (setq package-archives '(("gnu"   . "~/mnt/D/elpa/emacs/gnu")
-  ;; 						   ("melpa" . "~/mnt/D/elpa/emacs/melpa/")
-  ;; 						   ("org" . 	"~/mnt/D/elpa/emacs/org/")))
   (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 						   ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 						   ("org" . 	"http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
@@ -21,24 +18,22 @@
 
 ;; Add Packages
 (defvar abcdlsj/packages '(
-						   ;;base
+						   ;;
 						   request
 						   exec-path-from-shell
-						   ;; --- Auto-completion ---
+						   ;;
 						   company
 						   company-lsp
 						   company-prescient
 						   company-box
-						   ;;company-tabnine
-						   ;; --- Better Editor ---
-						   ;;LaTeX
+						   ;;
 						   auctex
-						   ;;pyim
+						   ;;
 						   avy
 						   projectile
 						   highlight-indent-guides
 						   expand-region
-						   ;;swiper
+						   ;;
 						   ivy
 						   ivy-rich
 						   all-the-icons-ivy-rich
@@ -47,33 +42,20 @@
 						   ivy-yasnippet
 						   ivy-prescient
 						   ivy-fuz
-						   ;;counsel
+						   ;;
 						   amx
 						   counsel-projectile
-						   ;;swiper
-						   ;;all-the-icons-ivy
 						   smartparens
 						   popwin
 						   evil
 						   evil-leader
 						   evil-collection
 						   evil-nerd-commenter
-						   ;;
-						   ;; neotree
-						   ;; treemacs
-						   ;; treemacs-evil
-						   ;; treemacs-projectile
-						   ;; treemacs-magit
 						   winum
 						   which-key
-						   ;;key
-						   hydra
-						   pretty-hydra
-						   ;;Major Mode
+						   ;;
 						   markdown-mode
 						   lsp-mode
-						   ;;lsp
-						   eglot
 						   lsp-java
 						   lsp-haskell
 						   dap-mode
@@ -83,10 +65,7 @@
 						   yasnippet
 						   yasnippet-snippets
 						   auto-yasnippet
-						   ;;use-package
 						   use-package
-						   ;;ui
-						   ;;perspeen
 						   dashboard
 						   page-break-lines
 						   all-the-icons
@@ -96,7 +75,6 @@
 						   doom-modeline
 						   hide-mode-line
 						   spacemacs-theme
-						   ;;lang
 						   modern-cpp-font-lock
 						   nasm-mode
 						   google-c-style
@@ -105,31 +83,18 @@
 						   racket-mode
 						   go-mode
 						   vterm
-						   ;;eshell-up
-						   ;;eshell-did-you-mean
-						   ;;apps
+						   rust-mode
 						   gist
 						   telega
 						   wakatime-mode
-						   ;;elfeed
-						   ;;elfeed-org
-						   ;;blog
-						   ;;org-page
 						   org-bullets
 						   org-download
 						   ox-hugo
 						   org-brain
-						   ;;org-roam
 						   org-download
-						   ;;mingus
-						   ;;workspace
 						   persp-mode
-						   ;;magit
 						   magit
-						   ;;read
-						   ;;nov
 						   benchmark-init
-						   ;;
 						   prescient
 						   ))
 ;; ...

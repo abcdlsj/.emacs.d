@@ -2,33 +2,23 @@
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars) default-frame-alist)
 
-(use-package doom-themes
-  :if (display-graphic-p)
-  :config
-  ;; Global settings (defaults)
-  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
-        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+;; Usage
+;; item of time-themes-table: ( hours-in-string . theme-name)
+;; 6:00 - 17::00 use spacemacs-light, 17:00 - 24:00 use monokai, 24:00 - 6:00 use spacemacs-light
+;; you could add more items.
+(mp-ui/config-time-themes-table '(("6" . spacemacs-light) ("18" . spacemacs-dark)))
+(mp-ui/open-themes-auto-change)
 
-  ;; (load-theme 'doom-one-light t)
-  (doom-themes-visual-bell-config)
-
-  (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
-  ;; (setq doom-themes-treemacs-enable-variable-pitch t)
-  ;; (setq doom-variable-pitch-font (font-spec :family "Ubuntu" :size 2))
-  ;;(doom-themes-neotree-config)
-  ;;(doom-themes-treemacs-config)
-  (doom-themes-org-config)
-  )
-
-(load-theme 'spacemacs-dark)
-
-;; 字体设置
+;;
+;; 这是中文
+;; this is english
+;;
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" "Menlo" 24))
+                      (format "%s:pixelsize=%d" "RobotoMono" 24))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
-					  (font-spec :family "Noto Sans CJK SC" :size 24))))
+					  (font-spec :family "Noto Sans CJK SC" :size 22))))
 
 (when (display-graphic-p)
   (my-font-set))
@@ -59,16 +49,15 @@
   :config
   (dashboard-setup-startup-hook)
   (add-to-list 'dashboard-items '(agenda) t)
-  (setq ;;dashboard-banner-logo-title "RTFSC – Read The F**king Source Code :)!"
-   dashboard-banner-logo-title "Recursion or Iteration? That's a question!"
-   ;;dashboard-startup-banner "~/.emacs.d/banner/ue-colorful.png"
-   ;;dashboard-center-content t
-   dashboard-set-heading-icons t
-   dashboard-set-file-icons t
-   dashboard-items '((recents  . 10)
-					 (bookmarks . 5)
-					 (projects . 5)
-					 (agenda . 5))))
+  (setq dashboard-banner-logo-title "Recursion or Iteration? That's a question!"
+  ;;dashboard-startup-banner "~/.emacs.d/banner/ue-colorful.png"
+  ;;dashboard-center-content t
+  dashboard-set-heading-icons t
+  dashboard-set-file-icons t
+  dashboard-items '((recents  . 10)
+					(bookmarks . 5)
+					(projects . 5)
+					(agenda . 5))))
 
 (use-package winum
   :config

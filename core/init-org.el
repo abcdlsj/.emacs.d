@@ -13,7 +13,7 @@
         '(
           ("t" "Task To Do!" plain
            (file "task.org")
-           "* TODO %^{Task Name:} \n%?\n")
+           "* TODO %^{Task Name:} (DL. %^{Add Deadline:}) %^g\n%?\n")
           ("m" "Media.Reading.Relaxing.Ideas" entry
            (file+olp+datetree "media.org")
            "* %U - %^{heading} %^g\n%?\n" :tree-type week)
@@ -35,7 +35,7 @@
   ;;org-view
   ;;(setq org-indent-mode 1)
   (setq org-log-done 'time)
-  (setq org-image-actual-width '(400))
+  (setq org-image-actual-width '(800))
   ;;(setq org-src-preserve-indentation t)
   (add-hook 'org-mode-hook 'toggle-truncate-lines)
   (setq org-babel-racket-command "/usr/bin/racket")

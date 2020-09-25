@@ -13,7 +13,7 @@
 (global-set-key (kbd "C-c e") 'company-english-helper-search)
 (global-unset-key (kbd "C-SPC"))
 (global-unset-key (kbd "C-n"))
-;;evil-leader
+;; evil-leader
 (evil-leader/set-leader "<SPC>")
 (evil-leader/set-key
   "ll" 'evil-avy-goto-line
@@ -21,11 +21,10 @@
   "ff" 'counsel-find-file
   "fw" 'find-file-other-window
   "fl" 'counsel-library
-  ;;"fp" 'open-private-config
   "fr" 'counsel-buffer-or-recentf
   "fd" 'delete-file
   "fe" 'eaf-open
-  ;;counsel
+  ;; counsel
   "ca" 'counsel-ag
   "cz" 'counsel-fzf
   "cy" 'ivy-yasnippet
@@ -41,33 +40,11 @@
   "4" 'winum-select-window-4
   "oc" 'counsel-org-capture
   "oa" 'org-agenda
-  ;;ivy
+  ;; ivy
   "is" 'ivy-baidu-fanyi-suggest
-  ;;"ia" 'ivy-yasnippet
-  ;; "qd" 'awesome-tab-forward-tab
-  ;; "qa" 'awesome-tab-backward-tab
-  ;; "qw" 'awesome-tab-forward-group
-  ;; "qs" 'awesome-tab-backward-group
   "mc" 'comment-region
   "mu" 'uncomment-region
   "v" 'vterm
   )
-
-
-(global-set-key
- (kbd "C-c C-n")
- (defhydra hydra-move
-   (:body-pre (next-line))
-   "move"
-   ("n" next-line)
-   ("p" previous-line)
-   ("f" forward-char)
-   ("b" backward-char)
-   ("a" beginning-of-line)
-   ("e" move-end-of-line)
-   ("v" scroll-up-command)
-   ;; Converting M-v to V here by analogy.
-   ("V" scroll-down-command)
-   ("l" recenter-top-bottom)))
 
 (provide 'init-keybindings)
