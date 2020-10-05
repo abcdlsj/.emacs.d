@@ -11,26 +11,23 @@
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
   (setq org-capture-templates
         '(
-          ("t" "Task To Do!" plain
-           (file "task.org")
-           "* TODO %^{Task Name:} (DL. %^{Add Deadline:}) %^g\n%?\n")
           ("m" "Media.Reading.Relaxing.Ideas" entry
            (file+olp+datetree "media.org")
            "* %U - %^{heading} %^g\n%?\n" :tree-type week)
           ("j" "Journal!!!" entry
            (file+olp+datetree "journal.org")
            "* %U - %^{heading} %^g\n%?\n" :tree-type week)
-	  ))
+		  ))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(
                                                            (lisp . t)
                                                            (shell . t)
                                                            (C . t)
-							   (java . t)
-							   (python . t)
-							   (dot . t)
-							   (racket . t)
-							   (latex . t)
+														   (java . t)
+														   (python . t)
+														   (dot . t)
+														   (racket . t)
+														   (latex . t)
                                                            ))
   ;;org-view
   ;;(setq org-indent-mode 1)
@@ -51,10 +48,10 @@
   (setq org-lowest-priority  ?C)
   (setq org-default-priority ?B)
   (setq org-priority-faces
-	'((?A . (:background "red" :foreground "white" :weight bold))
-	  (?B . (:background "DarkOrange" :foreground "white" :weight bold))
-	  (?C . (:background "yellow" :foreground "DarkGreen" :weight bold))
-	  ))
+		'((?A . (:background "red" :foreground "white" :weight bold))
+		  (?B . (:background "DarkOrange" :foreground "white" :weight bold))
+		  (?C . (:background "yellow" :foreground "DarkGreen" :weight bold))
+		  ))
   )
 
 (use-package ox-hugo

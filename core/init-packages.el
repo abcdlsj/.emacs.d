@@ -56,11 +56,10 @@
 						   ;;
 						   markdown-mode
 						   lsp-mode
-						   lsp-java
-						   lsp-haskell
-						   dap-mode
 						   lsp-ui
 						   ccls
+						   dap-mode
+						   rust-mode
 						   lsp-python-ms
 						   yasnippet
 						   yasnippet-snippets
@@ -70,27 +69,19 @@
 						   page-break-lines
 						   all-the-icons
 						   posframe
-						   ;;theme
-						   doom-themes
+						   ;;
 						   doom-modeline
 						   hide-mode-line
 						   spacemacs-theme
 						   modern-cpp-font-lock
 						   nasm-mode
 						   google-c-style
-						   sly
-						   sly-quicklisp
 						   racket-mode
-						   go-mode
 						   vterm
-						   rust-mode
-						   gist
-						   telega
 						   wakatime-mode
 						   org-bullets
 						   org-download
 						   ox-hugo
-						   org-brain
 						   org-download
 						   persp-mode
 						   magit
