@@ -6,9 +6,9 @@
 ;; item of time-themes-table: ( hours-in-string . theme-name)
 ;; 6:00 - 17::00 use light, 17:00 - 24:00 use dark, 24:00 - 6:00 use light
 ;; you could add more items.
-(mp-ui/config-time-themes-table '(("6" . dichromacy) ("18" . spacemacs-dark)))
-(mp-ui/open-themes-auto-change)
-
+;; (mp-ui/config-time-themes-table '(("6" . spacemacs-light) ("18" . spacemacs-dark)))
+;; (mp-ui/open-themes-auto-change)
+(load-theme 'spacemacs-dark)
 ;;
 ;; 这是中文
 ;; this is english

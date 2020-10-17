@@ -61,4 +61,11 @@ then check whether emacs should to modify theme, if so, modify it."
   "Close automatically change themes."
   )
 
+;; Usage
+;; item of time-themes-table: ( hours-in-string . theme-name)
+;; 6:00 - 17::00 use light, 17:00 - 24:00 use dark, 24:00 - 6:00 use light
+;; you could add more items.
+;; (mp-ui/config-time-themes-table '(("6" . spacemacs-light) ("18" . spacemacs-dark)))
+;; (mp-ui/open-themes-auto-change)
+
 (provide 'init-funcs)

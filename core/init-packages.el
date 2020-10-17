@@ -23,9 +23,9 @@
 						   exec-path-from-shell
 						   ;;
 						   company
-						   company-lsp
 						   company-prescient
 						   company-box
+						   company-lsp
 						   ;;
 						   auctex
 						   ;;
@@ -74,8 +74,9 @@
 						   hide-mode-line
 						   spacemacs-theme
 						   modern-cpp-font-lock
+						   fontawesome
 						   nasm-mode
-						   google-c-style
+						   clang-format
 						   racket-mode
 						   vterm
 						   wakatime-mode
@@ -87,6 +88,8 @@
 						   magit
 						   benchmark-init
 						   prescient
+						   ;;
+						   color-theme-sanityinc-tomorrow
 						   ))
 ;; ...
 (setq package-selected-packages abcdlsj/packages)

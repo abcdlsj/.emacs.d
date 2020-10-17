@@ -42,7 +42,10 @@
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 
-  (setq org-todo-keywords '((sequence "TODO(t)" "WAITING(w)" "|" "DONE(d)" "CANCELLED(c)")))
+  (setq org-todo-keywords '((sequence "TODO(t)" "HAND(h)" "|" "DONE(d)" "CANCELLED(c)")))
+  (setf org-todo-keyword-faces '(("TODO" . (:foreground "white" :background "#95A5A6"   :weight bold))
+                                 ("HAND" . (:foreground "white" :background "#2E8B57"  :weight bold))
+                                 ("DONE" . (:foreground "white" :background "#3498DB" :weight bold))))
 
   (setq org-highest-priority ?A)
   (setq org-lowest-priority  ?C)
@@ -54,45 +57,55 @@
 		  ))
   )
 
-(use-package ox-hugo
-  :after ox)
+;; hugo blog capture
+;; (use-package ox-hugo
+;;   :after ox)
 
-(with-eval-after-load 'org-capture
-  (defun org-hugo-new-subtree-post-capture-template ()
-    "Returns `org-capture' template string for new Hugo post.
-See `org-capture-templates' for more information."
-    (let* ((title (read-from-minibuffer "Post Title: ")) ;Prompt to enter the post title
-           (fname (org-hugo-slug title)))
-      (mapconcat #'identity
-                 `(
-                   ,(concat "* TODO " title)
-                   ":PROPERTIES:"
-                   ,(concat ":EXPORT_FILE_NAME: " fname)
-                   ":END:"
-                   "%?\n")          ;Place the cursor here finally
-                 "\n")))
-  (add-to-list 'org-capture-templates
-               '("h" "Hugo post Blog" entry
-                 (file "~/Dropbox/org/blog.org")
-                 (function org-hugo-new-subtree-post-capture-template))))
+;; (with-eval-after-load 'org-capture
+;;   (defun org-hugo-new-subtree-post-capture-template ()
+;;     "Returns `org-capture' template string for new Hugo post.
+;; See `org-capture-templates' for more information."
+;;     (let* ((title (read-from-minibuffer "Post Title: ")) ;Prompt to enter the post title
+;;            (fname (org-hugo-slug title)))
+;;       (mapconcat #'identity
+;;                  `(
+;;                    ,(concat "* TODO " title)
+;;                    ":PROPERTIES:"
+;;                    ,(concat ":EXPORT_FILE_NAME: " fname)
+;;                    ":END:"
+;;                    "%?\n")          ;Place the cursor here finally
+;;                  "\n")))
+;;   (add-to-list 'org-capture-templates
+;;                '("h" "Hugo post Blog" entry
+;;                  (file "~/Dropbox/org/blog.org")
+;;                  (function org-hugo-new-subtree-post-capture-template))))
 
-;; (use-package org-brain :ensure t
-;;   :init
-;;   (setq org-brain-path "~/Dropbox/n/org-brain")
-;;   ;; For Evil users
-;;   (with-eval-after-load 'evil
-;;     (evil-set-initial-state 'org-brain-visualize-mode 'emacs))
-;;   :config
-;;   (setq org-id-track-globally t)
-;;   (setq org-id-locations-file "~/.emacs.d/.org-id-locations")
-;;   (add-hook 'before-save-hook #'org-brain-ensure-ids-in-buffer)
-;;   (push '("b" "Brain" plain (function org-brain-goto-end)
-;;           "* %i%?" :empty-lines 1)
-;;         org-capture-templates)
-;;   (setq org-brain-visualize-default-choices 'all)
-;;   (setq org-brain-title-max-length 12)
-;;   (setq org-brain-include-file-entries nil
-;;         org-brain-file-entries-use-title nil))
+;; agenda 里面时间块彩色显示
+;; From: https://emacs-china.org/t/org-agenda/8679/3
+;;
+(defun ljg/org-agenda-time-grid-spacing ()
+  "Set different line spacing w.r.t. time duration."
+  (save-excursion
+    (let* ((background (alist-get 'background-mode (frame-parameters)))
+           (background-dark-p (string= background "dark"))
+           (colors (list "#1ABC9C" "#2ECC71" "#3498DB" "#9966ff"))
+           pos
+           duration)
+      (nconc colors colors)
+      (goto-char (point-min))
+      (while (setq pos (next-single-property-change (point) 'duration))
+        (goto-char pos)
+        (when (and (not (equal pos (point-at-eol)))
+                   (setq duration (org-get-at-bol 'duration)))
+          (let ((line-height (if (< duration 30) 1.0 (+ 0.5 (/ duration 60))))
+                (ov (make-overlay (point-at-bol) (1+ (point-at-eol)))))
+            (overlay-put ov 'face `(:background ,(car colors)
+                                                :foreground
+                                                ,(if background-dark-p "black" "white")))
+            (setq colors (cdr colors))
+            (overlay-put ov 'line-height line-height)
+            (overlay-put ov 'line-spacing (1- line-height))))))))
 
+(add-hook 'org-agenda-finalize-hook #'ljg/org-agenda-time-grid-spacing)
 
 (provide 'init-org)
