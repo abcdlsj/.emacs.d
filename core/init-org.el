@@ -29,11 +29,11 @@
 														   (racket . t)
 														   (latex . t)
                                                            ))
-  ;;org-view
-  ;;(setq org-indent-mode 1)
+  ;;; org-view
+  (setq org-indent-mode 1)
   (setq org-log-done 'time)
   (setq org-image-actual-width '(800))
-  ;;(setq org-src-preserve-indentation t)
+  ;; (setq org-src-preserve-indentation t)
   (add-hook 'org-mode-hook 'toggle-truncate-lines)
   (setq org-babel-racket-command "/usr/bin/racket")
 
@@ -41,12 +41,7 @@
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-
   (setq org-todo-keywords '((sequence "TODO(t)" "HAND(h)" "|" "DONE(d)" "CANCELLED(c)")))
-  (setf org-todo-keyword-faces '(("TODO" . (:foreground "white" :background "#95A5A6"   :weight bold))
-                                 ("HAND" . (:foreground "white" :background "#2E8B57"  :weight bold))
-                                 ("DONE" . (:foreground "white" :background "#3498DB" :weight bold))))
-
   (setq org-highest-priority ?A)
   (setq org-lowest-priority  ?C)
   (setq org-default-priority ?B)
@@ -82,7 +77,6 @@
 
 ;; agenda 里面时间块彩色显示
 ;; From: https://emacs-china.org/t/org-agenda/8679/3
-;;
 (defun ljg/org-agenda-time-grid-spacing ()
   "Set different line spacing w.r.t. time duration."
   (save-excursion

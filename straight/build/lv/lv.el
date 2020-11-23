@@ -1,1 +1,0 @@
-/home/abcdlsj/.emacs.d/straight/repos/hydra/lv.el

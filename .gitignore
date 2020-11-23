@@ -8,6 +8,7 @@ history
 recentf
 eshell/*
 cnfonts/*
+straight/*
 .dap-breakpoints
 .lsp-session-v1
 amx-items

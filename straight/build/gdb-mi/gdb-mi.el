@@ -1,1 +1,0 @@
-/home/abcdlsj/.emacs.d/straight/repos/emacs-gdb/gdb-mi.el

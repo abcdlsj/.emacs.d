@@ -15,10 +15,10 @@
 ;;
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" "Menlo" 24))
-  (dolist (charset '(kana han cjk-misc bopomofo))
+                      (format "%s:pixelsize=%d" "SFMono Nerd Font Mono" 26))
+ (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
-					  (font-spec :family "Noto Sans CJK SC" :size 22))))
+					  (font-spec :family "Noto Sans CJK SC" :size 24))))
 
 (when (display-graphic-p)
   (my-font-set))
