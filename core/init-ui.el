@@ -6,10 +6,9 @@
 ;; item of time-themes-table: ( hours-in-string . theme-name)
 ;; 6:00 - 17::00 use light, 17:00 - 24:00 use dark, 24:00 - 6:00 use light
 ;; you could add more items.
-;; (mp-ui/config-time-themes-table '(("6" . spacemacs-light) ("18" . spacemacs-dark)))
-;; (mp-ui/open-themes-auto-change)
-(load-theme 'spacemacs-dark)
-;;
+(mp-ui/config-time-themes-table '(("6" . modus-operandi) ("18" . modus-vivendi)))
+(mp-ui/open-themes-auto-change)
+
 ;; 这是中文
 ;; this is english
 ;;
@@ -27,13 +26,13 @@
 (valign-mode)
 
 ;; doom-modeline
-(use-package doom-modeline
-  :config
-  (doom-modeline-mode 1)
-  (setq doom-modeline-height 1)
-  (set-face-attribute 'mode-line nil :height 100)
-  (set-face-attribute 'mode-line-inactive nil :height 100)
-  )
+;; (use-package doom-modeline
+;;   :config
+;;   (doom-modeline-mode 1)
+;;   (setq doom-modeline-height 1)
+;;   (set-face-attribute 'mode-line nil :height 100)
+;;   (set-face-attribute 'mode-line-inactive nil :height 100)
+;; )
 
 (use-package all-the-icons
   :if(display-graphic-p))

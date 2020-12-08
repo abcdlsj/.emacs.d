@@ -34,9 +34,9 @@ decrease this. If you experience stuttering, increase this.")
             ;; `focus-out-hook' is obsolete since 27.1
             (if (boundp 'after-focus-change-function)
                 (add-function :after after-focus-change-function
-                  (lambda ()
-                    (unless (frame-focus-state)
-                      (garbage-collect))))
+							  (lambda ()
+								(unless (frame-focus-state)
+								  (garbage-collect))))
               (add-hook 'focus-out-hook 'garbage-collect))
 
             ;; Avoid GCs while using `ivy'/`counsel'/`swiper' and `helm', etc.
@@ -60,18 +60,18 @@ decrease this. If you experience stuttering, increase this.")
 
 (update-load-path)
 
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
-      (bootstrap-version 5))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
+;; (defvar bootstrap-version)
+;; (let ((bootstrap-file
+;;        (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
+;;       (bootstrap-version 5))
+;;   (unless (file-exists-p bootstrap-file)
+;;     (with-current-buffer
+;;         (url-retrieve-synchronously
+;;          "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
+;;          'silent 'inhibit-cookies)
+;;       (goto-char (point-max))
+;;       (eval-print-last-sexp)))
+;;   (load bootstrap-file nil 'nomessage))
 
 (add-to-list 'load-path "~/.emacs.d/gitel/valign/")
 (setq custom-file "~/.emacs.d/core/init-custom.el")

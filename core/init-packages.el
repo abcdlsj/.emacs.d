@@ -13,6 +13,7 @@
 						   ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 						   ("org" . 	"http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
   )
+
 ;; cl - Common Lisp Extension
 (require 'cl)
 
@@ -60,6 +61,7 @@
 						   ccls
 						   dap-mode
 						   rust-mode
+						   go-mode
 						   lsp-python-ms
 						   yasnippet
 						   yasnippet-snippets
@@ -72,7 +74,6 @@
 						   ;;
 						   doom-modeline
 						   hide-mode-line
-						   spacemacs-theme
 						   modern-cpp-font-lock
 						   fontawesome
 						   nasm-mode
@@ -90,6 +91,8 @@
 						   prescient
 						   ;;
 						   color-theme-sanityinc-tomorrow
+						   spacemacs-theme
+						   modus-themes
 						   ))
 ;; ...
 (setq package-selected-packages abcdlsj/packages)
