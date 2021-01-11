@@ -48,8 +48,8 @@
                'lua-mode-hook
                'swift-mode-hook
                'minibuffer-inactive-mode-hook
-	       'scheme-mode-hook
-	       'racket-mode-hook
+			   'scheme-mode-hook
+			   'racket-mode-hook
                ))
   (add-hook hook '(lambda () (awesome-pair-mode 1))))
 
@@ -87,13 +87,13 @@
 (use-package projectile
   :diminish
   :bind (:map projectile-mode-map
-         ("C-c p" . projectile-command-map))
+			  ("C-c p" . projectile-command-map))
   :hook (after-init . projectile-mode)
   :init
   (setq projectile-mode-line-prefix ""
         projectile-sort-order 'recentf
         projectile-use-git-grep t
-	projectile-git-submodule-command nil
+		projectile-git-submodule-command nil
         projectile-completion-system 'ivy)
   :config
   ;; (projectile-update-mode-line)         ; Update mode-line at the first time
@@ -114,11 +114,20 @@
 (load "preview.el" nil t t)
 
 (add-hook 'LaTeX-mode-hook
-	  (lambda()
-	    (add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
-	    (setq TeX-command-default "XeLaTeX")
-	    (setq TeX-save-querynil )
-	    (setq TeX-show-compilation t)
-	    ))
+		  (lambda()
+			(add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
+			(setq TeX-command-default "XeLaTeX")
+			(setq TeX-save-querynil )
+			(setq TeX-show-compilation t)
+			))
+
+(use-package rime
+  :custom
+  (default-input-method "rime")
+  :config
+  (setq rime-show-candidate 'posframe)
+  (setq rime-posframe-properties
+		(list :font "Sarasa Mono SC Nerd"
+			  :internal-border-width 12)))
 
 (provide 'init-edit)

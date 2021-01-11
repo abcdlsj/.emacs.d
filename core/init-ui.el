@@ -4,9 +4,7 @@
 
 ;; Usage
 ;; item of time-themes-table: ( hours-in-string . theme-name)
-;; 6:00 - 17::00 use light, 17:00 - 24:00 use dark, 24:00 - 6:00 use light
-;; you could add more items.
-(mp-ui/config-time-themes-table '(("6" . modus-operandi) ("18" . modus-vivendi)))
+(mp-ui/config-time-themes-table '(("6" . spacemacs-dark) ("18" . modus-vivendi)))
 (mp-ui/open-themes-auto-change)
 
 ;; 这是中文
@@ -14,16 +12,16 @@
 ;;
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                      (format "%s:pixelsize=%d" "SFMono Nerd Font Mono" 26))
+                      (format "%s:pixelsize=%d" "SFMono Nerd Font Mono" 24))
  (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
-					  (font-spec :family "Noto Sans CJK SC" :size 24))))
+					  (font-spec :family "Sarasa Mono SC Nerd" :size 24))))
 
 (when (display-graphic-p)
   (my-font-set))
 
-(load "~/.emacs.d/gitel/valign/valign.el")
-(valign-mode)
+;; (load "~/.emacs.d/gitel/valign/valign.el")
+;; (valign-mode)
 
 ;; doom-modeline
 ;; (use-package doom-modeline
@@ -44,20 +42,6 @@
 (use-package popwin
   :config
   (popwin-mode 1))
-
-(use-package dashboard
-  :config
-  (dashboard-setup-startup-hook)
-  (add-to-list 'dashboard-items '(agenda) t)
-  (setq dashboard-banner-logo-title "Recursion or Iteration? That's a question!"
-  ;;dashboard-startup-banner "~/.emacs.d/banner/ue-colorful.png"
-  ;;dashboard-center-content t
-  dashboard-set-heading-icons t
-  dashboard-set-file-icons t
-  dashboard-items '((recents  . 10)
-					(bookmarks . 5)
-					(projects . 5)
-					(agenda . 5))))
 
 (use-package winum
   :config

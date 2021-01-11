@@ -14,3 +14,5 @@ straight/*
 amx-items
 .cache/*
 .lsp-session-v1
+rime/luna_pinyin.userdb/*
+rime/build/*

@@ -6,8 +6,8 @@
   ;;org babel
   (setq org-babel-lisp-eval-fn "sly-eval")
   ;;org-agenda
-  (setq org-directory "~/Dropbox/org/")
-  (setq org-agenda-files (list "~/Dropbox/org/"))
+  (setq org-directory "/mnt/c/Users/abcdlsj/Dropbox/org/")
+  (setq org-agenda-files (list "/mnt/c/Users/abcdlsj/Dropbox/org/"))
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
   (setq org-capture-templates
         '(
@@ -52,28 +52,8 @@
 		  ))
   )
 
-;; hugo blog capture
-;; (use-package ox-hugo
-;;   :after ox)
-
-;; (with-eval-after-load 'org-capture
-;;   (defun org-hugo-new-subtree-post-capture-template ()
-;;     "Returns `org-capture' template string for new Hugo post.
-;; See `org-capture-templates' for more information."
-;;     (let* ((title (read-from-minibuffer "Post Title: ")) ;Prompt to enter the post title
-;;            (fname (org-hugo-slug title)))
-;;       (mapconcat #'identity
-;;                  `(
-;;                    ,(concat "* TODO " title)
-;;                    ":PROPERTIES:"
-;;                    ,(concat ":EXPORT_FILE_NAME: " fname)
-;;                    ":END:"
-;;                    "%?\n")          ;Place the cursor here finally
-;;                  "\n")))
-;;   (add-to-list 'org-capture-templates
-;;                '("h" "Hugo post Blog" entry
-;;                  (file "~/Dropbox/org/blog.org")
-;;                  (function org-hugo-new-subtree-post-capture-template))))
+(use-package ox-hugo
+  :after ox)
 
 ;; agenda 里面时间块彩色显示
 ;; From: https://emacs-china.org/t/org-agenda/8679/3

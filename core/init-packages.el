@@ -93,6 +93,8 @@
 						   color-theme-sanityinc-tomorrow
 						   spacemacs-theme
 						   modus-themes
+						   ;;
+						   rime
 						   ))
 ;; ...
 (setq package-selected-packages abcdlsj/packages)
