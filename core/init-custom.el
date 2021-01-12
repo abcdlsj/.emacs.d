@@ -1,7 +1,8 @@
 (when (<= emacs-major-version 27)
   (menu-bar-mode -1)
   (tool-bar-mode -1)
-  (scroll-bar-mode -1))
+  ;;(scroll-bar-mode -1) // emacs-nox not support it
+)
 
 (global-hl-line-mode t)
 (show-paren-mode t)
