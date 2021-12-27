@@ -3,7 +3,8 @@
   (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
   (setq evil-want-keybinding nil)
   :config
-  (evil-mode 1))
+  (evil-mode 1)
+  (evil-set-initial-state 'term-mode 'emacs))
 
 (use-package evil-leader
   :after evil
@@ -12,7 +13,8 @@
 
 (use-package evil-collection
   :after evil
-  :custom (evil-collection-setup-minibuffer t)
+  ;;
+  ;; :custom (evil-collection-setup-minibuffer t)
   :init (evil-collection-init))
 
 ;;which-key
@@ -129,5 +131,30 @@
   (setq rime-posframe-properties
 		(list :font "Sarasa Mono SC Nerd"
 			  :internal-border-width 12)))
+;; Keybonds
+(global-set-key [(hyper a)] 'mark-whole-buffer)
+(global-set-key [(hyper v)] 'yank)
+(global-set-key [(hyper c)] 'kill-ring-save)
+(global-set-key [(hyper s)] 'save-buffer)
+(global-set-key [(hyper l)] 'goto-line)
+(global-set-key [(hyper w)]
+                (lambda () (interactive) (delete-window)))
+(global-set-key [(hyper z)] 'undo)
+
+;; mac switch meta key
+(defun mac-switch-meta nil
+  "switch meta between Option and Command"
+  (interactive)
+  (if (eq mac-option-modifier nil)
+      (progn
+		(setq mac-option-modifier 'meta)
+		(setq mac-command-modifier 'hyper)
+		)
+    (progn
+      (setq mac-option-modifier nil)
+      (setq mac-command-modifier 'meta)
+      )
+    )
+  )
 
 (provide 'init-edit)

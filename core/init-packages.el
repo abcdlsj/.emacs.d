@@ -26,7 +26,6 @@
 						   company
 						   company-prescient
 						   company-box
-						   company-lsp
 						   ;;
 						   auctex
 						   ;;
@@ -95,6 +94,8 @@
 						   modus-themes
 						   ;;
 						   rime
+						   ;;
+						   neotree
 						   ))
 ;; ...
 (setq package-selected-packages abcdlsj/packages)

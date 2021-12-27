@@ -33,7 +33,7 @@
  "be" 'eval-buffer
  "xd" 'xref-find-definitions
  "xf" 'xref-find-references
- "0" 'treemacs-select-window
+ ;; "0" 'treemacs-select-window
  "1" 'winum-select-window-1
  "2" 'winum-select-window-2
  "3" 'winum-select-window-3
@@ -41,10 +41,12 @@
  "oc" 'counsel-org-capture
  "oa" 'org-agenda
  ;; ivy
- "is" 'ivy-baidu-fanyi-suggest
+ "fy" 'ivy-baidu-fanyi-suggest
  "mc" 'comment-region
  "mu" 'uncomment-region
  "v" 'vterm
+ ;; neotree
+ "nt" 'neotree-toggle
  )
 
 (provide 'init-keybindings)
