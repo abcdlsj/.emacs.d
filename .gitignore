@@ -16,3 +16,4 @@ amx-items
 .lsp-session-v1
 rime/luna_pinyin.userdb/*
 rime/build/*
+request/*
