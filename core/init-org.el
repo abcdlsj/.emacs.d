@@ -6,8 +6,8 @@
   ;;org babel
   (setq org-babel-lisp-eval-fn "sly-eval")
   ;;org-agenda
-  (setq org-directory "/Users/songjian.li/Workspace/github/wiki/")
-  (setq org-agenda-files (list "/Users/songjian.li/Workspace/github/wiki/agenda/"))
+  (setq org-directory "~/Workspace/github/wiki/")
+  (setq org-agenda-files (list "~/Workspace/github/wiki/agenda/"))
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
   (setq org-capture-templates
         '(

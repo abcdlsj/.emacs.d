@@ -9,9 +9,9 @@
 (when (>= emacs-major-version 25)
   (require 'package)
   (package-initialize)
-  (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-						   ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-						   ("org" . 	"http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+  (setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+			   ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+			   ("org"z . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
   )
 
 ;; cl - Common Lisp Extension
@@ -57,7 +57,12 @@
 						   markdown-mode
 						   lsp-mode
 						   lsp-ui
+
+						   ;; eglot
+						   eglot
+						   ;; nox
 						   ccls
+
 						   dap-mode
 						   rust-mode
 						   go-mode
@@ -72,6 +77,7 @@
 						   posframe
 						   ;;
 						   doom-modeline
+						   doom-themes
 						   hide-mode-line
 						   modern-cpp-font-lock
 						   fontawesome
@@ -96,7 +102,10 @@
 						   rime
 						   ;;
 						   neotree
+						   ;;
+						   gcmh
 						   ))
+
 ;; ...
 (setq package-selected-packages abcdlsj/packages)
 

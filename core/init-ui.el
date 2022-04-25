@@ -5,18 +5,36 @@
 
 ;; Usage
 ;; item of time-themes-table: ( hours-in-string . theme-name)
-(mp-ui/config-time-themes-table '(("6" . spacemacs-dark) ("18" . spacemacs-dark)))
+(mp-ui/config-time-themes-table '(("6" . sanityinc-tomorrow-bright) ("18" . sanityinc-tomorrow-bright)))
 (mp-ui/open-themes-auto-change)
+
+;; (use-package doom-themes
+;;   :ensure t
+;;   :config
+;;   ;; Global settings (defaults)
+;;   (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+;;         doom-themes-enable-italic t) ; if nil, italics is universally disabled
+;;   (load-theme 'doom-one t)
+
+;;   ;; Enable flashing mode-line on errors
+;;   (doom-themes-visual-bell-config)
+;;   ;; Enable custom neotree theme (all-the-icons must be installed!)
+;;   (doom-themes-neotree-config)
+;;   ;; or for treemacs users
+;;   (setq doom-themes-treemacs-theme "doom-atom") ; use "doom-colors" for less minimal icon theme
+;;   (doom-themes-treemacs-config)
+;;   ;; Corrects (and improves) org-mode's native fontification.
+;;   (doom-themes-org-config))
 
 ;; 这是中文
 ;; this is english
 ;;
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                       (format "%s:pixelsize=%d" "JetBrains Mono" 14))
+                       (format "%s:pixelsize=%d" "JetBrains Mono" 15))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
-					  (font-spec :family "PingFang SC" :size 14)))
+					  (font-spec :family "PingFang SC" :size 15)))
   )
 
 (when (display-graphic-p)
@@ -30,8 +48,8 @@
   :config
   (doom-modeline-mode 1)
   (setq doom-modeline-height 1)
-  (set-face-attribute 'mode-line nil :height 120)
-  (set-face-attribute 'mode-line-inactive nil :height 120)
+  (set-face-attribute 'mode-line nil :height 150)
+  (set-face-attribute 'mode-line-inactive nil :height 150)
 )
 
 (use-package all-the-icons
@@ -49,7 +67,7 @@
   :config
   (winum-mode 1))
 
-;; File tree
+;; file tree
 (use-package neotree
   :config
   (setq neo-window-width 32

@@ -115,9 +115,8 @@
   ;; 		  '((swiper          . ivy-display-function-fallback)
   ;; 			(complete-symbol . ivy-posframe-display-at-point)
   ;; 			(counsel-M-x     . ivy-posframe-display-at-frame-bottom-left)
-
   ;; 			(t               . ivy-posframe-display-at-frame-center)))
-  ;; (ivy-posframe-mode 1))
+  ;; 	(ivy-posframe-mode 1))
   )
 
 (provide 'init-ivy)
