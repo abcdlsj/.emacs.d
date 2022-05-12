@@ -1,7 +1,5 @@
 (use-package org
   ;;:init
-  ;;(setq org-directory nil)
-  ;;(setq org-capture-templates nil)
   :config
   ;;org babel
   (setq org-babel-lisp-eval-fn "sly-eval")
@@ -37,9 +35,9 @@
   (add-hook 'org-mode-hook 'toggle-truncate-lines)
   (setq org-babel-racket-command "/usr/bin/racket")
 
-  (use-package org-bullets
-    :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+  ;; (use-package org-bullets
+  ;;   :config
+  ;;   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
   (setq org-todo-keywords '((sequence "TODO(t)" "HAND(h)" "|" "DONE(d)" "CANCELLED(c)")))
   (setq org-highest-priority ?A)

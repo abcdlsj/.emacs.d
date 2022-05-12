@@ -58,6 +58,8 @@
 						   lsp-mode
 						   lsp-ui
 
+						   corfu
+						   orderless
 						   ;; eglot
 						   eglot
 						   ;; nox

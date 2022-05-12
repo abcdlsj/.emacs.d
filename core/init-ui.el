@@ -5,7 +5,7 @@
 
 ;; Usage
 ;; item of time-themes-table: ( hours-in-string . theme-name)
-(mp-ui/config-time-themes-table '(("6" . sanityinc-tomorrow-bright) ("18" . sanityinc-tomorrow-bright)))
+(mp-ui/config-time-themes-table '(("6" . modus-operandi) ("18" . modus-vivendi)))
 (mp-ui/open-themes-auto-change)
 
 ;; (use-package doom-themes
@@ -31,10 +31,10 @@
 ;;
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                       (format "%s:pixelsize=%d" "JetBrains Mono" 15))
+                       (format "%s:pixelsize=%d" "BlexMono Nerd Font" 15))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
-					  (font-spec :family "PingFang SC" :size 15)))
+					  (font-spec :family "PingFang SC" :size 14)))
   )
 
 (when (display-graphic-p)

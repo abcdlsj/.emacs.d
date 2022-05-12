@@ -28,8 +28,6 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
-;; (add-to-list 'load-path "~/.emacs.d/gitel/valign/")
-;; (add-to-list 'load-path "~/.emacs.d/gitel/nox/")
 (setq custom-file "~/.emacs.d/core/init-custom.el")
 
 ;;init
