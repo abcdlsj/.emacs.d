@@ -1,5 +1,7 @@
 (use-package org
-  ;;:init
+  :init
+  (setq org-directory nil)
+  (setq org-capture-templates nil)
   :config
   ;;org babel
   (setq org-babel-lisp-eval-fn "sly-eval")
@@ -9,12 +11,6 @@
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
   (setq org-capture-templates
         '(
-          ("m" "Media.Reading.Relaxing.Ideas" entry
-           (file+olp+datetree "media.org")
-           "* %U - %^{heading} %^g\n%?\n" :tree-type week)
-          ("j" "Journal!!!" entry
-           (file+olp+datetree "journal.org")
-           "* %U - %^{heading} %^g\n%?\n" :tree-type week)
 		  ))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(
