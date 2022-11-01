@@ -31,10 +31,10 @@
 ;;
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                       (format "%s:pixelsize=%d" "BlexMono Nerd Font" 15))
+                       (format "%s:pixelsize=%d" "Hack" 15))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
-					  (font-spec :family "PingFang SC" :size 14)))
+					  (font-spec :family "PingFang SC" :size 15)))
   )
 
 (when (display-graphic-p)

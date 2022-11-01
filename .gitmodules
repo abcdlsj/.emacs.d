@@ -1,3 +1,7 @@
 [submodule "gitel/valign"]
 	path = gitel/valign
-	url = https://github.com/casouri/valign.git
+    url = https://github.com/casouri/valign.git
+
+[submodule "gitel/lsp-bridge"]
+	path = gitel/lsp-bridge
+	url = https://github.com/manateelazycat/lsp-bridge.git

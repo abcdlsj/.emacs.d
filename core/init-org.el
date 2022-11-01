@@ -5,12 +5,19 @@
   :config
   ;;org babel
   (setq org-babel-lisp-eval-fn "sly-eval")
+  (require 'ob-go)
   ;;org-agenda
-  (setq org-directory "~/Workspace/github/wiki/")
-  (setq org-agenda-files (list "~/Workspace/github/wiki/agenda/"))
+  (setq org-directory "~/Workspace/github/p/agenda/")
+  (setq org-agenda-files (list "~/Workspace/github/p/agenda/"))
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
   (setq org-capture-templates
         '(
+          ("t" "Task To Do!" entry
+           (file+headline "todo.org" "GTD")
+           "* TODO %^{Task Name:}\n%u\n%a\n" :clock-in t :clock-resume t)
+          ("n" "Notes!!!" entry
+           (file+headline "notes.org" "NOTES")
+           "* %U - %^{heading} %^g\n %?\n")
 		  ))
 
   (org-babel-do-load-languages 'org-babel-load-languages '(

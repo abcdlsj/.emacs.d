@@ -28,11 +28,13 @@
  "ca" 'counsel-ag
  "cz" 'counsel-fzf
  "cy" 'ivy-yasnippet
- "bs" 'switch-to-buffer
+ "bs" 'counsel-switch-buffer
  "bk" 'kill-buffer
  "be" 'eval-buffer
+
  "xd" 'xref-find-definitions
  "xf" 'xref-find-references
+
  ;; "0" 'treemacs-select-window
  "1" 'winum-select-window-1
  "2" 'winum-select-window-2

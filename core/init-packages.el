@@ -10,8 +10,8 @@
   (require 'package)
   (package-initialize)
   (setq package-archives '(("gnu" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-			   ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-			   ("org"z . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
+			   ("melpa" . "https://melpa.org/packages/")
+			   ("org" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")))
   )
 
 ;; cl - Common Lisp Extension
@@ -60,6 +60,7 @@
 
 						   corfu
 						   orderless
+						   cape
 						   ;; eglot
 						   eglot
 						   ;; nox
@@ -106,6 +107,9 @@
 						   neotree
 						   ;;
 						   gcmh
+						   ox-reveal
+						   ;;
+						   lua-mode
 						   ))
 
 ;; ...
