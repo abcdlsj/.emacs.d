@@ -109,14 +109,14 @@
       (setq xref-show-definitions-function #'ivy-xref-show-defs))
     (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
-  ;; (use-package ivy-posframe
-  ;; 	:config
-  ;; 	(setq ivy-posframe-display-functions-alist
-  ;; 		  '((swiper          . ivy-display-function-fallback)
-  ;; 			(complete-symbol . ivy-posframe-display-at-point)
-  ;; 			(counsel-M-x     . ivy-posframe-display-at-frame-bottom-left)
-  ;; 			(t               . ivy-posframe-display-at-frame-center)))
-  ;; 	(ivy-posframe-mode 1))
+  (use-package ivy-posframe
+	:config
+	(setq ivy-posframe-display-functions-alist
+		  '((swiper          . ivy-display-function-fallback)
+			(complete-symbol . ivy-posframe-display-at-point)
+			(counsel-M-x     . ivy-posframe-display-at-frame-bottom-left)
+			(t               . ivy-posframe-display-at-frame-center)))
+	(ivy-posframe-mode 1))
   )
 
 (provide 'init-ivy)

@@ -74,10 +74,10 @@
 (define-key awesome-pair-mode-map (kbd "C-k n") 'awesome-pair-jump-left)
 (define-key awesome-pair-mode-map (kbd "C-k :") 'awesome-pair-jump-out-pair-and-newline)
 
-;; (use-package highlight-indent-guides
-;;   :config
-;;   (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
-;;   (setq highlight-indent-guides-method 'character))
+(use-package highlight-indent-guides
+  :config
+  (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+  (setq highlight-indent-guides-method 'character))
 
 (use-package expand-region
   :defer 1
@@ -98,7 +98,7 @@
 		projectile-git-submodule-command nil
         projectile-completion-system 'ivy)
   :config
-  ;; (projectile-update-mode-line)         ; Update mode-line at the first time
+  (projectile-update-mode-line)         ; Update mode-line at the first time
 
   ;; Use the faster searcher to handle project files: ripgrep `rg'.
   (when (and (not (executable-find "fd"))
@@ -109,28 +109,11 @@
               (setq rg-cmd (format "%s --glob '!%s'" rg-cmd dir)))
             (concat "rg -0 --files --color=never --hidden" rg-cmd)))))
 
-;;python format
-(require 'blacken)
 
-(load "auctex.el" nil t t)
-(load "preview.el" nil t t)
+(require 'auto-save)            ;; 加载自动保存模块
+(auto-save-enable)              ;; 开启自动保存功能
+(setq auto-save-slient t)       ;; 自动保存的时候静悄悄的， 不要打扰我
 
-(add-hook 'LaTeX-mode-hook
-		  (lambda()
-			(add-to-list 'TeX-command-list '("XeLaTeX" "%`xelatex%(mode)%' %t" TeX-run-TeX nil t))
-			(setq TeX-command-default "XeLaTeX")
-			(setq TeX-save-querynil )
-			(setq TeX-show-compilation t)
-			))
-
-(use-package rime
-  :custom
-  (default-input-method "rime")
-  :config
-  (setq rime-show-candidate 'posframe)
-  (setq rime-posframe-properties
-		(list :font "Sarasa Mono SC Nerd"
-			  :internal-border-width 12)))
 ;; Keybonds
 (global-set-key [(hyper a)] 'mark-whole-buffer)
 (global-set-key [(hyper v)] 'yank)
@@ -156,5 +139,6 @@
       )
     )
   )
+
 
 (provide 'init-edit)

@@ -15,19 +15,6 @@
 (advice-add #'package-initialize :after #'update-load-path)
 (update-load-path)
 
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name "straight/repos/straight.el/bootstrap.el" user-emacs-directory))
-      (bootstrap-version 5))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/raxod502/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
-
 (setq custom-file "~/.emacs.d/core/init-custom.el")
 
 ;;init
@@ -38,10 +25,7 @@
 (require 'init-ui)
 (require 'init-ivy)
 (require 'init-edit)
-;; (require 'init-snippet)
-;; (require 'init-lang)
-;; (require 'init-company)
-;; (require 'init-reveal)
+(require 'init-snippet)
 (require 'init-awesome)
 (require 'init-lisp)
 (require 'init-org)

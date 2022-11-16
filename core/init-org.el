@@ -7,8 +7,8 @@
   (setq org-babel-lisp-eval-fn "sly-eval")
   (require 'ob-go)
   ;;org-agenda
-  (setq org-directory "~/Workspace/github/p/agenda/")
-  (setq org-agenda-files (list "~/Workspace/github/p/agenda/"))
+  (setq org-directory "/Users/songjian.li/Workspace/github/Obsidian")
+  (setq org-agenda-files (list "/Users/songjian.li/Workspace/github/Obsidian/agenda"))
   (setq org-agenda-file-regexp "\\`[^.].*\\.org\\|.todo\\'")
   (setq org-capture-templates
         '(
@@ -38,9 +38,9 @@
   (add-hook 'org-mode-hook 'toggle-truncate-lines)
   (setq org-babel-racket-command "/usr/bin/racket")
 
-  ;; (use-package org-bullets
-  ;;   :config
-  ;;   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+  (use-package org-bullets
+    :config
+    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
   (setq org-todo-keywords '((sequence "TODO(t)" "HAND(h)" "|" "DONE(d)" "CANCELLED(c)")))
   (setq org-highest-priority ?A)

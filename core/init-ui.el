@@ -1,8 +1,3 @@
-(when (display-graphic-p)
-(push '(menu-bar-lines . 0) default-frame-alist)
-(push '(tool-bar-lines . 0) default-frame-alist)
-(push '(vertical-scroll-bars) default-frame-alist))
-
 ;; Usage
 ;; item of time-themes-table: ( hours-in-string . theme-name)
 (mp-ui/config-time-themes-table '(("6" . modus-operandi) ("18" . modus-vivendi)))
@@ -31,7 +26,7 @@
 ;;
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                       (format "%s:pixelsize=%d" "Hack" 15))
+                       (format "%s:pixelsize=%d" "BlexMono Nerd Font" 15))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
 					  (font-spec :family "PingFang SC" :size 15)))

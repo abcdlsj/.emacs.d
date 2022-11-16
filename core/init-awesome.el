@@ -1,9 +1,4 @@
-;; ;; wakatime mode
-;; (global-wakatime-mode)
-
-;;company-english-helper
-(require 'company-english-helper)
-
-(require 'ivy-baidu-fanyi-sug)
+;; wakatime mode
+(global-wakatime-mode)
 
 (provide 'init-awesome)

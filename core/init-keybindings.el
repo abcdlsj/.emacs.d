@@ -9,7 +9,6 @@
 
 (global-set-key (kbd "M-m") 'set-mark-command)
 (global-set-key (kbd "M--") 'shell-command)
-(global-set-key (kbd "C-c e") 'company-english-helper-search)
 (global-set-key (kbd "M-q") "ESC")
 (global-unset-key (kbd "C-SPC"))
 (global-unset-key (kbd "C-n"))
