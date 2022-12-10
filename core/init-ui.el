@@ -26,7 +26,7 @@
 ;;
 (defun my-font-set()
   (set-face-attribute 'default nil :font
-                       (format "%s:pixelsize=%d" "BlexMono Nerd Font" 15))
+                      (format "%s:pixelsize=%d" "MesloLGS NF" 15))
   (dolist (charset '(kana han cjk-misc bopomofo))
 	(set-fontset-font (frame-parameter nil 'font) charset
 					  (font-spec :family "PingFang SC" :size 15)))
@@ -38,14 +38,63 @@
 ;; (load "~/.emacs.d/gitel/valign/valign.el")
 ;; (valign-mode)
 
-;; doom-modeline
-(use-package doom-modeline
-  :config
-  (doom-modeline-mode 1)
-  (setq doom-modeline-height 1)
-  (set-face-attribute 'mode-line nil :height 150)
-  (set-face-attribute 'mode-line-inactive nil :height 150)
-)
+;; use setq-default to set it for /all/ modes
+(setq mode-line-format
+	  (list
+       ;; the buffer name; the file name as a tool tip
+       '(:eval (propertize "%b " 'face 'font-lock-keyword-face
+						   'help-echo (buffer-file-name)))
+
+       ;; line and column
+       "(" ;; '%02' to set to 2 chars at least; prevents flickering
+       (propertize "%02l" 'face 'font-lock-type-face) ","
+       (propertize "%02c" 'face 'font-lock-type-face) 
+       ") "
+
+       ;; relative position, size of file
+       "["
+       (propertize "%p" 'face 'font-lock-constant-face) ;; % above top
+       "/"
+       (propertize "%I" 'face 'font-lock-constant-face) ;; size
+       "] "
+
+       ;; the current major mode for the buffer.
+       "["
+
+       '(:eval (propertize "%m" 'face 'font-lock-string-face
+						   'help-echo buffer-file-coding-system))
+       "] "
+
+
+       "[" ;; insert vs overwrite mode, input-method in a tooltip
+       '(:eval (propertize (if overwrite-mode "Ovr" "Ins")
+						   'face 'font-lock-preprocessor-face
+						   'help-echo (concat "Buffer is in "
+											  (if overwrite-mode "overwrite" "insert") " mode")))
+
+       ;; was this buffer modified since the last save?
+       '(:eval (when (buffer-modified-p)
+				 (concat ","  (propertize "Mod"
+										  'face 'font-lock-warning-face
+										  'help-echo "Buffer has been modified"))))
+
+       ;; is this buffer read-only?
+       '(:eval (when buffer-read-only
+				 (concat ","  (propertize "RO"
+										  'face 'font-lock-type-face
+										  'help-echo "Buffer is read-only"))))  
+       "] "
+
+       ;; add the time, with the date and the emacs uptime in the tooltip
+       '(:eval (propertize (format-time-string "%H:%M")
+						   'help-echo
+						   (concat (format-time-string "%c; ")
+								   (emacs-uptime "Uptime:%hh"))))
+       " --"
+       ;; i don't want to see minor-modes; but if you want, uncomment this:
+       ;; minor-mode-alist  ;; list of minor modes
+       "%-" ;; fill with '-'
+       ))
 
 (use-package all-the-icons
   :if(display-graphic-p))
