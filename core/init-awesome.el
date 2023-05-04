@@ -1,5 +1,5 @@
-;; ;; wakatime mode
-;; (global-wakatime-mode)
+;; wakatime mode
+(global-wakatime-mode)
 
 ;;company-english-helper
 (require 'company-english-helper)
